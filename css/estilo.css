@@ -361,3 +361,117 @@ background-color:  black;
     grid-area: mediopago3;
 }  
 
+/*********************************************/
+
+.contenedor footer{
+    grid-area: footer;
+    background-color: black;
+    margin-bottom: 0;
+    border-top: 1px solid yellowgreen;
+    /*padding-top: 1px;*/
+}
+
+footer .copyright{
+    color: white;
+    text-align: center;
+    /*padding-bottom: 10px;*/
+
+}
+
+#footer{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(1,1fr);
+  grid-template-areas: "email menui redes"
+                       /*"copy copy copy"*/;
+
+ padding-top: 15px;
+
+}
+
+.email{
+
+  border:0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #F25E3D;
+  height: 30px;
+  width: 200px;
+ /* border-radius: 5px;*/
+  
+}
+
+.casilla-de-mail{
+
+ grid-area: email;
+ /* margin-left: 20px;*/
+ margin: auto;
+
+}
+
+
+.suscribirse{
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+  height: 32px;
+  background-color: yellowgreen;
+  font-weight: bold;
+  /*border-radius: 5px;*/
+}
+
+.suscribirse:hover{
+  background-color: #F25E3D;
+}
+.menu-interior>a{
+  text-decoration: none;
+  color: yellowgreen;
+  margin: auto;
+  
+}
+
+
+#mi{
+  text-align: center;
+}
+
+#mi:hover{
+  /*text-decoration:overline;
+  text-decoration-color: black;*/
+  font-weight: bold;
+  color:#F25E3D;
+}
+
+.menu-interior{
+  grid-area: menui;
+  margin: auto;
+  text-align: center;
+}
+
+.redes{
+  color: yellowgreen;
+  display:inline-block;
+  grid-area: redes;
+  margin:auto;
+  font-size: 20px;
+  /*margin-right: 50px;*/
+  text-align: center;
+
+}
+
+.redes span{
+  margin-right: 25px;
+}
+
+.redes span:hover{
+
+ color:#F25E3D;
+
+}
+
+.copyright{
+  
+ /* grid-area: copy;*/
+  text-align: center;
+  margin-bottom: 0px;
+  padding-top: 8px;
+  font-size: 10px;
+}
