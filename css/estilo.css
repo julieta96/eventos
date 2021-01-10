@@ -278,5 +278,86 @@ background-color:  black;
 .paso1:hover , .paso2:hover , .paso3:hover{
     background-color: yellowgreen;
     color: black;
-    }  
+    }
+    
+
+.contenedor .e1 , .contenedor .e2 , 
+.contenedor .e3 , .contenedor .e4,
+.contenedor .e5 , .contenedor .e6{
+
+ display: flex;
+ justify-content: space-between;
+ margin-left: 10px;
+
+}
+
+.contenedor .e1{
+   grid-area: evento1;
+   padding: 0px 0px 100px 0px;
+   background: white;
+   margin: auto;
+}
+
+
+
+.contenedor .e2{
+    grid-area: evento2;
+    padding: 0px 0px 100px 0px;
+   background: white;
+   margin: auto;
+ }
+
+ .contenedor .e3{
+    grid-area: evento3;
+    padding: 0px 0px 100px 0px;
+   background: white;
+   margin: auto;
+ }
+
+ .contenedor .e4{
+    grid-area: evento4;
+    padding: 0px 0px 100px 0px;
+   background: white;
+   margin: auto;
+ }
+
+ .contenedor .e5{
+    grid-area: evento5;
+    padding: 0px 0px 100px 0px;
+   background: white;
+   margin: auto;
+    
+ }
+
+ .contenedor .e6{
+    grid-area: evento6;
+    padding: 0px 0px 100px 0px;
+   background: white;
+   margin: auto;
+ }
+
+
+
+.contenedor .mp1 , .contenedor .mp2 ,.contenedor .mp3 ,.contenedor .mp4 {
+   
+    width: 85px;
+    height: 60px;
+    justify-content: center;
+    margin: auto;
+    padding: 40px;
+
+}
+
+.contenedor .mp1 {
+    grid-area: mediopago1;
+    height: 50px;
+}
+
+.contenedor .mp2 {
+    grid-area: mediopago2;
+}
+
+.contenedor .mp3 {
+    grid-area: mediopago3;
+}  
 
