@@ -20,3 +20,32 @@ body{
                           "footer footer footer";
 }
 
+/*-----HEADER------*/
+
+.header{
+    height: 80%;
+    padding-bottom: 18px;
+}
+
+#menu{
+   
+   padding: 5px;
+}
+
+ .header .header1 {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+}
+
+.header .marca{
+    text-align: left;
+}
+
+
+
