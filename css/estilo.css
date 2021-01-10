@@ -240,3 +240,43 @@ body{
 .clearfix{
     clear: both;}
 
+
+  .contenedor .paso1 ,.contenedor .paso2 , .contenedor .paso3{
+  
+  border:1px solid yellowgreen;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 12px;
+  font-size: 15px;  
+}
+
+
+
+.paso1{
+    grid-area: p1;
+    background-color:  black;
+    color:yellowgreen;
+    padding-bottom: 40px;
+
+    }
+.paso2{
+    grid-area: p2;
+   background-color:  black;
+    color:yellowgreen;
+    padding-bottom: 40px;
+    }
+
+
+  .paso3{
+grid-area: p3;
+background-color:  black;
+    color:yellowgreen;
+    padding-bottom: 40px;
+}
+
+.paso1:hover , .paso2:hover , .paso3:hover{
+    background-color: yellowgreen;
+    color: black;
+    }  
+
