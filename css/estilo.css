@@ -133,5 +133,110 @@ body{
     color: white;
 }
 
+/*--------------------------------------------------------------*/
 
+.contenedor .slider{
+    grid-area: slider;
+    background-color: black;
+    height: 400px;
+    padding-top: 10px;
+    margin:auto;
+
+
+}
+
+.slider{
+  /* display: grid;
+  grid-gap: 10px;
+ grid-template-columns: repeat(3 , 1fr);
+  grid-template-rows:repeat(1 , auto) ;
+  grid-template-areas: "sl s sr";*/
+  padding-bottom: 30px;
+
+
+
+
+
+}
+
+.slider img{
+  display: block;
+  margin: auto;
+  grid-column: 2/3;
+  /*grid-area: s;*/
+  width: 1240px;
+  height: 400px;
+  margin: auto;
+  border: 10px solid #F25E3D;
+}
+.slider .eventos{
+  display: none;
+  margin:auto; 
+}
+
+.slider .eventos:first-child{
+  display: block;
+
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.0s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .8}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+#f-izq , #f-der{
+  position: relative;
+  top:-200px;
+  cursor: pointer;
+}
+
+ #f-izq{
+  grid-area:slider;
+  color: white;
+  float: left;
+ background-color: #F25E3D;
+ font-size: 50px;
+ /*grid-area:sl;*/
+ /*margin-bottom: 80%*/;
+ width: 5%;
+ justify-content:space-between;
+ position: relative;
+ grid-column: 1/2;
+ margin: auto;
+
+}
+
+
+  #f-der{
+  grid-area: slider;
+  color: white;
+  float: right;
+  background-color: #F25E3D;
+  font-size: 50px;
+ /*margin-bottom: 80%;*/
+ width: 5%;
+ /*grid-area: sr;*/
+ /*padding-left: 7%;*/
+
+
+
+
+}
+
+.clearfix{
+    clear: both;}
 
