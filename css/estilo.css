@@ -1,0 +1,22 @@
+body{
+    margin:0;
+    padding: 0;
+    background-color: #eeeeee;
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contenedor{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows:repeat(7 , auto) ;
+    grid-template-areas: "header header header"
+                          "slider slider slider"
+                          "p1       p2    p3"
+                          "evento1 evento2 evento3"
+                          "evento4 evento5 evento6"
+                          "mediopago1 mediopago2 mediopago3"
+                          "footer footer footer";
+}
+
