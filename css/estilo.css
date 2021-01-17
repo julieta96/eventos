@@ -13,7 +13,7 @@ body{
     grid-template-rows:repeat(7 , auto) ;
     grid-template-areas: "header header header"
                           "slider slider slider"
-                          "p1       p2    p3"
+                          "pasos  pasos    pasos"
                           "evento1 evento2 evento3"
                           "evento4 evento5 evento6"
                           "mediopago1 mediopago2 mediopago3"
@@ -238,51 +238,50 @@ input#buscador {
  /*padding-left: 7%;*/
 
 
-
-
 }
 
 .clearfix{
-    clear: both;}
+    clear: both;
+    width: 0;
+   height: 0;
+   padding: 0;
+   margin: 0;}
 
 
-  .contenedor .paso1 ,.contenedor .paso2 , .contenedor .paso3{
-  
+.contenedor .pasos{
+  grid-area: pasos;
+  display: flex;
+  width: auto;
+  /*border: 10px solid red ;*/
+  justify-content:flex-start;
+  margin-left: 0;
+}
+
+.paso1 , .paso2 , .paso3{
+
+  display: inline-block;
+  align-self: center;
+  color:yellowgreen; 
   border:1px solid yellowgreen;
-  padding: 10px;
-  text-align: center;
+  background-color:  black;
   font-family: 'Roboto', sans-serif;
-  margin-left: 12px;
-  font-size: 15px;  
+  /*padding: 10px;*/
+  text-align: center;
+  margin-left: 10px;
+  font-size: 15px; 
+  width: 400px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+ 
+
 }
 
-
-
-.paso1{
-    grid-area: p1;
-    background-color:  black;
-    color:yellowgreen;
-    padding-bottom: 40px;
-
-    }
-.paso2{
-    grid-area: p2;
-   background-color:  black;
-    color:yellowgreen;
-    padding-bottom: 40px;
-    }
-
-
-  .paso3{
-grid-area: p3;
-background-color:  black;
-    color:yellowgreen;
-    padding-bottom: 40px;
-}
 
 .paso1:hover , .paso2:hover , .paso3:hover{
     background-color: yellowgreen;
     color: black;
+    padding-top: 0px;
+    padding-bottom: 0px;
     }
     
 
