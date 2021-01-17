@@ -50,6 +50,11 @@ body{
     text-align: left;
 }
 
+.evento-marca{
+  text-decoration: none;
+  font-family: 'Cinzel', serif;
+}
+
 input#buscador {
 
     outline: none;
