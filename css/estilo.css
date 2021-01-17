@@ -14,9 +14,9 @@ body{
     grid-template-areas: "header header header"
                           "slider slider slider"
                           "pasos  pasos    pasos"
-                          "evento1 evento2 evento3"
-                          "evento4 evento5 evento6"
-                          "mediopago1 mediopago2 mediopago3"
+                          "eventos eventos eventos"
+                          "eventos eventos eventos"
+                          "mediospago mediospago mediospago"
                           "footer footer footer";
 }
 
@@ -247,6 +247,7 @@ input#buscador {
    padding: 0;
    margin: 0;}
 
+/*-----------------pasos-----------------------------*/
 
 .contenedor .pasos{
   grid-area: pasos;
@@ -255,6 +256,7 @@ input#buscador {
   /*border: 10px solid red ;*/
   justify-content:flex-start;
   margin-left: 0;
+  padding-bottom: 20px;
 }
 
 .paso1 , .paso2 , .paso3{
@@ -265,7 +267,6 @@ input#buscador {
   border:1px solid yellowgreen;
   background-color:  black;
   font-family: 'Roboto', sans-serif;
-  /*padding: 10px;*/
   text-align: center;
   margin-left: 10px;
   font-size: 15px; 
@@ -284,86 +285,67 @@ input#buscador {
     padding-bottom: 0px;
     }
     
+ /*-------------fin pasos-------------*/ 
+ 
+ /*------eventos-------------------*/  
 
-.contenedor .e1 , .contenedor .e2 , 
-.contenedor .e3 , .contenedor .e4,
-.contenedor .e5 , .contenedor .e6{
-
+.contenedor .evento{
+ grid-area: eventos;
  display: flex;
  justify-content: space-between;
  margin-left: 10px;
+ flex-wrap: wrap;
+ padding-top: 20px;
+
+}
+.evento .e1 , .evento .e2 ,
+ .evento .e3 , .evento .e4 ,
+  .evento .e5 , .evento .e6{
+   margin: auto;
+   padding-bottom: 20px;
+}
+
+
+
+/*-------------fin eventos----*/
+
+.contenedor .medios-pago{
+    grid-area: mediospago;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    padding-bottom: 15px;
+    /*border: 10px solid red;*/
+    padding-top: 1px;
+    padding-left:25px;
+    padding-right: 25px; 
 
 }
 
-.contenedor .e1{
-   grid-area: evento1;
-   padding: 0px 0px 100px 0px;
-   background: white;
-   margin: auto;
+.medios{
+
+  display: flex;
+  justify-content: space-between;
+
 }
 
-
-
-.contenedor .e2{
-    grid-area: evento2;
-    padding: 0px 0px 100px 0px;
-   background: white;
-   margin: auto;
- }
-
- .contenedor .e3{
-    grid-area: evento3;
-    padding: 0px 0px 100px 0px;
-   background: white;
-   margin: auto;
- }
-
- .contenedor .e4{
-    grid-area: evento4;
-    padding: 0px 0px 100px 0px;
-   background: white;
-   margin: auto;
- }
-
- .contenedor .e5{
-    grid-area: evento5;
-    padding: 0px 0px 100px 0px;
-   background: white;
-   margin: auto;
-    
- }
-
- .contenedor .e6{
-    grid-area: evento6;
-    padding: 0px 0px 100px 0px;
-   background: white;
-   margin: auto;
- }
-
-
-
-.contenedor .mp1 , .contenedor .mp2 ,.contenedor .mp3 ,.contenedor .mp4 {
-   
+ .mp1 , .mp2 , .mp3 {
     width: 85px;
-    height: 60px;
-    justify-content: center;
-    margin: auto;
-    padding: 40px;
-
-}
-
-.contenedor .mp1 {
-    grid-area: mediopago1;
     height: 50px;
+    align-self: center;
+    margin-right: 10px;
+
+  
 }
 
-.contenedor .mp2 {
-    grid-area: mediopago2;
-}
+.titulo-medios{
 
-.contenedor .mp3 {
-    grid-area: mediopago3;
-}  
+  text-align: center;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+
+}
 
 /*********************************************/
 
