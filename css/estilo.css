@@ -208,9 +208,9 @@ input#buscador {
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 3.5s;
   animation-name: fade;
-  animation-duration: 1.0s;
+  animation-duration: 3.0s;
 }
 
 @-webkit-keyframes fade {
@@ -236,8 +236,6 @@ input#buscador {
   float: left;
  background-color: #F25E3D;
  font-size: 50px;
- /*grid-area:sl;*/
- /*margin-bottom: 80%*/;
  width: 5%;
  justify-content:space-between;
  position: relative;
@@ -253,10 +251,8 @@ input#buscador {
   float: right;
   background-color: #F25E3D;
   font-size: 50px;
- /*margin-bottom: 80%;*/
- width: 5%;
- /*grid-area: sr;*/
- /*padding-left: 7%;*/
+  width: 5%;
+ 
 
 
 }
@@ -305,6 +301,7 @@ input#buscador {
     padding-top: 0px;
     padding-bottom: 0px;
     }
+
     
  /*-------------fin pasos-------------*/ 
  
@@ -324,6 +321,30 @@ input#buscador {
   .evento .e5 , .evento .e6{
    margin: auto;
    padding-bottom: 20px;
+}
+
+.evento>div{
+
+  border: 2px solid yellowgreen;
+  padding:2px 5px; 
+
+}
+
+.evento-card{
+  margin-bottom: 10px;
+}
+
+.evento-card >h2 , .evento-card>p{
+  text-align: center;
+  color: #fff;
+}
+
+.b-comprar-e{
+
+  margin: auto;
+  background: #cddc39;
+  border: 0;
+  outline: 0;
 }
 
 
