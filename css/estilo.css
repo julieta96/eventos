@@ -1,3 +1,4 @@
+
 body{
     margin:0;
     padding: 0;
@@ -19,8 +20,12 @@ body{
                           "eventos eventos eventos"
                           "mediospago mediospago mediospago"
                           "footer footer footer";
-  margin-right: 0;
                      
+}
+
+.contenedor{
+
+  margin-right: 0;
 }
 
 /*-----HEADER------*/
@@ -39,15 +44,15 @@ body{
 
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 1fr;
+    /*flex-wrap: wrap;*/
+    justify-content: space-evenly;
+   
 }
 
-.header .marca{
+ .marca{
     text-align: left;
+    margin-left: 0;
+    justify-content: flex-start;
 }
 
 .evento-marca{
@@ -55,28 +60,36 @@ body{
   font-family: 'Cinzel', serif;
 }
 
+.evento-marca >h2{
+   font-family: 'Cinzel', serif;
+}
+
+
+.buscador-lupa {
+
+  width: 500px;
+  /*border: 1px solid red;*/
+  padding: 5px;
+  display: flex;
+  flex-direction:row;
+  
+}
+
 input#buscador {
 
-    outline: none;
+    outline: none;  
+
 }
+
 
 #buscador{
     display: flex;
-    /*justify-content: start;*/
-    grid-column: 2/3;
-    justify-items: stretch;
-    /*flex-direction: row;
-    flex-wrap: wrap;*/
-    width: 100%
+    justify-items: center;
+
+    width: 100px;
+  
+ 
 }
-
-
-
-/*.icon-lupa{
-
-   grid-column: 2/3;
-}*/
-
 
 
 .icon-basket{
@@ -88,8 +101,16 @@ input#buscador {
 }
 
 .icon-lupa{
-    color: #fff;
+  color: #fff;
+  text-align: center;
+  margin: auto;
+  cursor: pointer;
+  padding: 5px;
+  background: yellowgreen;
+    
 }
+
+
 
 #menu ul li{
     display: inline-block;
@@ -131,6 +152,7 @@ input#buscador {
     /*border: 1px solid black;*/
 }
 
+
 .marca{
     font-family: 'Cinzel', serif;
     color: #fff;
@@ -159,16 +181,8 @@ input#buscador {
 }
 
 .slider{
-  /* display: grid;
-  grid-gap: 10px;
- grid-template-columns: repeat(3 , 1fr);
-  grid-template-rows:repeat(1 , auto) ;
-  grid-template-areas: "sl s sr";*/
+  
   padding-bottom: 30px;
-
-
-
-
 
 }
 
@@ -176,8 +190,7 @@ input#buscador {
   display: block;
   margin: auto;
   grid-column: 2/3;
-  /*grid-area: s;*/
-  width: 1240px;
+  width: auto;
   height: 400px;
   margin: auto;
   border: 10px solid #F25E3D;
