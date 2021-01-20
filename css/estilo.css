@@ -452,14 +452,14 @@ footer .copyright{
 
   border:0;
   font-family: 'Roboto', sans-serif;
-  background-color: #F25E3D;
+  background-color: #E8F0FE/*#F25E3D*/;
   height: 30px;
   width: 200px;
   outline: 0;
 }
 
 .e-mail::placeholder{
-  background-color: #F25E3D;
+  background-color: #E8F0FE;
   color: #000;
   font-family: 'Roboto', sans-serif;
   text-align: center;
