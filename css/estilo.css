@@ -33,6 +33,7 @@ body{
 .header{
     height: 80%;
     padding-bottom: 18px;
+    
 }
 
 #menu{
@@ -41,28 +42,31 @@ body{
 }
 
  .header .header1 {
-
     display: flex;
     flex-direction: row;
     /*flex-wrap: wrap;*/
-    justify-content: space-evenly;
-   
+    justify-content: space-around;
 }
 
- .marca{
+.marca{
     text-align: left;
     margin-left: 0;
-    justify-content: flex-start;
+
 }
 
 .evento-marca{
   text-decoration: none;
   font-family: 'Cinzel', serif;
+
+
 }
 
 .evento-marca >h2{
-   font-family: 'Cinzel', serif;
+
+  font-family: 'Cinzel', serif;
+  
 }
+
 
 
 .buscador-lupa {
@@ -72,6 +76,7 @@ body{
   padding: 5px;
   display: flex;
   flex-direction:row;
+  justify-content: space-evenly;
   
 }
 
@@ -152,11 +157,12 @@ input#buscador {
     /*border: 1px solid black;*/
 }
 
-
 .marca{
-    font-family: 'Cinzel', serif;
+    font: 'Cinzel', serif;
     color: #fff;
+
 }
+
 .contenedor #menu{
     grid-area:menuu;
     background-color: yellowgreen;
@@ -190,7 +196,7 @@ input#buscador {
   display: block;
   margin: auto;
   grid-column: 2/3;
-  width: auto;
+  width: 1220px;
   height: 400px;
   margin: auto;
   border: 10px solid #F25E3D;
@@ -308,6 +314,7 @@ input#buscador {
  /*------eventos-------------------*/  
 
 .contenedor .evento{
+
  grid-area: eventos;
  display: flex;
  justify-content: space-between;
@@ -319,6 +326,7 @@ input#buscador {
 .evento .e1 , .evento .e2 ,
  .evento .e3 , .evento .e4 ,
   .evento .e5 , .evento .e6{
+
    margin: auto;
    padding-bottom: 20px;
 }
@@ -331,20 +339,42 @@ input#buscador {
 }
 
 .evento-card{
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
-.evento-card >h2 , .evento-card>p{
+.evento-card >h2 , .evento-card>a , .evento-card>p{
   text-align: center;
   color: #fff;
 }
 
-.b-comprar-e{
+.evento-card a{
+
+  text-decoration: none;
+  color: #000;
+}
+
+.evento>.e4,.evento>.e5,.evento>.e6{
+  margin-top: 2%;
+}
+
+.b-detalle-e{
 
   margin: auto;
   background: #cddc39;
   border: 0;
   outline: 0;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.b-detalle-e:hover{
+
+  background: yellowgreen;
+
+
 }
 
 
