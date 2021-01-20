@@ -12,7 +12,7 @@ body{
     grid-template-columns: repeat(3 , 1fr);
     grid-template-rows:repeat(7 , auto) ;
     grid-template-areas: "header header header"
-                          "e-foto e-foto e-desc"
+                          "e-desc e-desc e-desc"
                           "mapa-t mapa-t mapa-t"
                           "mapa mapa mapa"
                           "evento-t evento-t evento-t"
@@ -71,6 +71,7 @@ body{
 }
 
 #menu ul li a{
+
     font-family: 'Roboto', sans-serif;
     color:black;
     font-weight:300;
@@ -117,10 +118,10 @@ body{
     font-family: 'Cinzel', serif;
     color: #fff;
 }
+
 #menu{
-    grid-area:menuu;
+
     background-color: yellowgreen;
-    grid-gap: 0;
 
 }
 
@@ -154,7 +155,6 @@ input#buscador {
 .buscador-lupa {
 
   width: 500px;
-  /*border: 1px solid red;*/
   padding: 5px;
   display: flex;
   flex-direction:row;
@@ -174,28 +174,35 @@ input#buscador {
 
 /*--------------------------------------------------------------*/
 
-.e-img{
-  grid-area: e-foto;
-  margin-left: 200px ;
-}
+
 
 .descripcion-e{
   grid-area: e-desc;
   color: white;
-  /*border:2px solid white ;*/
-  margin-left: -250px;
-  width: 400px;
+  width: 900px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /*border: 10px solid red;*/
+  margin: auto;
 }
 
-.descripcion-e h3 , .descripcion-e .fecha-hora , .descripcion-e .organizador , .descripcion-e .desc-e {
+.descripcion-e h3 {
+
   text-align: center;
 }
 
-/*.descripcion-e h3{
-  text-decoration: underline;
-  text-decoration-color: yellowgreen;
-}*/
+.descripcion-e_detalle>p{
+  text-align: left;
+}
 
+.descripcion-e_img{
+
+  margin-right: 50px;
+  display: flex;
+  justify-content: center;
+  /*border: 10px solid blue;*/
+}
 
  .b-incribirse{
 
@@ -203,23 +210,20 @@ input#buscador {
   border: 0;
   font-family: 'Roboto', sans-serif;
   color: #F0F4C3;
-  /*border-radius: 10px;*/
   padding: 10px;
   width: 300px;
   font-size: 15px;
   font-weight: bold;
-  margin-left: 50px;
 }
 
 .b-incribirse:hover{
   color: black;
-  /*text-decoration: underline;*/
 
 }
 
 .desc{
-  margin-left: 30px;
-  text-align: center;
+
+  text-align: left;
 }
 
 .mapa-t{
@@ -253,7 +257,6 @@ input#buscador {
 
 .e-relacionados img{
   
-  margin-right: 5px;
 
 }
 
