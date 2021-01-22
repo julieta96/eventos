@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <script type="text/javascript" src="js/validacion_js.js"></script>
+  
   
  </head>
   <body>
@@ -21,7 +21,7 @@
 
         <div class="header1">
 
-           <a href="index.html" class="evento-marca">
+           <a href="index.html" class="evento-marca" id="ver-evento">
               <h2 class="icon-diamond marca">Eventos.com</h2>
            </a>
 
@@ -57,9 +57,9 @@
          </div>
          <div class="descripcion-e_detalle">
 
-          <h2>RECITALES</h2>
-          <p class="fecha-hora">Fecha y hora: 28/01/2021 20hs</p>
-          <p class="organizador">Organizador: Iure</p>
+          <h2 class="titulo">RECITALES</h2>
+          <p class="fecha-hora">Fecha y hora: <span class="cambio-hora">28/01/2021 20hs</span></p>
+          <p class="organizador">Organizador: <span class="cambio-organizador">Iure</span> </p>
           <p class="desc-e">Descripcion del evento: 
           <p class="desc">
             Lorem ipsum dolor sit amet consectetur,<br>
@@ -86,7 +86,16 @@
 
           <h2 class="eventos-t">EVENTOS RELACIONADOS</h2>
 
-          <span class="e-relacionados"><img src="img/eventos/2.jpg" class="eventos-r1"><img src="img/eventos/3.jpg" class="eventos-r2"><img src="img/eventos/4.jpg" class="eventos-r3"><img src="img/eventos/5.jpg" class="eventos-r5"><img src="img/eventos/6.jpg" class="eventos-r6"></span> 
+          <span class="e-relacionados">
+            <div id="f-izq" class="icon-left-open"></div>
+            <a href="#ver-evento"><img src="img/eventos/2.jpg" class=" evento eventos-r2"></a>
+            <a href="#ver-evento"><img src="img/eventos/3.jpg" class=" evento eventos-r3"></a>
+            <a href="#ver-evento"><img src="img/eventos/4.jpg" class=" evento eventos-r4"></a>
+            <a href="#ver-evento"><img src="img/eventos/5.jpg" class=" evento eventos-r5"></a>
+            <a href="#ver-evento"><img src="img/eventos/6.jpg" class=" evento eventos-r6"></a>
+            <a href="#ver-evento"><img src="img/eventos/1.png" class=" evento eventos-r1"></a>
+            <div id="f-der" class="icon-right-open"></div>
+         </span> 
 
     </section>
     
@@ -134,7 +143,7 @@
 
     </div>
 
-
+   <script type="text/javascript" src="js/eventos-relacionados.js"></script>
 
   </body>
 </html>
