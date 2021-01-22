@@ -13,10 +13,10 @@ body{
     grid-template-rows:repeat(7 , auto) ;
     grid-template-areas: "header header header"
                           "e-desc e-desc e-desc"
-                          "mapa-t mapa-t mapa-t"
                           "mapa mapa mapa"
-                          "evento-t evento-t evento-t"
-                          "evr evr evr"
+                          "mapa mapa mapa"
+                          "evento evento evento"
+                          "evento evento evento"
                           "footer footer footer";
 }
 
@@ -131,6 +131,7 @@ body{
 
 #opciones li a{
   text-decoration:none;
+
 }
 
 
@@ -138,7 +139,7 @@ body{
 #opciones .activo a {
   
   font-weight: bold;
-  color: white;
+  color: #000;
   
 }
 
@@ -183,13 +184,22 @@ input#buscador {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /*border: 10px solid red;*/
   margin: auto;
+  margin-bottom: 5%;
+
 }
 
-.descripcion-e h3 {
+.descripcion-e h2 {
 
   text-align: center;
+}
+
+.descripcion-e_detalle{
+
+  border-top: 1px solid yellowgreen;
+ 
+  padding: 5px;
+
 }
 
 .descripcion-e_detalle>p{
@@ -201,23 +211,25 @@ input#buscador {
   margin-right: 50px;
   display: flex;
   justify-content: center;
-  /*border: 10px solid blue;*/
 }
 
  .b-incribirse{
 
-  background-color: yellowgreen;
+  background-color: #cddc39;
   border: 0;
   font-family: 'Roboto', sans-serif;
-  color: #F0F4C3;
+  /*color: #F0F4C3;*/
+  color: #000;
   padding: 10px;
-  width: 300px;
+  width: 400px;
   font-size: 15px;
   font-weight: bold;
+ align-self: center;
 }
 
 .b-incribirse:hover{
-  color: black;
+
+  background: yellowgreen;
 
 }
 
@@ -226,37 +238,57 @@ input#buscador {
   text-align: left;
 }
 
+.ubicacion{
+
+  grid-area: mapa;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  background:  #cddc39;
+  padding: 5px;
+  border-top: 5px solid yellowgreen; 
+
+}
+
 .mapa-t{
-  grid-area: mapa-t;
- border-top: 1px solid yellowgreen;
-  color: white;
+  
+  color: #000;
   text-align: center;
-  padding-top: 15px;
+
 }
 
 .mapa{
-  grid-area: mapa;
   margin: auto;
 }
 
+/**********************************************************/
+.section-evento{
+ grid-area: evento;
+ direction: flex;
+ flex-direction: column;
+ background: #cddc39;
+ border-top: 5px solid yellowgreen;
+
+}
+
 .eventos-t{
-  grid-area: evento-t;
-  color: white;
+  
+  color: #000;
   text-align: center;
-  border-top: 1px solid yellowgreen;
   padding-top: 15px; 
 
 }
 
 .e-relacionados{
-  grid-area: evr;
   margin: auto;
   padding-bottom: 20px;
 
 }
 
-.e-relacionados img{
-  
+.e-relacionados{
+  display: flex;
+flex-wrap: nowrap;
+
 
 }
 
