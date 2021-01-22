@@ -22,7 +22,10 @@ function mostrarImagenes(n){
 
   slider[n].style.display="block";
 
+
 }
+
+
 
 function right(){
 
