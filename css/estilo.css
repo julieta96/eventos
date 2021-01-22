@@ -25,7 +25,7 @@ body{
 
 .contenedor{
 
-  margin-right: 0;
+background:/*#ffffff*/#000;
 }
 
 /*-----HEADER------*/
@@ -182,7 +182,9 @@ input#buscador {
     height: 400px;
     padding-top: 10px;
     margin:auto;
-
+    width: 100%;
+    padding-right: 0%;
+    padding-left: 0%;
 
 }
 
@@ -196,10 +198,10 @@ input#buscador {
   display: block;
   margin: auto;
   grid-column: 2/3;
-  width: 1220px;
+  width: 100%;
   height: 400px;
   margin: auto;
-  border: 10px solid #F25E3D;
+
 }
 .slider .eventos{
   display: none;
@@ -234,19 +236,27 @@ input#buscador {
   position: relative;
   top:-200px;
   cursor: pointer;
+  border-radius: 150px;
 }
 
  #f-izq{
   grid-area:slider;
   color: white;
   float: left;
- background-color: #F25E3D;
  font-size: 50px;
  width: 5%;
  justify-content:space-between;
  position: relative;
  grid-column: 1/2;
  margin: auto;
+background-color: #000;
+
+
+
+}
+
+#f-izq::after{
+ opacity: 0.5;
 
 }
 
@@ -255,11 +265,14 @@ input#buscador {
   grid-area: slider;
   color: white;
   float: right;
-  background-color: #F25E3D;
+  background-color: #000;
   font-size: 50px;
   width: 5%;
- 
 
+}
+
+#f-der::after{
+ opacity: 0.5;
 
 }
 
@@ -286,9 +299,8 @@ input#buscador {
 
   display: inline-block;
   align-self: center;
-  color:yellowgreen; 
-  border:1px solid yellowgreen;
-  background-color:  black;
+  color:black; 
+  background-color: #cddc39;
   font-family: 'Roboto', sans-serif;
   text-align: center;
   margin-left: 10px;
@@ -425,11 +437,12 @@ input#buscador {
 .contenedor footer{
     grid-area: footer;
     background-color: black;
-    margin-bottom: 0;
     border-top: 1px solid yellowgreen;
     display: flex;
     flex-direction: column;
+
 }
+
 
 
 .footer-fila1{
