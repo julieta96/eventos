@@ -263,6 +263,31 @@ input#buscador {
 
 }
 
+.dot-slider>.dot{
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #000;
+  border-radius: 50%;
+  border: 1px solid yellowgreen;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+
+
+}
+
+.dot-slider{
+   display: flex;
+  flex-direction: row;
+  justify-content: center;
+   padding-top: 8px;
+
+}
+
+.active, .dot:hover {
+  background-color: #cddc39;
+}
 
 
 .clearfix{
