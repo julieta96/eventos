@@ -244,16 +244,16 @@ input#buscador {
   display: flex;
   flex-direction:column;
   justify-content: center;
-  background:  #cddc39;
+  background:  #000/*#cddc39*/;
   padding: 5px;
-  border-top: 5px solid yellowgreen;
+  /*border-top: 1px solid yellowgreen;*/
   margin-bottom: 0%; 
 
 }
 
 .mapa-t{
   
-  color: #000;
+  color: #fff;
   text-align: center;
 
 }
@@ -267,15 +267,15 @@ input#buscador {
  grid-area: evento;
  direction: flex;
  flex-direction: column;
- background: #cddc39;
- border-top: 5px solid yellowgreen;
+ background:#000/*#cddc39*/;
+ border-top: 1px solid yellowgreen;
  margin-top: 0%;
 
 }
 
 .eventos-t{
   
-  color: #000;
+  color: #fff;
   text-align: center;
   padding-top: 15px; 
 
