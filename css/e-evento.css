@@ -335,7 +335,6 @@ a .eventos-r1 {
 }
 /***************************************************/
 
-/*slider netflix*/
 
 .section-evento{
   width: 100%;
@@ -362,9 +361,14 @@ a .eventos-r1 {
 
 }
 
+
 .div-contenedor-img{
   
   transition:all .5s ease-in-out;
+}
+
+.e-img:hover{
+  filter: grayscale(80%);
 }
 
 .img-eventos:hover{
