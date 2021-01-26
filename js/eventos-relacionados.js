@@ -1,125 +1,84 @@
 
-/*function cambioEvento1(){
+$(document).ready(function(){
+
+	$("#f-izq").click(function(){
+
+		let slider= $(".div-contenedor-img");
+
+		$(slider[0]).css("display","none");
+		$(slider[1]).css("display","block");
+
+	})
 
 
-   
+	$("#f-der").click(function(){
 
-		   let cambioImagen = document.querySelector(".e-img");
-		    cambioImagen.src='img/eventos/2.jpg';
+		let slider= $(".div-contenedor-img");
 
-			/*let eventoClickeado = document.querySelector(".evento-r"+i);*/
-			/*let cambioClase = document.querySelector("evento-r2");
-			cambioClase.className = cambioClase[i].className.replace(".evento-r"+i, ".evento-r"+(i+1));*/
+		$(slider[1]).css("display","none");
+		$(slider[0]).css("display","block");
 
-			//let cambioTitulo = document.querySelector(".titulo");
-			//cambioTitulo.innerHTML="KARAOKE";
-			//let cambioFechaHora= document.querySelector(".cambio-hora");
-			//cambioFechaHora.innerHTML="02/09/2021 23hs";
-			//let cambioOrganizador= document.querySelector(".cambio-organizador");
-			//cambioOrganizador.innerHTML="Organizador2";
-//}
+	})
 
-//function cambioEvento2(){
+	$(".a_eventos1").click(function(){
+
+        $(".e-img").attr("src" ,"img/eventos/1.png");
+		$(".titulo").text("RECITALES");
+		$(".cambio-hora").text("28/01/2021 20hs");
+		$(".cambio-organizador").text("Iure");
+
+	})
+
+	$(".a_eventos2").click(function(){
+
+        $(".e-img").attr("src" ,"img/eventos/2.jpg");
+		$(".titulo").text("KARAOKE");
+		$(".cambio-hora").text("02/09/2021 23hs");
+		$(".cambio-organizador").text("Organizador2");
+
+		
+	})
+
+	$(".a_eventos3").click(function(){
+
+        $(".e-img").attr("src" ,"img/eventos/3.jpg");
+		$(".titulo").text("CUMPLEAÑOS");
+		$(".cambio-hora").text("10/07/2021 20hs");
+		$(".cambio-organizador").text("Organizador3");
+
+		
+	})
+
+	$(".a_eventos4").click(function(){
+
+        $(".e-img").attr("src" ,"img/eventos/4.jpg");
+		$(".titulo").text("CASAMIENTOS");
+		$(".cambio-hora").text("20/09/2021 23hs");
+		$(".cambio-organizador").text("Organizador4");
+
+		
+	})
+
+	$(".a_eventos5").click(function(){
+
+        $(".e-img").attr("src" ,"img/eventos/5.jpg");
+		$(".titulo").text("EGRESADOS");
+		$(".cambio-hora").text("12/12/2021 20hs");
+		$(".cambio-organizador").text("Organizador5");
+
+		
+	})
+
+	$(".a_eventos6").click(function(){
+
+        $(".e-img").attr("src" ,"img/eventos/6.jpg");
+		$(".titulo").text("FIESTA DE 15");
+		$(".cambio-hora").text("08/08/2021 21hs");
+		$(".cambio-organizador").text("Organizador6");
+
+		
+	})
 
 
-   
 
-		   //let cambioImagen = document.querySelector(".e-img");
-		    //cambioImagen.src='img/eventos/3.jpg';
-
-			/*let eventoClickeado = document.querySelector(".evento-r"+i);*/
-			/*let cambioClase = document.querySelector("evento-r2");
-			cambioClase.className = cambioClase[i].className.replace(".evento-r"+i, ".evento-r"+(i+1));*/
-
-			/*let cambioTitulo = document.querySelector(".titulo");
-			cambioTitulo.innerHTML="CUMPLEAÑOS";
-			let cambioFechaHora= document.querySelector(".cambio-hora");
-			cambioFechaHora.innerHTML="10/07/2021 21hs";
-			let cambioOrganizador= document.querySelector(".cambio-organizador");
-			cambioOrganizador.innerHTML="Organizador3";
-
-
-	
-	
-}*/
-
-//function cambioEvento3(){
-
-
-   
-
-		   //let cambioImagen = document.querySelector(".e-img");
-		   // cambioImagen.src='img/eventos/4.jpg';
-
-			/*let eventoClickeado = document.querySelector(".evento-r"+i);*/
-			/*let cambioClase = document.querySelector("evento-r2");
-			cambioClase.className = cambioClase[i].className.replace(".evento-r"+i, ".evento-r"+(i+1));*/
-
-			/*let cambioTitulo = document.querySelector(".titulo");
-			cambioTitulo.innerHTML="CASAMIENTOS";
-			let cambioFechaHora= document.querySelector(".cambio-hora");
-			cambioFechaHora.innerHTML="20/09/2021 22hs";
-			let cambioOrganizador= document.querySelector(".cambio-organizador");
-			cambioOrganizador.innerHTML="Organizador4";*/
-
-
-	
-	
-//}
-
-/*function click1(){
-
-	let evento1 = document.querySelector(".eventos-r2");
-	evento1=addEventListener("click" , cambioEvento1);
-
-}
-
-function click2(){
-
-	let evento2 = document.querySelector(".eventos-r3");
-	evento2=addEventListener("click" , cambioEvento2);
-	
-}
-
-function click3(){
-
-	let evento3 = document.querySelector(".eventos-r4");
-	evento3=addEventListener("click" , cambioEvento3);
-	
-}*/
-
-/*window.addEventListener("load",*/ 
-
-let arrowL = document.querySelector("#f-izq");
-let arrowR = document.querySelector("#f-der");
-
-//arrowR.addEventListener("click" ,cambiarImg);
-arrowL.addEventListener("click" ,cambiarImgL);
-
-/*function cambiarImgR(){
-
-	let cambioImagen1 = document.querySelector(".eventos-r5");
-	cambioImagen1.src='img/eventos/5.jpg';
-
-	let cambioImagen1 = document.querySelector(".eventos-r6");
-	cambioImagen1.src='img/eventos/6.jpg';
-
-	let cambioImagen1 = document.querySelector(".eventos-r1");
-	cambioImagen1.src='img/eventos/1.jpg';
-
-}*/
-
-function cambiarImgL(){
-
-	let cambioImagen2 = document.querySelector(".eventos-r2");
-	cambioImagen2.src='img/eventos/3.jpg';
-
-	let cambioImagen3 = document.querySelector(".eventos-r3");
-	cambioImagen3.src='img/eventos/4.jpg';
-
-	let cambioImagen4 = document.querySelector(".eventos-r4");
-	cambioImagen4.src='img/eventos/5.jpg';
-	cambioImagen4.style.display="block";
-
-}
-
+})
