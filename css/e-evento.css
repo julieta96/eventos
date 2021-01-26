@@ -335,6 +335,93 @@ a .eventos-r1 {
 }
 /***************************************************/
 
+/*slider netflix*/
+
+.section-evento{
+  width: 100%;
+  height: auto;
+  /*background: blue;*/
+  display: flex;
+  flex-direction:column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding-bottom: 20px;
+
+}
+
+.eventos-t{
+  padding: 10px;
+}
+
+.section-evento > div{
+
+  margin-right:20px;
+  margin-left:-10px;
+  align-self: center;
+  /*background: white;*/
+
+}
+
+.div-contenedor-img{
+  
+  transition:all .5s ease-in-out;
+}
+
+.img-eventos:hover{
+  
+  margin: 0 40px;
+  transform: scale(1.1);
+  filter: grayscale(80%);
+  transition:all .5s ease-in-out;
+  
+
+}
+
+.div-contenedor-img:first-child{
+  display: block
+
+}
+
+.div-contenedor-img:nth-child(2){
+  display: none;
+}
+
+
+.div-contenedor-img >a{
+  margin-right: 20px;
+}
+
+.section-evento  #f-izq, 
+.section-evento  #f-der{
+
+  color: #F25E3D;
+  font-weight: bold;
+  height: 100%;
+  width: 45px;
+  line-height: 250px;
+  font-size: 25px;
+  text-align: center;
+  /*background: red;*/
+  z-index: 1;
+  cursor: pointer;
+
+}
+
+ #f-izq{
+
+  /*left:-50% ;*/
+  float: left;
+}
+
+ #f-der{
+ 
+  /*right: 50%;*/
+ 
+  float: right;
+}
+
+/***************************************************/
+
  .contenedor footer{
     grid-area: footer;
     background-color: black;
