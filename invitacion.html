@@ -10,7 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <script type="text/javascript" src="js/validacion_js.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/invitacion.js"></script>
  
  </head>
   <body>
@@ -33,7 +34,7 @@
           <li><a href="index.html">INICIO</a></li>
           <li><a href="evento.html">EVENTO</a></li>
           <li><a href="entradas.html">ENTRADAS COMPRADAS</a></li>
-          <li><a href="invitacion.html">PERSONALIZAR INVITACION</a></li>
+          <li class="activo"><a href="invitacion.html">PERSONALIZAR INVITACION</a></li>
           <li><a href="formulario.html">FORMULARIO</a></li>
           <li><a href="contacto.html">CONTACTO</a></li>
         </ul>
@@ -45,125 +46,125 @@
      </header>
 
 
-      
+      <section class="section-invitacion-personalizada">
     
-      <div class="tarjeta">
+          <div class="tarjeta">
 
-       <h3 class="titulo">Titulo</h3>
-       <p>fecha , hora </p>
+            <h3 class="titulo"  id="titulo-e">Titulo</h3>
+            <p id="fecha-hora">fecha , hora </p>
         
-      </div>
+          </div>
     
 
 
-      <div class="personalizacion">
+          <form class="personalizacion" name="formulario" id="formulario">
         
-        <h3> Personalizacion de invitacion</h3>
+            <h3> Personalizacion de invitacion</h3>
 
-        <input type="text" placeholder="Titulo Evento" class="titulo-e">
+            <input type="text" placeholder="Titulo Evento" class="titulo-e" name="titulo-e">
 
-        <br><br>
+            <br><br>
 
-        Color
+            Color
 
-        <br> 
+            <br> 
       
-        <div class="opciones-color"> 
+            <div class="opciones-color"> 
 
-        <input type="radio">
-        <span class="icon-circle" id="negro"></span>
+            <input type="radio">
+           <span class="icon-circle" id="negro"></span>
 
-        <input type="radio">
-        <span class="icon-circle" id="blanco"></span>
+            <input type="radio">
+            <span class="icon-circle" id="blanco"></span>
 
-        <input type="radio">
-        <span class="icon-circle" id="rojo"></span>
+            <input type="radio">
+            <span class="icon-circle" id="rojo"></span>
 
-        <input type="radio">
-        <span class="icon-circle" id="azul"></span>
+            <input type="radio">
+            <span class="icon-circle" id="azul"></span>
         
-        <input type="radio">
-        <span class="icon-circle" id="verde"></span>
+            <input type="radio">
+            <span class="icon-circle" id="verde"></span>
 
-       </div>
+           </div>
 
-       <br><br>
+           <br><br>
 
-       Tamaño de fuente
+              Tamaño de fuente
 
-        <div class="size-texto"> 
+            <div class="size-texto"> 
 
-        <input type="radio">
-        <span id="texto1">20px</span>
+              <input type="radio">
+              <span id="texto1">20px</span>
 
-        <input type="radio">
-        <span id="texto2">28px</span>
+              <input type="radio">
+              <span id="texto2">28px</span>
 
-        <input type="radio">
-        <span id="texto3">32px</span>
+              <input type="radio">
+              <span id="texto3">32px</span>
         
-        <input type="radio">
-        <span id="texto4">48px</span>
+              <input type="radio">
+              <span id="texto4">48px</span>
 
-        <input type="radio">
-        <span id="texto5">60px</span>
+              <input type="radio">
+              <span id="texto5">60px</span>
 
-       </div>
+           </div>
 
-       <br><br>
+           <br><br>
 
-       <input type="text" placeholder="Fecha y Hora" class="fecha-hora">
+           <input type="text" placeholder="Fecha y Hora" class="fecha-hora" name="fecha-hora">
 
-       <br><br>
+           <br><br>
 
-       Ubicacion
+           Ubicacion
 
-       <br>
+           <br>
 
-       <div class="ubicacion"> 
+           <div class="ubicacion"> 
 
-        <input type="radio">
-        <div class="ubi1">1</div>
+             <input type="radio">
+             <div class="ubi1">1</div>
 
-       <input type="radio">
-        <div class="ubi2">2</div>
+             <input type="radio">
+             <div class="ubi2">2</div>
 
-        <input type="radio">
-       <div class="ubi3">3</div>
+             <input type="radio">
+             <div class="ubi3">3</div>
         
-      </div>
-      <br><br>
+          </div>
+          <br><br>
 
-      Fondo
-      <br>
+           Fondo
+          <br>
 
-      <div class="opciones-color"> 
+          <div class="opciones-color"> 
 
-        <input type="radio">
-        <span class="icon-fondo" id="negro"></span>
+              <input type="radio">
+              <span class="icon-fondo" id="negro"></span>
 
-        <input type="radio">
-        <span class="icon-fondo" id="blanco"></span>
+              <input type="radio">
+              <span class="icon-fondo" id="blanco"></span>
 
-        <input type="radio">
-        <span class="icon-fondo" id="rojo"></span>
+              <input type="radio">
+              <span class="icon-fondo" id="rojo"></span>
 
-        <input type="radio">
-        <span class="icon-fondo" id="azul"></span>
+              <input type="radio">
+              <span class="icon-fondo" id="azul"></span>
         
-        <input type="radio">
-        <span class="icon-fondo" id="verde"></span>
+              <input type="radio">
+              <span class="icon-fondo" id="verde"></span>
 
-       </div>
+          </div>
         
-        <br><br>
+          <br><br>
 
-      <input type="submit" value="CONFIRMAR" class="b-confirmar">
-
-      
+          <input type="submit" value="CONFIRMAR" class="b-confirmar">
 
 
-      </div>
+          </form>
+
+      </section>
 
       <br> <br>
       
@@ -173,7 +174,7 @@
         <br>
 
         <div class="casilla-de-mail">
-          <input type="text" placeholder="ingresa tu e-mail" name="email" class="email"><input type="submit" name="enviar" class="suscribirse" value="ENVIAR">
+          <input type="text" placeholder="INGRESA TU E-MAIL" name="email" class="email"><input type="submit" name="enviar" class="suscribirse" value="ENVIAR">
         </div>
         <div class="menu-interior">
           <a href="inicio.html" id="mi">INICIO</a><br>

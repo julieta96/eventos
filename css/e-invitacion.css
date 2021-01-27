@@ -6,15 +6,16 @@ body{
 }
 
 .contenedor4{
+
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(3 , 1fr);
     grid-template-rows:repeat(5 , auto) ;
-    grid-template-areas: "header header header"
-                          "tarjeta tarjeta personalizacion"
-                          "tarjeta tarjeta personalizacion"
-                          "footer footer footer"
-                          "footer footer footer";
+    grid-template-areas:  "header                 header                header"
+                          "tarjeta-personalizada  tarjeta-personalizada tarjeta-personalizada"
+                          "tarjeta-personalizada  tarjeta-personalizada tarjeta-personalizada"
+                          "footer                 footer                footer"
+                          "footer                 footer                footer";
 }
 
 /*-----HEADER------*/
@@ -92,6 +93,13 @@ body{
 }
 
 
+#menu .opciones .activo a {
+  
+  font-weight: bold;
+  color: #000;
+  
+}
+
 
  .header{
     grid-area: header;
@@ -112,7 +120,7 @@ body{
     color: #fff;
 }
 #menu{
-    grid-area:menuu;
+    
     background-color: yellowgreen;
     grid-gap: 0;
 
@@ -126,6 +134,26 @@ body{
 
 /*--------------------------------------------------------------*/
 
+.section-invitacion-personalizada{
+
+  grid-area: tarjeta-personalizada;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 30px;
+
+}
+
+.section-invitacion-personalizada >div ,
+.section-invitacion-personalizada >form{
+
+  margin-right: 10px;
+  margin-left: 10px;
+
+
+}
+
 
  .tarjeta{
   background-color: black;
@@ -136,6 +164,7 @@ body{
   grid-area: tarjeta;
   margin-left: 200px;
   position: relative;
+
 
 
  }
@@ -150,13 +179,18 @@ body{
   bottom: 0px;
  }
 
+
 .personalizacion{
-  grid-area: personalizacion;
-   /*border:1px  solid red;*/
-   color:white;
-   width: 400px;
+
+  grid-area: tarjeta-personalizada;
+  color:white;
+  width: 400px;
   height: 10%;
   margin-right: 200px;
+ display: flex;
+ flex-direction: column;
+ text-align: center;
+ justify-content: center;
 
 }
 
@@ -168,10 +202,18 @@ body{
 
 }
 
+.personalizacion >input ,
+.personalizacion >div{
+     
+     align-self: center;
+
+ }
+
 .titulo-e{
   padding: 10px;
   background-color: #CDDC39;
   border:0;
+  outline: 0;
 }
 
 .fecha-hora{
@@ -179,6 +221,7 @@ body{
    padding: 10px;
   background-color: #CDDC39;
   border:0;
+  outline: 0;
 
 }
 
@@ -255,18 +298,20 @@ input[type="text"]{
 
   background-color: yellowgreen;
   border:0;
-  color: #F0F4C3;
+  color: #000/*#F0F4C3*/;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
   padding: 8px;
   /*border-radius: 10px;*/
   width: 320px;
   padding: 10px;
+  outline: 0;
+
 
 }
 
 .b-confirmar:hover{
-  color: black;
+  background: #CDDC39;
 }
 
 
@@ -299,15 +344,25 @@ footer .copyright{
 
 }
 
+
+
 .email{
 
   border:0;
   font-family: 'Roboto', sans-serif;
-  background-color: #F25E3D;
+  background-color: #E8F0FE/*#F25E3D*/;
   height: 30px;
   width: 200px;
- /* border-radius: 5px;*/
-  
+  outline: 0;
+}
+
+.email::placeholder{
+  background-color: #E8F0FE;
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-weight: 5px;
+
 }
 
 .casilla-de-mail{
@@ -325,7 +380,7 @@ footer .copyright{
   height: 32px;
   background-color: yellowgreen;
   font-weight: bold;
-  /*border-radius: 5px;*/
+  outline: 0;
 }
 
 .suscribirse:hover{
