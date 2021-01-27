@@ -93,6 +93,13 @@ body{
   text-decoration:none;
 }
 
+.opciones .activo a {
+  
+  font-weight: bold;
+  color: #000;
+  
+}
+
 
 
  .header{
@@ -106,7 +113,30 @@ body{
     margin: auto;
     height: 30px;
     width:100% ;
+    outline: 0;
+    background: #E8F0FE;
+    border: 0;
    
+}
+
+.buscador-lupa {
+
+  width: 500px;
+  padding: 5px;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-evenly;
+  
+}
+
+.icon-lupa{
+  color: #fff;
+  text-align: center;
+  margin: auto;
+  cursor: pointer;
+  padding: 6px;
+  background: yellowgreen;
+    
 }
 
 .marca{
@@ -137,18 +167,30 @@ body{
   grid-area: tabla;
   display: grid;
   grid-template-columns: repeat(6,1fr);
-  grid-template-rows: repeat(8,1fr);
+  grid-template-rows: repeat(7,1fr);
+ 
 
 }
-
+.tabla >.fila1{
+  color: #000;
+  border-top: 1px solid yellowgreen;
+  border-bottom: 1px solid yellowgreen;
+}
 .tabla>div{
- border: 1px solid yellowgreen;
- color: /*black*/white;
+ 
+ color:#E8F0FE;
  text-align: center;
  padding:10px;
  background-color: #6E8C03;
+ border-right: 1px solid yellowgreen;
+ border-left: 1px solid yellowgreen;
+
 }
 
+.fila1{
+  color: #000;
+  font-weight: bold;
+}
 
 .personalizar{
     background-color:#F2A341 ;
@@ -173,39 +215,29 @@ body{
 
 .botones-compra{
   grid-area: botones;
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  grid-template-rows: repeat(2, 1fr);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 
-
-
 .b-scomprar , .b-fcompra{
-  /*border-radius: 10px;*/
   background-color: yellowgreen;
   width: 200px;
   padding: 10px;
   border:0;
-  margin: auto;
-  color: white;
+  color: #000;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
+  margin-left: 50px;
 }
 
-.b-scomprar {
-
-  grid-column: 2/3;
-
-}
-
-.b-fcompra{
-  grid-column: 3/4;
-}
 
 .b-scomprar:hover , .b-fcompra:hover{
-   color: black;
-  /*text-decoration: underline*/;
+   background: #cddc39;
+  
 }
 
 /***********************************************************/
@@ -241,21 +273,30 @@ footer .copyright{
 
   border:0;
   font-family: 'Roboto', sans-serif;
-  background-color: #F25E3D;
+  background-color: #E8F0FE;
   height: 30px;
   width: 200px;
- /* border-radius: 5px;*/
+  outline: 0;
+  color: #000;
   
 }
+
+.email::placeholder{
+  background-color: #E8F0FE;
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-weight: 5px;
+
+}
+
 
 .casilla-de-mail{
 
  grid-area: email;
- /* margin-left: 20px;*/
  margin: auto;
 
 }
-
 
 .suscribirse{
   border: 0;
@@ -263,7 +304,7 @@ footer .copyright{
   height: 32px;
   background-color: yellowgreen;
   font-weight: bold;
-  /*border-radius: 5px;*/
+  outline: 0;
 }
 
 .suscribirse:hover{
@@ -282,8 +323,6 @@ footer .copyright{
 }
 
 #mi:hover{
-  /*text-decoration:overline;
-  text-decoration-color: black;*/
   font-weight: bold;
   color:#F25E3D;
 }
