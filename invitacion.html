@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/tarjeta-personalizada.js"></script>
+  <script type="text/javascript" src="js/tarjeta-personalizada2.js"></script>
  
  </head>
   <body>
@@ -23,7 +24,10 @@
       <div class="header1">
         <h2 class="icon-diamond marca">Eventos.com</h2>
 
-      <input type="search" id="buscador" placeholder="buscar">
+       <div class="buscador-lupa">
+              <input type="search" id="buscador" placeholder="buscar">
+              <div class="icon-lupa" id="lupa"></div>
+           </div>
 
         <div class="icon-basket carrito"></div>
 
@@ -71,20 +75,20 @@
       
             <div class="opciones-color"> 
 
-            <input type="radio">
-           <span class="icon-circle" id="negro"></span>
+                <input type="radio" name="colores" id="c-negro">
+                <label for="c-negro" class="icon-circle" id="negro"></label>
 
-            <input type="radio">
-            <span class="icon-circle" id="blanco"></span>
+                <input type="radio" name="colores" id="c-blanco"> 
+                <label for="c-blanco"class="icon-circle" id="blanco"></label>
 
-            <input type="radio">
-            <span class="icon-circle" id="rojo"></span>
+                <input type="radio"  name="colores" id="c-rojo">
+                <label for="c-rojo" class="icon-circle" id="rojo"></label>
 
-            <input type="radio">
-            <span class="icon-circle" id="azul"></span>
+                <input type="radio" name="colores" id="c-azul">
+                <label for="c-azul" class="icon-circle" id="azul"></label>
         
-            <input type="radio">
-            <span class="icon-circle" id="verde"></span>
+                <input type="radio"  name="colores" id="c-verde">
+                <label for="c-verde" class="icon-circle" id="verde"></label>
 
            </div>
 
@@ -94,20 +98,20 @@
 
             <div class="size-texto"> 
 
-              <input type="radio">
-              <span id="texto1">20px</span>
+              <input type="radio" name="size" id="size20">
+              <label for="size20" id="texto1">20px</label>
 
-              <input type="radio">
-              <span id="texto2">28px</span>
+              <input type="radio" name="size" id="size28">
+              <label for="size28" id="texto2">28px</label>
 
-              <input type="radio">
-              <span id="texto3">32px</span>
+              <input type="radio" name="size" id="size32">
+              <label for="size32" id="texto3">32px</label>
         
-              <input type="radio">
-              <span id="texto4">48px</span>
+              <input type="radio" name="size" id="size48">
+              <label for="size48" id="texto4">48px</label>
 
-              <input type="radio">
-              <span id="texto5">60px</span>
+              <input type="radio" name="size" id="size60">
+              <label for="size60" id="texto5">60px</label>
 
            </div>
 
@@ -123,14 +127,14 @@
 
            <div class="ubicacion"> 
 
-             <input type="radio">
-             <div class="ubi1">1</div>
+             <input type="radio" name="ubicacion" id="ub-1">
+             <label for="ub-1" class="ubi1">1</label>
 
-             <input type="radio">
-             <div class="ubi2">2</div>
+             <input type="radio" name="ubicacion" id="ub-">
+             <label for="ub-2" class="ubi2">2</label>
 
-             <input type="radio">
-             <div class="ubi3">3</div>
+             <input type="radio" name="ubicacion" id="ub-">
+             <label for="ub-3" class="ubi3">3</label>
         
           </div>
           <br><br>
@@ -140,20 +144,20 @@
 
           <div class="opciones-color"> 
 
-              <input type="radio">
-              <span class="icon-fondo" id="negro"></span>
+              <input type="radio" name="fondo" id="b-negro">
+              <label for="b-negro" class="icon-fondo" id="negro"></label>
 
-              <input type="radio">
-              <span class="icon-fondo" id="blanco"></span>
+              <input type="radio" name="fondo" id="b-blanco">
+              <label for="b-blanco" class="icon-fondo" id="blanco"></label>
 
-              <input type="radio">
-              <span class="icon-fondo" id="rojo"></span>
+              <input type="radio" name="fondo" id="b-rojo">
+              <label for="b-rojo" class="icon-fondo" id="rojo"></label>
 
-              <input type="radio">
-              <span class="icon-fondo" id="azul"></span>
+              <input type="radio" name="fondo" id="b-azul">
+              <label for="b-azul" class="icon-fondo" id="azul"></label>
         
-              <input type="radio">
-              <span class="icon-fondo" id="verde"></span>
+              <input type="radio" name="fondo" id="b-verde">
+              <label for="b-verde "class="icon-fondo" id="verde"></label>
 
           </div>
         

@@ -108,12 +108,36 @@ body{
     
 }
 
- #buscador{
+  #buscador{
     margin: auto;
     height: 30px;
     width:100% ;
+    outline: 0;
+    background: #E8F0FE;
+    border: 0;
    
 }
+
+.buscador-lupa {
+
+  width: 500px;
+  padding: 5px;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-evenly;
+  
+}
+
+.icon-lupa{
+  color: #fff;
+  text-align: center;
+  margin: auto;
+  cursor: pointer;
+  padding: 6px;
+  background: yellowgreen;
+    
+}
+
 
 .marca{
     font-family: 'Cinzel', serif;
@@ -156,7 +180,7 @@ body{
 
 
  .tarjeta{
-  background-color: black;
+ 
   color: white;
   border:1px  solid yellowgreen;
   width: 400px;
@@ -225,6 +249,13 @@ body{
 
 }
 
+input[type=radio]{
+
+  cursor: pointer;
+
+}
+
+
 #negro {
 
   color: black;
@@ -266,7 +297,7 @@ input[type="text"]{
 
 }
 
-.ubicacion>div{
+.ubicacion>label{
   background-color: white;
   width: 30px;
   height:20px;
