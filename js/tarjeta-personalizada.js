@@ -1,4 +1,10 @@
-$(document).on("keyup", "#formulario input[name='titulo-e'], #formulario input[name='fecha-hora']", function(event){
+
+
+$(document).on("keyup", "#formulario input[name='titulo-e'], #formulario input[name='fecha-hora']", 
+
+  function(event){
+
+
      let titulo=''
      let fechaHora=''
 
@@ -14,6 +20,8 @@ $(document).on("keyup", "#formulario input[name='titulo-e'], #formulario input[n
        $("#fecha-hora").text(fechaHora)
     }
     
-    
+ 
 
 })
+
+
