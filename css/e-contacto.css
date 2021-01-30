@@ -1,0 +1,306 @@
+body{
+    margin:0;
+    padding: 0;
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contenedor7{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows:repeat(6 , auto) ;
+    grid-template-areas: "header header header"
+                         "titulo titulo titulo"
+                         "contacto contacto emp-contacto"
+                         "titulo-ubi titulo-ubi titulo-ubi"
+                          "mapa mapa mapa"
+                          "footer footer footer"
+                          "footer footer footer";
+}
+
+/*-----HEADER------*/
+
+.header{
+    height: 80%;
+    padding-bottom: 18px;
+}
+
+#menu{
+   
+   padding: 5px;
+}
+
+ .header1 {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+ .header .header1 {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+}
+
+ .marca{
+    text-align: left;
+}
+
+
+ #buscador{
+    display: flex;
+    justify-content: center;
+}
+
+
+.icon-basket{
+   font-size: 20px;
+   grid-column: 3/-1 ;
+   line-height: 50px;
+   text-align: center;
+   color: #fff;
+   line-height: 70px;
+}
+
+.icon-lupa{
+    color: #fff;
+}
+
+#menu ul li{
+    display: inline-block;
+    margin-right: 10px;  
+
+}
+
+#menu ul li a{
+    font-family: 'Roboto', sans-serif;
+    color:black;
+    font-weight:300;
+    margin-right: 10px;
+    margin-left: 50px;
+    
+}
+
+.opciones li a{
+  text-decoration:none;
+}
+
+
+ .header{
+    grid-area: header;
+    background-color: black;
+    
+    
+}
+
+ #buscador{
+    margin: auto;
+    height: 30px;
+    width:100% ;
+   
+}
+
+.marca{
+    font-family: 'Cinzel', serif;
+    color: #fff;
+}
+#menu{
+    grid-area:menuu;
+    background-color: yellowgreen;
+    grid-gap: 0;
+
+}
+
+#menu a:hover{
+    color: white;
+}
+
+
+/*--------------------------------------------------------------*/
+
+
+ #titulo-contacto{
+  grid-area: titulo;
+  color: white;
+  text-align: left;
+  margin-left: 80px;
+
+
+ }
+
+ .contacto{
+   
+   grid-area: contacto;
+   margin-left: 80px;
+ }
+
+ .contacto>input ,.contacto>textarea{
+  width: 400px;
+  text-align: center;
+ }
+
+ .contacto>textarea{
+  height: 100px;
+  font-family: 'Roboto', sans-serif;
+ }
+
+
+ .datos-empresa{
+  grid-area: emp-contacto;
+  color: white;
+  margin-right: 80px;
+ }
+
+ #b-enviar{
+  margin: auto;
+  /*border-radius: 10px;*/
+  background-color: yellowgreen;
+  width: 400px;
+  padding: 10px;
+  border:0;
+  color: white;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  margin-right: 30px;
+ }
+
+ #b-enviar:hover{
+  color:black;
+ }
+
+.mapa{
+  grid-area: titulo-ubi;
+  text-align: center;
+  color: white;
+}
+
+.mapagoogle{
+  grid-area:mapa;
+  margin: auto;
+  width: 950px;
+}
+
+
+/*--------------------------------*/
+
+ footer{
+    grid-area: footer;
+    background-color: black;
+    margin-bottom: 0;
+    border-top: 1px solid white;
+}
+
+footer .copyright{
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;
+
+}
+
+
+#footer{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(1,1fr);
+  grid-template-areas: "email menui redes"
+                       /*"copy copy copy"*/;
+
+ padding-top: 15px;
+ border-top: 1px solid yellowgreen;
+
+}
+
+.email{
+
+  border:0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #F25E3D;
+  height: 30px;
+  width: 200px;
+ /* border-radius: 5px;*/
+  
+}
+
+.casilla-de-mail{
+
+ grid-area: email;
+ /* margin-left: 20px;*/
+ margin: auto;
+
+}
+
+
+.suscribirse{
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+  height: 32px;
+  background-color: yellowgreen;
+  font-weight: bold;
+  /*border-radius: 5px;*/
+}
+
+.suscribirse:hover{
+  background-color: #F25E3D;
+}
+.menu-interior>a{
+  text-decoration: none;
+  color: yellowgreen;
+  margin: auto;
+  
+}
+
+
+#mi{
+  text-align: center;
+}
+
+#mi:hover{
+  /*text-decoration:overline;
+  text-decoration-color: black;*/
+  font-weight: bold;
+  color:#F25E3D;
+}
+
+.menu-interior{
+  grid-area: menui;
+  margin: auto;
+  text-align: center;
+}
+
+.redes{
+  color: yellowgreen;
+  display:inline-block;
+  grid-area: redes;
+  margin:auto;
+  font-size: 20px;
+  /*margin-right: 50px;*/
+  text-align: center;
+
+}
+
+.redes span{
+  margin-right: 25px;
+}
+
+.redes span:hover{
+
+ color:#F25E3D;
+
+}
+
+.copyright{
+  
+ /* grid-area: copy;*/
+  text-align: center;
+  margin-bottom: 0px;
+  padding-top: 8px;
+  font-size: 10px;
+}
