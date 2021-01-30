@@ -378,14 +378,46 @@ input[type="text"]{
 
 }
 
-.ubi1:before{
+/*.ub-1:before , .ub-2:before , .ub-3:before{
   content: '';
   background-color: black;
-  width: 50px;
+  width: 10px;
   height: 10px;
+  z-index: 1;
 
+
+}*/
+
+
+.position{
+
+  background: black;
+  width: 10px;
+  height: 5px;
+  outline: 0;
+ 
 
 }
+
+.p1{
+
+margin-left: 0px;
+  
+}
+
+.p2{
+
+   margin: auto;
+ 
+}
+
+.p3{
+
+ margin-left: 20px;
+  
+}
+
+
 
 
 
