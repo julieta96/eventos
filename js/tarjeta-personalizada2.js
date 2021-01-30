@@ -1,28 +1,44 @@
 $(document).ready(function(){
 
 
-    let inputNegro = document.querySelector("#c-negro");
-    let inputBlanco = document.querySelector("#c-blanco");
-    let inputRojo = document.querySelector("#c-rojo");
-    let inputAzul = document.querySelector("#c-azul");
-    let inputVerde = document.querySelector("#c-verde");
 
-    let fontSize20= document.querySelector("#size20");
-    let fontSize28= document.querySelector("#size28");
-    let fontSize32= document.querySelector("#size32");
-    let fontSize48= document.querySelector("#size48");
-    let fontSize60= document.querySelector("#size60");
+    let inputNegroT = document.querySelector("#c-negro-t");
+    let inputBlancoT = document.querySelector("#c-blanco-t");
+    let inputRojoT = document.querySelector("#c-rojo-t");
+    let inputAzulT = document.querySelector("#c-azul-t");
+    let inputVerdeT = document.querySelector("#c-verde-t");
 
-    let bNegro = document.querySelector("#b-negro");
-    let bBlanco = document.querySelector("#b-blanco");
-    let bRojo = document.querySelector("#b-rojo");
-    let bAzul = document.querySelector("#b-azul");
-    let bVerde = document.querySelector("#b-verde");
+
+
+    let fontSize20T= document.querySelector("#size20-t");
+    let fontSize28T= document.querySelector("#size28-t");
+    let fontSize32T= document.querySelector("#size32-t");
+    let fontSize48T= document.querySelector("#size48-t");
+    let fontSize60T= document.querySelector("#size60-t");
+
+
+    let inputNegroFH = document.querySelector("#c-negro-fh");
+    let inputBlancoFH = document.querySelector("#c-blanco-fh");
+    let inputRojoFH = document.querySelector("#c-rojo-fh");
+    let inputAzulFH = document.querySelector("#c-azul-fh");
+    let inputVerdeFH = document.querySelector("#c-verde-fh");
+
+    let fontSize20FH= document.querySelector("#size20-fh");
+    let fontSize28FH= document.querySelector("#size28-fh");
+    let fontSize32FH= document.querySelector("#size32-fh");
+    let fontSize48FH= document.querySelector("#size48-fh");
+    let fontSize60FH= document.querySelector("#size60-fh");
+
+    let bNegroT = document.querySelector("#b-negro");
+    let bBlancoT = document.querySelector("#b-blanco");
+    let bRojoT = document.querySelector("#b-rojo");
+    let bAzulT = document.querySelector("#b-azul");
+    let bVerdeT = document.querySelector("#b-verde");
     
 
- //INPUT-COLOR
+ //INPUT COLOR TITULO
 
-    inputNegro.addEventListener("click",function(){
+    inputNegroT.addEventListener("click",function(){
 
 
           $('.titulo').css("color","#000");
@@ -30,7 +46,7 @@ $(document).ready(function(){
       })
 
    
-  inputBlanco.addEventListener("click",function(){
+  inputBlancoT.addEventListener("click",function(){
 
 
           $('.titulo').css("color","#fff");
@@ -38,7 +54,7 @@ $(document).ready(function(){
       })
 
 
-  inputRojo.addEventListener("click",function(){
+  inputRojoT.addEventListener("click",function(){
 
 
           $('.titulo').css("color","#f00");
@@ -46,7 +62,7 @@ $(document).ready(function(){
       })
 
 
-  inputAzul.addEventListener("click",function(){
+  inputAzulT.addEventListener("click",function(){
 
 
           $('.titulo').css("color","#00f");
@@ -54,7 +70,7 @@ $(document).ready(function(){
       })
 
 
-  inputVerde.addEventListener("click",function(){
+  inputVerdeT.addEventListener("click",function(){
 
 
           $('.titulo').css("color","#0f0");
@@ -62,9 +78,53 @@ $(document).ready(function(){
       })
 
 
- //FONT-SIZE
+//INPUT COLOR FECHA Y HORA
 
-  fontSize20.addEventListener("click",function(){
+
+    inputNegroFH.addEventListener("click",function(){
+
+
+          $('#fh').css("color","#000");
+ 
+      })
+
+   
+  inputBlancoFH.addEventListener("click",function(){
+
+
+          $('#fecha-hora').css("color","#fff");
+ 
+      })
+
+
+  inputRojoFH.addEventListener("click",function(){
+
+
+          $('#fecha-hora').css("color","#f00");
+ 
+      })
+
+
+  inputAzulFH.addEventListener("click",function(){
+
+
+          $('#fecha-hora').css("color","#00f");
+ 
+      })
+
+
+  inputVerdeFH.addEventListener("click",function(){
+
+
+          $('#fecha-hora').css("color","#0f0");
+ 
+      })
+
+
+
+ //FONT-SIZE TIULO
+
+  fontSize20T.addEventListener("click",function(){
 
 
     $('.titulo').css("font-size","20px");
@@ -73,7 +133,7 @@ $(document).ready(function(){
   })
 
 
-  fontSize28.addEventListener("click",function(){
+  fontSize28T.addEventListener("click",function(){
 
 
     $('.titulo').css("font-size","28px");
@@ -82,7 +142,7 @@ $(document).ready(function(){
   })
 
 
-  fontSize32.addEventListener("click",function(){
+  fontSize32T.addEventListener("click",function(){
 
 
     $('.titulo').css("font-size","32px");
@@ -90,7 +150,7 @@ $(document).ready(function(){
 
   })
 
-   fontSize48.addEventListener("click",function(){
+   fontSize48T.addEventListener("click",function(){
 
 
     $('.titulo').css("font-size","48px");
@@ -98,13 +158,59 @@ $(document).ready(function(){
 
   })
 
-  fontSize60.addEventListener("click",function(){
+  fontSize60T.addEventListener("click",function(){
 
 
     $('.titulo').css("font-size","60px");
 
 
   })
+
+  //SIZE FECHA HORA 
+
+
+  fontSize20FH.addEventListener("click",function(){
+
+
+    $('#fecha-hora').css("font-size","20px");
+
+
+  })
+
+
+  fontSize28FH.addEventListener("click",function(){
+
+
+    $('#fecha-hora').css("font-size","28px");
+
+
+  })
+
+
+  fontSize32FH.addEventListener("click",function(){
+
+
+    $('#fecha-hora').css("font-size","32px");
+
+
+  })
+
+   fontSize48FH.addEventListener("click",function(){
+
+
+    $('#fecha-hora').css("font-size","48px");
+
+
+  })
+
+  fontSize60FH.addEventListener("click",function(){
+
+
+    $('#fecha-hora').css("font-size","60px");
+
+
+  })
+
 
 
   //UBICACION
@@ -113,7 +219,7 @@ $(document).ready(function(){
   //BACKGROUND
     
 
-   bNegro.addEventListener("click" , function(){
+   bNegroT.addEventListener("click" , function(){
 
 
       $('.tarjeta').css("background","#000");
@@ -124,7 +230,7 @@ $(document).ready(function(){
    })
 
 
-   bBlanco.addEventListener("click" , function(){
+   bBlancoT.addEventListener("click" , function(){
 
 
       $('.tarjeta').css("background","#fff");
@@ -135,7 +241,7 @@ $(document).ready(function(){
    })
 
 
-    bRojo.addEventListener("click" , function(){
+    bRojoT.addEventListener("click" , function(){
 
 
       $('.tarjeta').css("background","#f00");
@@ -145,7 +251,7 @@ $(document).ready(function(){
 
    }) 
 
-    bAzul.addEventListener("click" , function(){
+    bAzulT.addEventListener("click" , function(){
 
 
       $('.tarjeta').css("background","blue");
@@ -156,7 +262,7 @@ $(document).ready(function(){
    })  
 
 
-    bVerde.addEventListener("click" , function(){
+    bVerdeT.addEventListener("click" , function(){
 
 
       $('.tarjeta').css("background","green");
