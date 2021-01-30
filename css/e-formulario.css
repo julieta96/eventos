@@ -1,0 +1,316 @@
+body{
+    margin:0;
+    padding: 0;
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contenedor4{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows:repeat(5 , auto) ;
+    grid-template-areas: "header header header"
+                         "titulo titulo titulo"
+                          "datos datos datos"
+                          "datos datos datos"
+                          "agregar agregar agregar"
+                          "b-it b-it b-it"
+                          "footer footer footer"
+                          "footer footer footer";
+}
+
+/*-----HEADER------*/
+
+.header{
+    height: 80%;
+    padding-bottom: 18px;
+}
+
+#menu{
+   
+   padding: 5px;
+}
+
+ .header1 {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+ .header .header1 {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+}
+
+ .marca{
+    text-align: left;
+}
+
+
+ #buscador{
+    display: flex;
+    justify-content: center;
+}
+
+
+.icon-basket{
+   font-size: 20px;
+   grid-column: 3/-1 ;
+   line-height: 50px;
+   text-align: center;
+   color: #fff;
+   line-height: 70px;
+}
+
+.icon-lupa{
+    color: #fff;
+}
+
+#menu ul li{
+    display: inline-block;
+    margin-right: 10px;  
+
+}
+
+#menu ul li a{
+    font-family: 'Roboto', sans-serif;
+    color:black;
+    font-weight:300;
+    margin-right: 10px;
+    margin-left: 50px;
+    
+}
+
+.opciones li a{
+  text-decoration:none;
+}
+
+
+ .header{
+    grid-area: header;
+    background-color: black;
+    
+    
+}
+
+ #buscador{
+    margin: auto;
+    height: 30px;
+    width:100% ;
+   
+}
+
+.marca{
+    font-family: 'Cinzel', serif;
+    color: #fff;
+}
+#menu{
+    grid-area:menuu;
+    background-color: yellowgreen;
+    grid-gap: 0;
+
+}
+
+#menu a:hover{
+    color: white;
+}
+
+
+/*--------------------------------------------------------------*/
+
+
+ .titulo-inscripcion {
+  grid-area: titulo;
+  color: white;
+  margin-left: 50px;
+  text-align: center;
+ }
+
+ .datos{
+  grid-area: datos;
+  margin: auto;
+ }
+
+ .datos >input{
+
+  width: 300px;
+  height: 30px;
+ }
+
+ .icon-minus{
+
+  color: #F25E3D;
+  font-size: 40px;
+  
+ }
+ .agregar{
+  grid-area: agregar;
+  text-align: center;
+ }
+
+
+ .agregar >p{
+    color:#F2A341;
+ }
+
+.agregar >h4{
+    color:white;
+}
+
+.b-inscribirse-total{
+  grid-area: b-it;
+  margin: auto;
+  padding-bottom: 10px;
+}
+
+.boton1{
+  /*border-radius: 10px;*/
+  background-color: yellowgreen;
+  width: 200px;
+  padding: 10px;
+  border:0;
+  color: white;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  margin-right: 30px;
+}
+
+.boton2:hover{
+  color:black;
+}
+
+.boton2{
+  /*border-radius: 10px;*/
+  background-color: yellowgreen;
+  width: 200px;
+  padding: 10px;
+  border:0;
+  color: white;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+/*--------------------------------*/
+
+ footer{
+    grid-area: footer;
+    background-color: black;
+    margin-bottom: 0;
+    border-top: 1px solid white;
+}
+
+footer .copyright{
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;
+
+}
+
+#footer{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(1,1fr);
+  grid-template-areas: "email menui redes"
+                       /*"copy copy copy"*/;
+
+ padding-top: 15px;
+ border-top: 1px solid yellowgreen;
+
+}
+
+.email{
+
+  border:0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #F25E3D;
+  height: 30px;
+  width: 200px;
+ /* border-radius: 5px;*/
+  
+}
+
+.casilla-de-mail{
+
+ grid-area: email;
+ /* margin-left: 20px;*/
+ margin: auto;
+
+}
+
+
+.suscribirse{
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+  height: 32px;
+  background-color: yellowgreen;
+  font-weight: bold;
+  /*border-radius: 5px;*/
+}
+
+.suscribirse:hover{
+  background-color: #F25E3D;
+}
+.menu-interior>a{
+  text-decoration: none;
+  color: yellowgreen;
+  margin: auto;
+  
+}
+
+
+#mi{
+  text-align: center;
+}
+
+#mi:hover{
+  /*text-decoration:overline;
+  text-decoration-color: black;*/
+  font-weight: bold;
+  color:#F25E3D;
+}
+
+.menu-interior{
+  grid-area: menui;
+  margin: auto;
+  text-align: center;
+}
+
+.redes{
+  color: yellowgreen;
+  display:inline-block;
+  grid-area: redes;
+  margin:auto;
+  font-size: 20px;
+  /*margin-right: 50px;*/
+  text-align: center;
+
+}
+
+.redes span{
+  margin-right: 25px;
+}
+
+.redes span:hover{
+
+ color:#F25E3D;
+
+}
+
+.copyright{
+  
+ /* grid-area: copy;*/
+  text-align: center;
+  margin-bottom: 0px;
+  padding-top: 8px;
+  font-size: 10px;
+}
+
