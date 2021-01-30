@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
 
+    //INPUT TITULO----------------------------------------
 
     let inputNegroT = document.querySelector("#c-negro-t");
     let inputBlancoT = document.querySelector("#c-blanco-t");
@@ -8,37 +9,7 @@ $(document).ready(function(){
     let inputAzulT = document.querySelector("#c-azul-t");
     let inputVerdeT = document.querySelector("#c-verde-t");
 
-
-
-    let fontSize20T= document.querySelector("#size20-t");
-    let fontSize28T= document.querySelector("#size28-t");
-    let fontSize32T= document.querySelector("#size32-t");
-    let fontSize48T= document.querySelector("#size48-t");
-    let fontSize60T= document.querySelector("#size60-t");
-
-
-    let inputNegroFH = document.querySelector("#c-negro-fh");
-    let inputBlancoFH = document.querySelector("#c-blanco-fh");
-    let inputRojoFH = document.querySelector("#c-rojo-fh");
-    let inputAzulFH = document.querySelector("#c-azul-fh");
-    let inputVerdeFH = document.querySelector("#c-verde-fh");
-
-    let fontSize20FH= document.querySelector("#size20-fh");
-    let fontSize28FH= document.querySelector("#size28-fh");
-    let fontSize32FH= document.querySelector("#size32-fh");
-    let fontSize48FH= document.querySelector("#size48-fh");
-    let fontSize60FH= document.querySelector("#size60-fh");
-
-    let bNegroT = document.querySelector("#b-negro");
-    let bBlancoT = document.querySelector("#b-blanco");
-    let bRojoT = document.querySelector("#b-rojo");
-    let bAzulT = document.querySelector("#b-azul");
-    let bVerdeT = document.querySelector("#b-verde");
-    
-
- //INPUT COLOR TITULO
-
-    inputNegroT.addEventListener("click",function(){
+       inputNegroT.addEventListener("click",function(){
 
 
           $('.titulo').css("color","#000");
@@ -78,8 +49,16 @@ $(document).ready(function(){
       })
 
 
-//INPUT COLOR FECHA Y HORA
+//-------------------------------------------------
 
+
+//INPUT FH-----------------------------------------
+
+    let inputNegroFH = document.querySelector("#c-negro-fh");
+    let inputBlancoFH = document.querySelector("#c-blanco-fh");
+    let inputRojoFH = document.querySelector("#c-rojo-fh");
+    let inputAzulFH = document.querySelector("#c-azul-fh");
+    let inputVerdeFH = document.querySelector("#c-verde-fh");
 
     inputNegroFH.addEventListener("click",function(){
 
@@ -89,7 +68,7 @@ $(document).ready(function(){
       })
 
    
-  inputBlancoFH.addEventListener("click",function(){
+   inputBlancoFH.addEventListener("click",function(){
 
 
           $('#fecha-hora').css("color","#fff");
@@ -97,7 +76,7 @@ $(document).ready(function(){
       })
 
 
-  inputRojoFH.addEventListener("click",function(){
+   inputRojoFH.addEventListener("click",function(){
 
 
           $('#fecha-hora').css("color","#f00");
@@ -105,7 +84,7 @@ $(document).ready(function(){
       })
 
 
-  inputAzulFH.addEventListener("click",function(){
+   inputAzulFH.addEventListener("click",function(){
 
 
           $('#fecha-hora').css("color","#00f");
@@ -113,18 +92,25 @@ $(document).ready(function(){
       })
 
 
-  inputVerdeFH.addEventListener("click",function(){
+   inputVerdeFH.addEventListener("click",function(){
 
 
           $('#fecha-hora').css("color","#0f0");
  
       })
 
+   //---------------------------------------------------
+
+   //FONTSIZE TITULO------------------------------------
+
+    let fontSize20T= document.querySelector("#size20-t");
+    let fontSize28T= document.querySelector("#size28-t");
+    let fontSize32T= document.querySelector("#size32-t");
+    let fontSize48T= document.querySelector("#size48-t");
+    let fontSize60T= document.querySelector("#size60-t");
 
 
- //FONT-SIZE TIULO
-
-  fontSize20T.addEventListener("click",function(){
+    fontSize20T.addEventListener("click",function(){
 
 
     $('.titulo').css("font-size","20px");
@@ -166,10 +152,18 @@ $(document).ready(function(){
 
   })
 
-  //SIZE FECHA HORA 
+//---------------------------------------------------------
+
+//FONT SIZE FH--------------------------------------------
 
 
-  fontSize20FH.addEventListener("click",function(){
+    let fontSize20FH= document.querySelector("#size20-fh");
+    let fontSize28FH= document.querySelector("#size28-fh");
+    let fontSize32FH= document.querySelector("#size32-fh");
+    let fontSize48FH= document.querySelector("#size48-fh");
+    let fontSize60FH= document.querySelector("#size60-fh");
+
+     fontSize20FH.addEventListener("click",function(){
 
 
     $('#fecha-hora').css("font-size","20px");
@@ -212,11 +206,64 @@ $(document).ready(function(){
   })
 
 
+  //-------------------------------------------------
 
-  //UBICACION
+  //UBICACION TITULO---------------------------------
+
+   let ubTLeft = document.querySelector("#ub-1T");
+   let ubTCenter = document.querySelector("#ub-2T");
+   let ubTRight =document.querySelector("#ub-3T");
+
+  ubTLeft.addEventListener("click", function(){
+
+    $('.titulo').css("text-align" , "left");
+  })
+
+   ubTCenter.addEventListener("click", function(){
+
+    $('.titulo').css("text-align" , "center");
+  })
+
+  ubTRight.addEventListener("click", function(){
+
+    $('.titulo').css("text-align" ,"right");
+  })
 
 
-  //BACKGROUND
+  //-------------------------------------------------
+
+  //UBICACION FH------------------------------------
+
+    let ubFHLeft = document.querySelector("#ub-1FH");
+    let ubFHCenter = document.querySelector("#ub-2FH");
+    let ubFHRight =document.querySelector("#ub-3FH");
+
+   ubFHLeft.addEventListener("click", function(){
+
+    $('#fecha-hora').css("text-align" , "left");
+    })
+
+   ubFHCenter.addEventListener("click", function(){
+
+    $('#fecha-hora').css("text-align" , "center");
+   })
+
+  ubFHRight.addEventListener("click", function(){
+
+    $('#fecha-hora').css("text-align" ,"right");
+   })
+
+
+  //-----------------------------------------------
+
+  //BACKGROUND TITULO+FH
+
+    let bNegroT = document.querySelector("#b-negro");
+    let bBlancoT = document.querySelector("#b-blanco");
+    let bRojoT = document.querySelector("#b-rojo");
+    let bAzulT = document.querySelector("#b-azul");
+    let bVerdeT = document.querySelector("#b-verde");
+
     
 
    bNegroT.addEventListener("click" , function(){
@@ -274,12 +321,7 @@ $(document).ready(function(){
  
 
 
-
-
-
-
-
-   })
+  })
 
 
   
