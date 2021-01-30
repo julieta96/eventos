@@ -50,20 +50,19 @@
      </header>
 
 
+
+
       <section class="section-invitacion-personalizada">
-    
-          <div class="tarjeta">
-
-            <h3 class="titulo"  id="titulo-e">Titulo</h3>
-            <p id="fecha-hora">fecha , hora </p>
-        
-          </div>
-    
 
 
-          <form class="personalizacion" name="formulario" id="formulario">
-        
-            <h3> Personalizacion de invitacion</h3>
+        <h3 class="titulo-principal"> Personalizacion de invitacion</h3>
+        <br>
+
+            
+        <div class="tarjeta-personalizacion">
+
+             <!------------TITULO----------->
+          <form class="modificacion-titulo" id="formulario">
 
             <input type="text" placeholder="Titulo Evento" class="titulo-e" name="titulo-e">
 
@@ -75,20 +74,20 @@
       
             <div class="opciones-color"> 
 
-                <input type="radio" name="colores" id="c-negro">
-                <label for="c-negro" class="icon-circle" id="negro"></label>
+                <input type="radio" name="colores-t" id="c-negro-t">
+                <label for="c-negro-t" class="icon-circle" id="negro"></label>
 
-                <input type="radio" name="colores" id="c-blanco"> 
-                <label for="c-blanco"class="icon-circle" id="blanco"></label>
+                <input type="radio" name="colores-t" id="c-blanco-t"> 
+                <label for="c-blanco-t"class="icon-circle" id="blanco"></label>
 
-                <input type="radio"  name="colores" id="c-rojo">
-                <label for="c-rojo" class="icon-circle" id="rojo"></label>
+                <input type="radio"  name="colores-t" id="c-rojo-t">
+                <label for="c-rojo-t" class="icon-circle" id="rojo"></label>
 
-                <input type="radio" name="colores" id="c-azul">
-                <label for="c-azul" class="icon-circle" id="azul"></label>
+                <input type="radio" name="colores-t" id="c-azul-t">
+                <label for="c-azul-t" class="icon-circle" id="azul"></label>
         
-                <input type="radio"  name="colores" id="c-verde">
-                <label for="c-verde" class="icon-circle" id="verde"></label>
+                <input type="radio"  name="colores-t" id="c-verde-t">
+                <label for="c-verde-t" class="icon-circle" id="verde"></label>
 
            </div>
 
@@ -98,28 +97,24 @@
 
             <div class="size-texto"> 
 
-              <input type="radio" name="size" id="size20">
-              <label for="size20" id="texto1">20px</label>
+              <input type="radio" name="size" id="size20-t">
+              <label for="size20-t" id="texto1">20px</label>
 
-              <input type="radio" name="size" id="size28">
-              <label for="size28" id="texto2">28px</label>
+              <input type="radio" name="size" id="size28-t">
+              <label for="size28-t" id="texto2">28px</label>
 
-              <input type="radio" name="size" id="size32">
-              <label for="size32" id="texto3">32px</label>
+              <input type="radio" name="size" id="size32-t">
+              <label for="size32-t" id="texto3">32px</label>
         
-              <input type="radio" name="size" id="size48">
-              <label for="size48" id="texto4">48px</label>
+              <input type="radio" name="size" id="size48-t">
+              <label for="size48-t" id="texto4">48px</label>
 
-              <input type="radio" name="size" id="size60">
-              <label for="size60" id="texto5">60px</label>
+              <input type="radio" name="size" id="size60-t">
+              <label for="size60-t" id="texto5">60px</label>
 
            </div>
 
-           <br><br>
-
-           <input type="text" placeholder="Fecha y Hora" class="fecha-hora" name="fecha-hora">
-
-           <br><br>
+            <br><br>
 
            Ubicacion
 
@@ -137,12 +132,101 @@
              <label for="ub-3" class="ubi3">3</label>
         
           </div>
-          <br><br>
 
-           Fondo
-          <br>
+      </form>
 
-          <div class="opciones-color"> 
+          <!------------FIN TITULO----------->
+
+
+
+          <div class="tarjeta">
+
+            <h3 class="titulo"  id="titulo-e" >Titulo</h3>
+            <p id="fecha-hora" >fecha , hora </p>
+        
+          </div>
+    
+        <!------------FECHA HORA----------->
+
+          <form class="personalizacion2" id="formulario">
+
+           <input type="text" placeholder="Fecha y Hora"  name="fecha-hora" class="fecha-hora">
+           <br>
+
+           Color
+
+            <br> 
+      
+            <div class="opciones-color"> 
+
+                <input type="radio" name="colores-fh" id="c-negro-fh">
+                <label for="c-negro-fh" class="icon-circle" id="negro"></label>
+
+                <input type="radio" name="colores-fh" id="c-blanco-fh"> 
+                <label for="c-blanco-fh"class="icon-circle" id="blanco-"></label>
+
+                <input type="radio"  name="colores-fh" id="c-rojo-fh">
+                <label for="c-rojo-fh" class="icon-circle" id="rojo"></label>
+
+                <input type="radio" name="colores-fh" id="c-azul-fh">
+                <label for="c-azul-fh" class="icon-circle" id="azul"></label>
+        
+                <input type="radio"  name="colores-fh" id="c-verde-fh">
+                <label for="c-verde-fh" class="icon-circle" id="verde"></label>
+
+           </div>
+
+           <br>
+
+              Tamaño de fuente
+
+            <div class="size-texto"> 
+
+              <input type="radio" name="size" id="size20-fh">
+              <label for="size20-fh" id="texto1">20px</label>
+
+              <input type="radio" name="size" id="size28-fh">
+              <label for="size28-fh" id="texto2">28px</label>
+
+              <input type="radio" name="size" id="size32-fh">
+              <label for="size32-fh" id="texto3">32px</label>
+        
+              <input type="radio" name="size" id="size48-fh">
+              <label for="size48-fh" id="texto4">48px</label>
+
+              <input type="radio" name="size" id="size60-fh">
+              <label for="size60-fh" id="texto5">60px</label>
+
+           </div>
+
+            <br>
+
+           Ubicacion
+
+           <br>
+
+           <div class="ubicacion"> 
+
+             <input type="radio" name="ubicacion" id="ub-1">
+             <label for="ub-1" class="ubi1">1</label>
+
+             <input type="radio" name="ubicacion" id="ub-">
+             <label for="ub-2" class="ubi2">2</label>
+
+             <input type="radio" name="ubicacion" id="ub-">
+             <label for="ub-3" class="ubi3">3</label>
+        
+          </div>
+
+
+          </form>
+
+      </div>
+
+       <p class="t-fondo"> Fondo</p>
+          
+
+     <div class="opciones-color"> 
 
               <input type="radio" name="fondo" id="b-negro">
               <label for="b-negro" class="icon-fondo" id="negro"></label>
@@ -159,16 +243,17 @@
               <input type="radio" name="fondo" id="b-verde">
               <label for="b-verde "class="icon-fondo" id="verde"></label>
 
-          </div>
-        
-          <br><br>
+     </div>
+     <br><br>
 
-          <input type="submit" value="CONFIRMAR" class="b-confirmar">
+      <div class="boton-confirmar">
+         <input type="submit" value="CONFIRMAR" class="b-confirmar" form="formulario">
+      </div>
 
-
-          </form>
 
       </section>
+
+       <!------------fin FECHA HORA----------->
 
       <br> <br>
       

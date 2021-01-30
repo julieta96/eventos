@@ -158,25 +158,42 @@ body{
 
 /*--------------------------------------------------------------*/
 
+.titulo-principal{
+
+  text-align: center;
+  color: white;
+}
+
 .section-invitacion-personalizada{
 
   grid-area: tarjeta-personalizada;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
   margin-bottom: 30px;
+  
 
 }
 
-.section-invitacion-personalizada >div ,
-.section-invitacion-personalizada >form{
+
+
+.tarjeta-personalizacion{
+
+  display: flex;
+  flex-direction:row;
+  /*margin-left: 30px;*/
+  justify-content: center;
+
+}
+
+
+.tarjeta-personalizacion >div{
 
   margin-right: 10px;
-  margin-left: 10px;
-
 
 }
+
 
 
  .tarjeta{
@@ -185,9 +202,9 @@ body{
   border:1px  solid yellowgreen;
   width: 400px;
   height: 300px;
-  grid-area: tarjeta;
-  margin-left: 200px;
   position: relative;
+  /*align-self: center;*/
+  margin: auto;
 
 
 
@@ -203,31 +220,72 @@ body{
   bottom: 0px;
  }
 
+ .tarjeta {
+
+  margin-right: 15px;
+ }
+
+.modificacion-titulo{
+  color:white;
+ 
+  margin: auto;
+}
 
 .personalizacion{
 
-  grid-area: tarjeta-personalizada;
   color:white;
   width: 400px;
-  height: 10%;
+  height: 100%;
   margin-right: 200px;
- display: flex;
+  display: flex;
  flex-direction: column;
  text-align: center;
  justify-content: center;
+ margin-top: 0px;
 
 }
 
 .personalizacion{
   text-align: center;
   /*background-color:  rgb(200,85,40);*/
-  height: 600px;
+  
 
 
 }
 
 .personalizacion >input ,
 .personalizacion >div{
+     
+     align-self: center;
+
+ }
+
+ /*****/
+ .personalizacion2{
+
+  color:white;
+  width: 400px;
+  height: 100%;
+  margin-right: 50px;
+ display: flex;
+ flex-direction: column;
+ text-align: center;
+ justify-content: center;
+
+ margin-top: 17px;
+
+}
+
+.personalizacion2{
+  text-align: center;
+  /*background-color:  rgb(200,85,40);*/
+  
+
+
+}
+
+.personalizacion2 >input ,
+.personalizacion2 >div{
      
      align-self: center;
 
@@ -242,7 +300,7 @@ body{
 
 .fecha-hora{
 
-   padding: 10px;
+  padding: 10px;
   background-color: #CDDC39;
   border:0;
   outline: 0;
@@ -284,11 +342,17 @@ input[type=radio]{
   color:#72751C /*#818520*/;
 }
 
+.t-fondo{
+  color: white;
+  text-align: center;
+}
+
 .opciones-color{
   display: inline-block;
   background-color: #CDDC39;
   padding: 10px;
   width: 300px;
+  align-self: center;
 }
 
 input[type="text"]{
