@@ -10,7 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <script type="text/javascript" src="js/validacion_js.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  
+  
 
  </head>
   <body>
@@ -22,7 +24,12 @@
       <div class="header1">
         <h2 class="icon-diamond marca">Eventos.com</h2>
 
-      <input type="search" id="buscador" placeholder="buscar">
+      <div class="buscador-lupa">
+
+        <input type="search" id="buscador" placeholder="buscar">
+        <div class="icon-lupa" id="lupa"></div>
+
+      </div>
 
         <div class="icon-basket carrito"></div>
 
@@ -34,45 +41,55 @@
           <li><a href="evento.html">EVENTO</a></li>
           <li><a href="entradas.html">ENTRADAS COMPRADAS</a></li>
           <li><a href="invitacion.html">PERSONALIZAR INVITACION</a></li>
-          <li><a href="formulario.html">FORMULARIO</a></li>
+          <li class="activo"><a href="formulario.html">FORMULARIO</a></li>
           <li><a href="contacto.html">CONTACTO</a></li>
         </ul>
       </nav>
 
-
-
-
      </header>
 
 
-      
-
-     <div class="titulo-inscripcion">
-
-       <h2 class="titulo-evento">Titulo Evento</h2>
-       <p class="inscripcion">Inscripcion</p>
-        
-      </div>
-
        <div class="datos">
+
+           <div class="titulo-inscripcion">
+
+            <h2 class="titulo-evento">Titulo Evento</h2>
+            <p class="inscripcion">Inscripcion</p>
         
-       <input type="text" name="" class="inscripcion1"> <input type="text" name="" class="inscripcion1"> <input type="text" name="" class="inscripcion1"><div class="icon-minus"></div>
-       <input type="text" name="" class="inscripcion1"> <input type="text" name="" class="inscripcion1"> <input type="text" name="" class="inscripcion1"><div class="icon-minus"></div>
-       <input type="text" name="" class="inscripcion1"> <input type="text" name="" class="inscripcion1"> <input type="text" name="" class="inscripcion1"><div class="icon-minus"></div>
+           </div>
+           <form class="formulario" name="formulario" id="formulario">
 
-       </div>
+                <div class="icon-minus no-remove">
+                   <input type="text" name="" class="inscripcion" placeholder="Nombre"> 
+                   <input type="text" name="" class="inscripcion" placeholder="Apellido">
+                   <input type="text" name="" class="inscripcion1" placeholder="Telefono">
+                </div>
+                <div class="icon-minus remove">
+                   <input type="text" name="" class="inscripcion" placeholder="Nombre">
+                   <input type="text" name="" class="inscripcion" placeholder="Apellido">
+                   <input type="text" name="" class="inscripcion" placeholder="Telefono">
+                </div>
+                <div class="icon-minus remove">
+                   <input type="text" name="" class="inscripcion" placeholder="Nombre">
+                   <input type="text" name="" class="inscripcion" placeholder="Apellido">
+                   <input type="text" name="" class="inscripcion" placeholder="Telefono">
+                </div>
 
-      <div class="agregar">
-         <p>+</p> <h4>Agregar persona</h4>
-       </div>
+           </form>
 
-       <div class="b-inscribirse-total">
+           <div class="agregar">
+             <p class="add">+</p> <h4>Agregar persona</h4>
+           </div>
 
-        <input type="button" value="000.-" class="boton1">
-        <input type="submit" value="INSCRIBIRSE" class="boton2">
+           <div class="b-inscribirse-total">
+
+            <input type="button" value="000.-" class="boton1">
+            <input type="submit" value="INSCRIBIRSE" class="boton2" form="formulario">
          
-       </div>
+           </div>
 
+
+       </div>
       
 
       <footer id="footer">
@@ -80,7 +97,7 @@
          <br>
 
         <div class="casilla-de-mail">
-          <input type="text" placeholder="ingresa tu e-mail" name="email" class="email"><input type="submit" name="enviar" class="suscribirse" value="ENVIAR">
+          <input type="text" placeholder="INGRESA TU E-MAIL" name="email" class="email"><input type="submit" name="enviar" class="suscribirse" value="ENVIAR">
         </div>
         <div class="menu-interior">
           <a href="inicio.html" id="mi">INICIO</a><br>
@@ -105,7 +122,7 @@
 
     </div>
 
-
+<script type="text/javascript" src="js/formulario.js"></script>
 
   </body>
 </html>
