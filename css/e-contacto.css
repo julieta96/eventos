@@ -141,7 +141,6 @@ body{
     color: #fff;
 }
 #menu{
-    grid-area:menuu;
     background-color: yellowgreen;
     grid-gap: 0;
 
