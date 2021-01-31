@@ -286,7 +286,21 @@ input#buscador {
   padding-top: 15px; 
 
 }
+.e-img{
+  display: none;
+}
 
+.e-img:first-child{
+  display: block;
+}
+
+.a-img{
+  display: none;
+}
+
+.a-img:first-child{
+  display: block;
+}
 
 .e-relacionados{
  
