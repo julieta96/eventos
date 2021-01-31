@@ -403,7 +403,7 @@ input#buscador {
   margin-top: 2%;
 }
 
-.b-detalle-e{
+.b-detalle-e,.b-detalle-c{
 
   margin: auto;
   background: #cddc39;
@@ -416,12 +416,18 @@ input#buscador {
   cursor: pointer;
 }
 
-.b-detalle-e:hover{
+.b-detalle-e:hover ,.b-detalle-c:hover{
 
   background: yellowgreen;
 
 
 }
+
+.precio{
+  color: #cddc39;
+  text-align: center;
+}
+
 
 
 
@@ -492,11 +498,15 @@ footer .copyright{
 }
 
 #footer{
- padding-top: 15px;
+  padding-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(1,1fr);
+  grid-template-areas: "email menui redes"
 }
 
 .e-mail{
-
+  
   border:0;
   font-family: 'Roboto', sans-serif;
   background-color: #E8F0FE/*#F25E3D*/;
@@ -517,7 +527,7 @@ footer .copyright{
 
 
 .casilla-de-mail {
-
+ grid-area: email;
  margin: auto;
  margin-left: 20px;
 
@@ -556,14 +566,18 @@ footer .copyright{
 .menu-interior{
   margin: auto;
   text-align: center;
+   grid-area: menui;
 }
 
 .redes{
+
+  grid-area: redes;
   color: yellowgreen;
   display:inline-block;
   margin:auto;
   font-size: 20px;
   text-align: center;
+
 
 }
 
