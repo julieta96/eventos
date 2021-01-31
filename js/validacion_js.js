@@ -5,10 +5,10 @@ function verDescripcionPasos() {
 
 	/*cambiarColorContenedor();*/
 
-	setInterval(esconderTitulo(),1);
-	setInterval(agregarDescripcion(),1);
-	setInterval(borrarDescripcion(),1);
-	setInterval(mostrarTitulo(),1);
+	setInterval(esconderTitulo(),3);
+	setInterval(agregarDescripcion(),3);
+	setInterval(borrarDescripcion(),3);
+	setInterval(mostrarTitulo(),3);
 	
 }
 
