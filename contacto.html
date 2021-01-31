@@ -15,14 +15,17 @@
  </head>
   <body>
 
-    <div class="contenedor7">
+    <div class="contenedor">
 
      <header class="header">
 
       <div class="header1">
         <h2 class="icon-diamond marca">Eventos.com</h2>
 
-      <input type="search" id="buscador" placeholder="buscar">
+      <div class="buscador-lupa">
+          <input type="search" id="buscador" placeholder="buscar">
+          <div class="icon-lupa" id="lupa"></div>
+     </div>
 
         <div class="icon-basket carrito"></div>
 
@@ -35,7 +38,7 @@
           <li><a href="entradas.html">ENTRADAS COMPRADAS</a></li>
           <li><a href="invitacion.html">PERSONALIZAR INVITACION</a></li>
           <li><a href="formulario.html">FORMULARIO</a></li>
-          <li><a href="contacto.html">CONTACTO</a></li>
+          <li class="activo"><a href="contacto.html">CONTACTO</a></li>
         </ul>
       </nav>
 
@@ -44,44 +47,44 @@
 
      </header>
 
-     
-     <h2 id="titulo-contacto">Contacto</h2>
-      
 
+    <section class="section-contacto">
 
-       <div class="contacto">
+        <h2 id="titulo-contacto">Contacto</h2>
 
-       
-        <input type="text" class="nombre" placeholder="Nombre"><br><br>
-       <input type="text" class="apellido" placeholder="Apellido"><br><br>
-       <input type="email" class="email1" placeholder="E-mail"><br><br>
-       <input type="number" class="telefono" placeholder="Telefono"><br><br>
-       <textarea placeholder="comentarios"></textarea><br><br>
-       <input type="submit" id="b-enviar" value="ENVIAR">
-         
-    </div>
-
-    <div class="datos-empresa">
+         <div class="datos-empresa">
         
-       Telefono: 05165669<br>
-       Direccion: calle falsa 123<br>
-       mail: fhfgh@g.com
+          <p>Telefono: 05165669</p>
+          <p>Direccion: calle falsa 123</p>
+          <p>E-mail: eventos@arg.com</p>
 
        </div>
-        
 
-  
+       <form class="form-contacto">
+          <input type="text" class="nombre" placeholder="Nombre"><br><br>
+          <input type="text" class="apellido" placeholder="Apellido"><br><br>
+          <input type="email" class="email1" placeholder="E-mail"><br><br>
+          <input type="number" class="telefono" placeholder="Telefono"><br><br>
+          <textarea placeholder="comentarios"></textarea><br><br>
+          <input type="submit" id="b-enviar" value="ENVIAR">
+      </form>
+    </section>
 
+    
+    <section class="section-mapa">
       <h2 class="mapa">Ubicacion</h2>
 
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.191768774265!2d-58.56558713527006!3d-34.675109218785096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc62c3d6ad2d1%3A0x2410c8073b5f31f2!2sRecepciones%20Illia!5e0!3m2!1ses!2sar!4v1599007096659!5m2!1ses!2sar" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="mapagoogle"></iframe>
+
+   </section>
+
 
       <footer id="footer">
 
         <br>
 
         <div class="casilla-de-mail">
-          <input type="text" placeholder="ingresa tu e-mail" name="email" class="email"><input type="submit" name="enviar" class="suscribirse" value="ENVIAR">
+          <input type="text" placeholder="INGRESA TU E-MAIL" name="email" class="email"><input type="submit" name="enviar" class="suscribirse" value="ENVIAR">
         </div>
         <div class="menu-interior">
           <a href="inicio.html" id="mi">INICIO</a><br>
