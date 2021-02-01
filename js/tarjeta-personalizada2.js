@@ -197,14 +197,6 @@ $(document).ready(function(){
 
   })
 
-  fontSize60FH.addEventListener("click",function(){
-
-
-    $('#fecha-hora').css("font-size","60px");
-
-
-  })
-
 
   //-------------------------------------------------
 
