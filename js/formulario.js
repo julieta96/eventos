@@ -1,18 +1,20 @@
 $(document).ready(function(){
 
-	let remove = $(".remove");
-	let add = $(".add");
+
+   $(".formulario").on('click', '.remove' , function(){
+       
+       $(this).parent().hide();
+
+   })
 
 
-    remove.click(function(){
-
-       $(this).css("display","none");
-          
-
-    })
+    $(".formulario").on('click', '.no-remove', function(){
+       
+         $('.borrar-dato').val('');
+   })
 
 
-    add.click(function(){
+    $(".add").click(function(){
          
          const formulario = $(".formulario");
          const div = $("<div>");
@@ -20,7 +22,7 @@ $(document).ready(function(){
          const input2 = $("<input>");
          const input3 = $("<input>");
 
-         div.addClass("icon-minus new-remove");
+         div.addClass("remove-container");
          input1.addClass("inscripcion");
          input2.addClass("inscripcion");
          input3.addClass("inscripcion");
@@ -40,22 +42,14 @@ $(document).ready(function(){
 
 
          formulario.append(div);
+         div.append("<div class='icon-minus remove'></div>")
          div.append(input1);
          div.append(input2);
          div.append(input3);
-
     	
     })
      
 
-     let newRemove = $(".new-remove");
-
-     newRemove.click(function(){
-
-       $(this).css("display","none");
-          
-
-    })
 
 
 })
