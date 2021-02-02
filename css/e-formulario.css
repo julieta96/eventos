@@ -166,7 +166,8 @@ body{
   margin: auto;
  }
 
- .no-remove>input{
+ .no-remove-container>div ,
+ .no-remove-container>input{
 
   width: 300px;
   height: 30px;
@@ -176,7 +177,8 @@ body{
  }
 
 
- .remove>input{
+ .remove-container>div,
+ .remove-container>input{
 
   width: 300px;
   height: 30px;
@@ -186,14 +188,12 @@ body{
 
  }
 
- .new-remove>input{
-  width: 300px;
-  height: 30px;
-  outline: 0;
-  text-align: center;
-  margin-bottom: 50px;
+ .remove-container>div,
+ .no-remove-container>div{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
  }
-
 
 
  .icon-minus{
