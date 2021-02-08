@@ -1,17 +1,18 @@
-window.onload = function(){
+$(document).ready( function(){
      
-     var imagenes=[];
-     imagenes[0] = 'imagenes/slider/e1.jpg';
-     imagenes[1] ='imagenes/slider/e2.jpg';
-     imagenes[2]='imagenes/slider/e3.jpg';
-     imagenes[3]='imagenes/slider/e4.jpg';
+     let evento=[];
+     evento[0] = 'img/slider/e1.jpg';
+     evento[1] ='img/slider/e2.jpg';
+     evento[2]='img/slider/e3.jpg';
+     evento[3]='img/slider/e4.jpg';
          
-	  var i=0;
+	 let i=0;
 	
  
 	  function cambiarImagenes(){
     
-	  var ims = document.slider.src=imagenes[i];
+
+	  $(".cambiarImg").attr('src',evento[i]);
 
 
 	  	  if(i<3){
@@ -22,7 +23,7 @@ window.onload = function(){
 
 	  }
 
-	  setInterval(cambiarImagenes , 1000);
+	  setInterval(cambiarImagenes , 4000);
 	  
 
-}
+})
