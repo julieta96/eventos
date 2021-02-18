@@ -6,15 +6,15 @@
 
   <link rel="stylesheet" type="text/css" href="css/e-formulario.css">
   <link rel="stylesheet" type="text/css" href="css/fontello.css">
-  
+
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/font-awesome.js"></script>
   <script type="text/javascript" src="js/carrito.js"></script>
   <script type="text/javascript" src="js/redireccionarPagina.js"></script>
-  
-  
+
 
  </head>
   <body>
@@ -61,20 +61,20 @@
            </div>
            <form class="formulario" name="formulario" id="formulario">
                   
-                 <div class="no-remove-container">
+                 <div class="no-remove-container datos">
                    <div class="icon-minus no-remove"></div>
                    <input type="text" id="nombre" class="borrar-dato inscripcion" placeholder="Nombre"> 
                    <input type="text" id="apellido" class="borrar-dato inscripcion" placeholder="Apellido">
                    <input type="text" id="telefono" class="borrar-dato inscripcion" placeholder="Telefono">
                  </div>
 
-                <div class="remove-container">
+                <div class="remove-container datos">
                    <div class="icon-minus remove"></div>
                    <input type="text" id="nombre" class="inscripcion" placeholder="Nombre">
                    <input type="text" id="apellido" class="inscripcion" placeholder="Apellido">
                    <input type="text" id="telefono" class="inscripcion" placeholder="Telefono">
                </div>
-               <div class="remove-container">
+               <div class="remove-container datos">
                    <div class="icon-minus remove"></div>
                    <input type="text" id="nombre" class="inscripcion" placeholder="Nombre">
                    <input type="text" id="apellido" class="inscripcion" placeholder="Apellido">
@@ -89,7 +89,23 @@
 
          
             <input type="button" value="000.-" class="boton1">
-            <input type="submit" value="INSCRIBIRSE" class="boton2" id="inscribirse" form="formulario">
+            <input type="button" value="INSCRIBIRSE" class="boton2" id="inscribirse" form="formulario">
+            <!--------modal----------->
+            <div  id="modal" class="modal-container">
+              <div class="modal-content">
+                <span><i class="fas fa-times close"></i></span>
+                <h2 class="estado-inscripcion"><i class="fas fa-check"></i>Inscripcion realizada correctamente</h2>
+                <br>
+                <div class="inscriptos">
+                 
+                </div>
+                <p>se inscribio a:</p>
+                <p class="evento-inscripto"></p><br>
+                <p>Fecha y Horario:<p class="fecha-horario"></p></p>
+
+              </div>
+            </div>
+  
          
 
 
@@ -130,6 +146,7 @@
     </div>
 
 <script type="text/javascript" src="js/formulario.js"></script>
+  <script type="text/javascript" src="js/modal.js"></script>
 
   </body>
 </html>
