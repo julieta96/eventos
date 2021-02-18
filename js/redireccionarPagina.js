@@ -25,7 +25,7 @@ $(document).ready(function(){
 		$(".titulo").text("RECITALES");
 		$(".cambio-hora").text("28/01/2021 20hs");
 		$(".cambio-organizador").text("Iure");
-		
+		$(".cambio-pagina").attr("href","formulario.html#recital");
 		break;
 
 		case "evento.html#karaoke":
@@ -39,6 +39,7 @@ $(document).ready(function(){
 		$(".titulo").text("KARAOKE");
 		$(".cambio-hora").text("02/09/2021 23hs");
 		$(".cambio-organizador").text("Organizador2");
+		$(".cambio-pagina").attr("href","formulario.html#karaoke");
 		
 		break;
 
@@ -53,6 +54,7 @@ $(document).ready(function(){
 		$(".titulo").text("CUMPLEAÑOS");
 		$(".cambio-hora").text("10/07/2021 20hs");
 		$(".cambio-organizador").text("Organizador3");
+		$(".cambio-pagina").attr("href","formulario.html#cumple");
 		
 		break;
 
@@ -65,6 +67,7 @@ $(document).ready(function(){
 		$(".titulo").text("CASAMIENTOS");
 		$(".cambio-hora").text("20/09/2021 23hs");
 		$(".cambio-organizador").text("Organizador4");
+		$(".cambio-pagina").attr("href","formulario.html#casamiento");
 
 		
 		break;
@@ -78,6 +81,7 @@ $(document).ready(function(){
 		$(".titulo").text("EGRESADOS");
 		$(".cambio-hora").text("12/12/2021 20hs");
 		$(".cambio-organizador").text("Organizador5");
+		$(".cambio-pagina").attr("href","formulario.html#egresado");
 		
 		break;
 
@@ -90,6 +94,7 @@ $(document).ready(function(){
 		$(".titulo").text("FIESTA DE 15");
 		$(".cambio-hora").text("08/08/2021 21hs");
 		$(".cambio-organizador").text("Organizador6");
+		$(".cambio-pagina").attr("href","formulario.html#fiesta15");
 		
 		break;
 
@@ -100,7 +105,34 @@ $(document).ready(function(){
 
 	//para pagina formulario--------------------------------------------------------------------------------
 
+	const infoEvento=(evento , fechaHora) => {
+
+		let inscriptos = Array.from($(".datos")).map(i => {
+        console.log(i);
+        let nombre = $(i).find("#nombre").val()
+        let apellido = $(i).find("#apellido").val()
+        let telefono = $(i).find("#telefono").val()
+        return `<p class='nombre'>${nombre}&nbsp;</p><p class='Apellido'>${apellido}&nbsp;</p><p class='telefono'>(Telefono: ${telefono}),&nbsp;</p>`;
+        
+    })
+
+    $(".inscriptos").html(inscriptos.join(""));
+    $(".evento-inscripto").html(evento);
+    $(".fecha-horario").html(fechaHora);
+
+	}
+
 	switch(pageHref()){
+
+
+		case "formulario.html":
+		$(".modal-content >h2").css("display" , "none");
+        $(".modal-content >p").css("display" , "none");
+        $(".inscriptos").html(`<h2>Para inscribirse debe seleccionar 1ero el evento</h2>`);
+        window.load(function(){
+        	$(".inscriptos>.nombre ,.inscriptos>.apellido , .inscriptos>.telefono ").remove();
+        })
+		break;
 
 		case "formulario.html#recital":
 
@@ -108,6 +140,10 @@ $(document).ready(function(){
 		$(".titulo-evento").attr("id","recital");
         $(location).attr("href","formulario.html#recital");
         $(".titulo-evento").text("RECITAL");
+        $("#inscribirse").click(function(){
+          infoEvento($(".titulo-evento").text() , "28/01/2021 20hs")
+        })
+       
 		break;
 
 		case "formulario.html#karaoke":
@@ -117,7 +153,11 @@ $(document).ready(function(){
 		$(".titulo-evento").attr("id","karaoke");
         $(location).attr("href","formulario.html#karaoke");
         $(".titulo-evento").text("KARAOKE");
-		
+        $("#inscribirse").click(function(){
+         infoEvento($(".titulo-evento").text() , "02/09/2021 23hs");
+        })
+
+        
 		break;
 
 		case "formulario.html#cumple":
@@ -126,6 +166,7 @@ $(document).ready(function(){
 		$(".titulo-evento").attr("id","cumple");
         $(location).attr("href","formulario.html#cumple");
         $(".titulo-evento").text("CUMPLEAÑOS");
+        infoEvento($(".titulo-evento").text() , "10/07/2021 20hs");
 		break;
 
 		case "formulario.html#casamiento":
@@ -134,9 +175,7 @@ $(document).ready(function(){
 		$(".titulo-evento").attr("id","casamiento");
         $(location).attr("href","formulario.html#casamiento");
         $(".titulo-evento").text("CASAMIENTOS");
-		
-
-		
+        infoEvento($(".titulo-evento").text() , "20/09/2021 23hs");
 		break;
 
 		case "formulario.html#egresado":
@@ -145,8 +184,7 @@ $(document).ready(function(){
 		$(".titulo-evento").attr("id","egresado");
         $(location).attr("href","formulario.html#egresado");
         $(".titulo-evento").text("EGRESADOS");
-		
-		
+        infoEvento($(".titulo-evento").text() , "12/12/2021 20hs");
 		break;
 
 		case "formulario.html#fiesta15":
@@ -155,8 +193,7 @@ $(document).ready(function(){
 		$(".titulo-evento").attr("id","fiesta15");
         $(location).attr("href","formulario.html#fiesta15");
         $(".titulo-evento").text("FIESTA DE 15");
-		
-		
+        infoEvento($(".titulo-evento").text() , "08/08/2021 21hs");
 		break;
 
 
