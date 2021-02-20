@@ -16,8 +16,6 @@ $(document).ready(function(){
 
 		case "evento.html#recitales":
 
-		//alert(pageHref());
-
 		$("#recitales").css("display","block");
         $(".re").css("display","block");
         $("#recitales").siblings().css("display","none");
@@ -29,8 +27,6 @@ $(document).ready(function(){
 		break;
 
 		case "evento.html#karaoke":
-
-		/*alert(pageHref());*/
 
 		$("#karaoke").css("display","block");
         $(".ka").css("display","block");
@@ -45,8 +41,6 @@ $(document).ready(function(){
 
 		case "evento.html#cumpleanos":
 
-		//alert(pageHref());
-
 		$("#cumpleanos").css("display","block");
         $(".cu").css("display","block");
         $(".cu").siblings().css("display","none");
@@ -59,7 +53,7 @@ $(document).ready(function(){
 		break;
 
 		case "evento.html#casamientos":
-		//alert(pageHref());
+		
 		$("#casamientos").css("display","block");
         $(".ca").css("display","block");
         $(".ca").siblings().css("display","none");
@@ -73,7 +67,7 @@ $(document).ready(function(){
 		break;
 
 		case "evento.html#egresados":
-		//alert(pageHref());
+		
 		$("#egresados").css("display","block");
         $(".eg").css("display","block");
         $(".eg").siblings().css("display","none");
@@ -86,7 +80,7 @@ $(document).ready(function(){
 		break;
 
 		case "evento.html#fiesta15":
-		//alert(pageHref());
+		
 		$("#fiesta15").css("display","block");
         $(".fi").css("display","block");
         $(".fi").siblings().css("display","none");
@@ -101,6 +95,149 @@ $(document).ready(function(){
 
 
 	}
+
+	//para pagina entradas---------------------------------------------------------------------------------
+
+	const getData=(tituloE , tituloColorE, tituloSizeE ,ubicacionTituloE, fechaHoraE , fechaHoraColorE, fechaHoraSizeE, ubicacionFechaHoraE,fondoE)=>{
+
+		$(".b-confirmar").click(function(){
+
+		if($(".titulo-e").val()!="Titulo" && $(".fecha-hora").val()!="fecha, hora"){
+
+            $(".personalizar").removeClass('personalizar').addClass('m-personalizar');
+			$(".personalizar").text("MODIFICAR PERSONALIZACION");
+
+			localStorage.setItem(tituloE,$(".titulo-e").val());
+			localStorage.setItem(tituloColorE,$("#titulo-e").css("color"));
+			localStorage.setItem(tituloSizeE,$("#titulo-e").css("font-size"));
+			localStorage.setItem(ubicacionTituloE,$("#titulo-e").css("text-align"));
+
+			localStorage.setItem(fechaHoraE,$(".fecha-hora").val());
+			localStorage.setItem(fechaHoraColorE,$("#fecha-hora").css("color"));
+			localStorage.setItem(fechaHoraSizeE,$("#fecha-hora").css("font-size"));
+			localStorage.setItem(ubicacionFechaHoraE,$("#fecha-hora").css("text-align"));
+
+			localStorage.setItem(fondoE,$(".tarjeta").css("background-color"));		
+				
+		}
+
+	})
+
+		//guardo valores
+
+			$("#titulo-e").text(localStorage.getItem(tituloE));
+			$("#titulo-e").css("color",localStorage.getItem(tituloColorE));
+			$("#titulo-e").css("font-size" ,localStorage.getItem(tituloSizeE));
+			$("#titulo-e").css("text-align" ,localStorage.getItem(ubicacionTituloE));
+
+
+			$("#fecha-hora").text(localStorage.getItem(fechaHoraE));
+			$("#fecha-hora").css("color",localStorage.getItem(fechaHoraColorE));
+			$("#fecha-hora").css("font-size" ,localStorage.getItem(fechaHoraSizeE));
+			$("#fecha-hora").css("text-align" ,localStorage.getItem(ubicacionFechaHoraE));
+
+			$(".tarjeta").css("background-color",localStorage.getItem(fondoE));	
+
+
+
+	}
+
+	switch(pageHref()){
+
+		case "invitacion.html#recital":
+          
+          getData(
+          	"recital-titulo" ,
+          	"recital-colorTitulo",
+          	"recital-sizeTitulo",
+          	"recital-ubicacionTitulo", 
+          	"recital-fechaHora" , 
+          	"recital-colorFechaHora" ,
+          	"recital-sizeFechaHora",
+          	"recital-ubicacionFechaHora",
+          	"recital-fondo");
+
+		break;
+
+		case "invitacion.html#karaoke":
+
+		 getData(
+          	"karaoke-titulo" ,
+          	"karaoke-colorTitulo",
+          	"karaoke-sizeTitulo", 
+          	"karaoke-ubicacionTitulo", 
+          	"karaoke-fechaHora" , 
+          	"karaoke-colorFechaHora" ,
+          	"karaoke-sizeFechaHora",
+          	"karaoke-ubicacionFechaHora",
+          	"karaoke-fondo");
+		break;
+
+		case "invitacion.html#cumple":
+
+		  getData(
+          	"cumple-titulo" ,
+          	"cumple-colorTitulo",
+          	"cumple-sizeTitulo",
+          	"cumple-ubicacionTitulo",
+          	"cumple-fechaHora" , 
+          	"cumple-colorFechaHora" ,
+          	"cumple-sizeFechaHora",
+          	"cumple-ubicacionFechaHora",
+          	"cumple-fondo");
+		
+		break;
+
+		case "invitacion.html#casamiento":
+
+		  getData(
+          	"casamiento-titulo" ,
+          	"casamiento-colorTitulo",
+          	"casamiento-sizeTitulo", 
+          	"casamiento-ubicacionTitulo",
+          	"casamiento-fechaHora" , 
+          	"casamiento-colorFechaHora" ,
+          	"casamiento-sizeFechaHora",
+          	"casamiento-ubicacionFechaHora",
+          	"casamiento-fondo");
+
+		
+		break;
+
+		case "invitacion.html#egresados":
+
+		  getData(
+          	"egresados-titulo" ,
+          	"egresados-colorTitulo",
+          	"egresados-sizeTitulo", 
+          	"egresados-ubicacionTitulo",
+          	"egresados-fechaHora" , 
+          	"egresados-colorFechaHora" ,
+          	"egresados-sizeFechaHora",
+          	"egresados-ubicacionFechaHora",
+          	"egresados-fondo");
+		
+		break;
+
+		case "invitacion.html#fiesta15":
+
+	     getData(
+          	"fiesta15-titulo" ,
+          	"fiesta15-colorTitulo",
+          	"fiesta15-sizeTitulo",
+          	"fiesta15-ubicacionTitulo",
+          	"fiesta15-fechaHora" , 
+          	"fiesta15-colorFechaHora" ,
+          	"fiesta15-sizeFechaHora",
+          	"fiesta15-ubicacionFechaHora",
+          	"fiesta15-fondo");
+		
+		break;
+
+
+
+	}
+
 
 
 	//para pagina formulario--------------------------------------------------------------------------------
@@ -126,6 +263,7 @@ $(document).ready(function(){
 
 
 		case "formulario.html":
+
 		$(".modal-content >h2").css("display" , "none");
         $(".modal-content >p").css("display" , "none");
         $(".inscriptos").html(`<h2>Para inscribirse debe seleccionar 1ero el evento</h2>`);
@@ -136,7 +274,6 @@ $(document).ready(function(){
 
 		case "formulario.html#recital":
 
-		//alert(pageHref());
 		$(".titulo-evento").attr("id","recital");
         $(location).attr("href","formulario.html#recital");
         $(".titulo-evento").text("RECITAL");
@@ -147,8 +284,6 @@ $(document).ready(function(){
 		break;
 
 		case "formulario.html#karaoke":
-
-		/*alert(pageHref());*/
 
 		$(".titulo-evento").attr("id","karaoke");
         $(location).attr("href","formulario.html#karaoke");
@@ -162,7 +297,6 @@ $(document).ready(function(){
 
 		case "formulario.html#cumple":
 
-		//alert(pageHref());
 		$(".titulo-evento").attr("id","cumple");
         $(location).attr("href","formulario.html#cumple");
         $(".titulo-evento").text("CUMPLEAÑOS");
@@ -170,7 +304,6 @@ $(document).ready(function(){
 		break;
 
 		case "formulario.html#casamiento":
-		//alert(pageHref());
 
 		$(".titulo-evento").attr("id","casamiento");
         $(location).attr("href","formulario.html#casamiento");
@@ -179,7 +312,6 @@ $(document).ready(function(){
 		break;
 
 		case "formulario.html#egresado":
-		//alert(pageHref());
 
 		$(".titulo-evento").attr("id","egresado");
         $(location).attr("href","formulario.html#egresado");
@@ -188,7 +320,6 @@ $(document).ready(function(){
 		break;
 
 		case "formulario.html#fiesta15":
-		//alert(pageHref());
 
 		$(".titulo-evento").attr("id","fiesta15");
         $(location).attr("href","formulario.html#fiesta15");
