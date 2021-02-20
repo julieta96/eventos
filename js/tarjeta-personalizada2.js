@@ -63,7 +63,7 @@ $(document).ready(function(){
     inputNegroFH.addEventListener("click",function(){
 
 
-          $('#fh').css("color","#000");
+          $('#fecha-hora').css("color","#000");
  
       })
 
