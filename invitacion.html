@@ -11,8 +11,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/carrito.js"></script>
   <script type="text/javascript" src="js/tarjeta-personalizada.js"></script>
   <script type="text/javascript" src="js/tarjeta-personalizada2.js"></script>
+  <script type="text/javascript" src="js/personalizar-invitacion.js"></script>
+  <script type="text/javascript" src="js/redireccionarPagina.js"></script>
  
  </head>
   <body>
@@ -29,7 +32,7 @@
               <div class="icon-lupa" id="lupa"></div>
            </div>
 
-        <div class="icon-basket carrito"></div>
+        <div class="icon-basket carrito"><span class="contador">0</span></div>
 
        </div>
 
@@ -55,7 +58,9 @@
       <section class="section-invitacion-personalizada">
 
 
-        <h3 class="titulo-principal"> Personalizacion de invitacion</h3>
+        <a href="invitacion.html#recital" class="a-titulo-principal">
+          <h3 class="titulo-principal">Personalizacion de invitacion</h3>
+        </a>
         <br>
 
             
@@ -64,7 +69,7 @@
              <!------------TITULO----------->
           <form class="modificacion-titulo" id="formulario">
 
-            <input type="text" placeholder="Titulo Evento" class="titulo-e" name="titulo-e">
+            <input type="text" placeholder="Titulo Evento" class="titulo-e" name="titulo-e"  autocomplete="off">
 
             <br><br>
 
@@ -147,8 +152,8 @@
 
           <div class="tarjeta">
 
-            <h3 class="titulo"  id="titulo-e" >Titulo</h3>
-            <p id="fecha-hora" >fecha , hora </p>
+            <h3 class="titulo"  id="titulo-e">Titulo</h3>
+            <p id="fecha-hora" >fecha, hora </p>
         
           </div>
     
@@ -237,19 +242,19 @@
 
      <div class="opciones-color"> 
 
-              <input type="radio" name="fondo" id="b-negro">
+              <input type="radio" name="fondo" id="b-negro" class="fondo">
               <label for="b-negro" class="icon-fondo" id="negro"></label>
 
-              <input type="radio" name="fondo" id="b-blanco">
+              <input type="radio" name="fondo" id="b-blanco" class="fondo"> 
               <label for="b-blanco" class="icon-fondo" id="blanco"></label>
 
-              <input type="radio" name="fondo" id="b-rojo">
+              <input type="radio" name="fondo" id="b-rojo" class="fondo">
               <label for="b-rojo" class="icon-fondo" id="rojo"></label>
 
-              <input type="radio" name="fondo" id="b-azul">
+              <input type="radio" name="fondo" id="b-azul" class="fondo">
               <label for="b-azul" class="icon-fondo" id="azul"></label>
         
-              <input type="radio" name="fondo" id="b-verde">
+              <input type="radio" name="fondo" id="b-verde" class="fondo">
               <label for="b-verde "class="icon-fondo" id="verde"></label>
 
      </div>
