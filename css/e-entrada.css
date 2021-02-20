@@ -68,7 +68,17 @@ body{
    text-align: center;
    color: #fff;
    line-height: 70px;
+    cursor: pointer;
 
+}
+
+
+.contador{
+  color: yellowgreen;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  display: inline-block;
 }
 
 .carrito{
@@ -224,9 +234,9 @@ input[type=number]::outer-spin-button {
 
 .personalizar , .m-personalizar{
   border:0;
- /* border-radius: 10px;*/
   padding: 5px;
   font-family: 'Roboto', sans-serif;
+  outline: 0;
 }
 
 .personalizar:hover , .m-personalizar:hover{
@@ -252,12 +262,61 @@ input[type=number]::outer-spin-button {
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
   margin-left: 50px;
+  outline: 0;
 }
 
 
 .b-scomprar:hover , .b-fcompra:hover{
    background: #cddc39;
   
+}
+
+/*---------------modal------------------------*/
+.modal-container{
+  display: none; 
+  position: fixed; 
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  overflow-y: visible;
+}
+.modal-content{
+     background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid lightgray;
+      border-top: 10px solid #CDDC39;
+      width: 60%;
+      height: 60%;
+}
+
+.modal-container .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .modal-container .close:hover,
+    .modal-container .close:focus {
+      color: #f00;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+
+.fa-check{
+  color: green;
+}
+
+.estado-inscripcion {
+  text-align: center;
 }
 
 /***********************************************************/
