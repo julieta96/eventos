@@ -66,6 +66,15 @@ body{
    text-align: center;
    color: #fff;
    line-height: 70px;
+    cursor: pointer;
+}
+
+.contador{
+  color: yellowgreen;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  display: inline-block;
 }
 
 .icon-lupa{
@@ -166,6 +175,7 @@ body{
 
 .section-contacto >h2{
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .section-contacto >h2 ,
@@ -186,6 +196,7 @@ body{
  .form-contacto >input{
   padding-top: 5px;
   padding-bottom: 5px;
+  border: 0;
  }
 
 
@@ -201,6 +212,14 @@ body{
   resize: none;
  }
 
+ .form-contacto>.fa-check{
+
+  color: #7DCEA0;
+  margin-left: 10px;
+  display: none;
+
+ }
+
 
  .datos-empresa{
   color: white;
@@ -213,9 +232,34 @@ body{
 
  }
 
- .datos-empresa >p{
+ .datos-empresa >p , .datos-empresa >i{
   text-align: left;
+  /*border: 1px solid green;*/
+  margin-top: -10px;
+  display: inline-block;
+
  }
+
+ .datos-empresa >i{
+
+  color: #cddc39;
+ 
+ }
+
+ .datos-empresa >p{
+
+  margin-right: 10px;
+ }
+
+ .fa-phone-alt,.fa-envelope {
+    margin-right: 10px;
+    color: #cddc39;
+}
+
+.fa-map-marker-alt{
+  margin-right: 15px;
+  color: #cddc39;
+} 
 
  #b-enviar{
   margin: auto;
@@ -383,4 +427,33 @@ footer .copyright{
   margin-bottom: 0px;
   padding-top: 8px;
   font-size: 10px;
+}
+
+
+@media screen and (min-width: 500px){
+
+ /* .contenedor{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:repeat(4 , auto) ;
+    grid-template-areas: "header "
+                         "contacto"
+                         "mapa"
+                         "footer footer footer";
+  }
+
+
+  .header{
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .header1{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  
+  }*/
 }
