@@ -266,7 +266,7 @@ input[type=number]::outer-spin-button {
 }
 
 
-.b-scomprar:hover , .b-fcompra:hover{
+.b-scomprar:hover , .b-fcompra:hover , .imprimir-comprobante:hover , .pagar:hover{
    background: #cddc39;
   
 }
@@ -276,7 +276,7 @@ input[type=number]::outer-spin-button {
   display: none; 
   position: fixed; 
   z-index: 1;
-  padding-top: 100px;
+  padding-top: 90px;
   left: 0;
   top: 0;
   width: 100%;
@@ -318,6 +318,52 @@ input[type=number]::outer-spin-button {
 .estado-inscripcion {
   text-align: center;
 }
+
+.titulo-carrito{
+  text-align: center;
+}
+
+.detalle-compra{
+  margin: auto;
+  /*border: 1px solid red;*/
+  text-align: center;
+}
+
+
+.imprimir-comprobante , .pagar{
+
+  background-color: yellowgreen;
+  padding: 10px;
+  border:0;
+  color: #000;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  outline: 0;
+
+}
+
+.imprimir-comprobante{
+  width: 200px;
+}
+
+.tarjeta-empresa{
+  height: 21px;
+}
+
+.codigo-seguridad{
+  width: 23px;
+  outline: 0;
+  /*border: 0;*/
+}
+
+
+
+.pagar{
+
+  width:700px;
+  margin-left: 30px;
+}
+
 
 /***********************************************************/
 
