@@ -68,7 +68,16 @@ body{
     text-align: center;
     color: #fff;
     line-height: 70px;
+     cursor: pointer;
 
+}
+
+.contador{
+  color: yellowgreen;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  display: inline-block;
 }
 
 .icon-lupa{
@@ -221,6 +230,7 @@ input#buscador {
   font-size: 15px;
   font-weight: bold;
  align-self: center;
+ outline: 0;
 }
 
 .b-incribirse:hover{
