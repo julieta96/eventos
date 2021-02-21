@@ -10,7 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <script type="text/javascript" src="js/validacion_js.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/carrito.js"></script>
+  <script type="text/javascript" src="js/contacto.js"></script>
  
  </head>
   <body>
@@ -27,7 +29,7 @@
           <div class="icon-lupa" id="lupa"></div>
      </div>
 
-        <div class="icon-basket carrito"></div>
+        <div class="icon-basket carrito"><span class="contador">0</span></div>
 
        </div>
 
@@ -54,21 +56,25 @@
 
          <div class="datos-empresa">
         
-          <p>Telefono: 05165669</p>
-          <p>Direccion: calle falsa 123</p>
-          <p>E-mail: eventos@arg.com</p>
+         <p> <i class="fas fa-phone-alt"></i>Telefono: 05165669</p>
+         <p><i class="fas fa-map-marker-alt"></i>Direccion: calle falsa 123</p>
+         <p><i class="fas fa-envelope"></i>E-mail: eventos@arg.com</p>
 
        </div>
 
        <form class="form-contacto">
-          <input type="text" class="nombre" placeholder="Nombre"><br><br>
-          <input type="text" class="apellido" placeholder="Apellido"><br><br>
-          <input type="email" class="email1" placeholder="E-mail"><br><br>
-          <input type="number" class="telefono" placeholder="Telefono"><br><br>
-          <textarea placeholder="comentarios"></textarea><br><br>
-          <input type="submit" id="b-enviar" value="ENVIAR">
+          <input type="text" id="nombre" class="nombre" placeholder="Nombre" required=""><br><br>
+          <input type="text" id="apellido" class="apellido" placeholder="Apellido" required=""><br><br>
+          <input type="email" id="email1" class="email1" placeholder="E-mail" required=""><br><br>
+          <input type="text" id="telefono" class="telefono" placeholder="Telefono" required=""><br><br>
+          <textarea placeholder="comentarios" id="comentarios"></textarea><br><br>
+          <input type="submit" id="b-enviar" value="ENVIAR" >
       </form>
+
+
     </section>
+
+  
 
     
     <section class="section-mapa">
