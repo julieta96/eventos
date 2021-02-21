@@ -62,16 +62,14 @@ background:/*#ffffff*/#000;
 
 .marca{
     text-align: left;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
     /*margin-left: 0;*/
+    cursor: pointer;
 
 }
 
-.evento-marca{
-  text-decoration: none;
-  font-family: 'Cinzel', serif;
 
-
-}
 
 .evento-marca >h2{
 
@@ -115,6 +113,16 @@ input#buscador {
     line-height: 70px;
     text-align: center;
     color: #fff;
+    cursor: pointer;
+
+}
+
+.contador{
+  color: yellowgreen;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  display: inline-block;
 }
 
 .icon-lupa{
@@ -185,6 +193,7 @@ input#buscador {
 #menu a:hover{
     color: white;
 }
+
 
 /*--------------------------------------------------------------*/
 
@@ -403,7 +412,7 @@ input#buscador {
   margin-top: 2%;
 }
 
-.b-detalle-e,.b-detalle-c{
+.detalle,.comprar{
 
   margin: auto;
   background: #cddc39;
@@ -416,7 +425,7 @@ input#buscador {
   cursor: pointer;
 }
 
-.b-detalle-e:hover ,.b-detalle-c:hover{
+.detalle:hover ,.comprar:hover{
 
   background: yellowgreen;
 
