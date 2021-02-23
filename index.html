@@ -18,10 +18,10 @@
   <script type="text/javascript" src="js/slider-automatico.js"></script>
   <!--<script type="text/javascript" src="js/menu_activo.js"></script>-->
   <script type="text/javascript" src="js/slider.js"></script>
-  <script type="text/javascript" src="js/carrito2.js"></script>
+  <script type="text/javascript" src="js/carritoo.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
- 
-  
+  <script type="text/javascript" src="js/eventos.js"></script>
+
  </head>
   <body>
 
@@ -107,9 +107,9 @@
 
           <div class="e1 evento-card lista-eventos">
              <img class ="evento1" src="img/eventos/1.png">
-             <h2 class="titulo-evento">RECITALES</h2>
-             <p class="fechas">Octubre 15, 2021</p>
-             <h3 class="precio p-r">$3.000</h3>
+             <h2 class="titulo-evento" id="t-recital"></h2>
+             <p class="fechas" id="fecha-recital"></p>
+             <h3 class="precio p-r" id="precio-recital"></h3>
              <a href="evento.html#recitales" class="detalle a_eventos1">VER DETALLE</a>
              <br>
              <a href="#" class="comprar c-recitales">COMPRAR</a>
@@ -117,9 +117,9 @@
 
           <div class="e2 evento-card lista-eventos">
              <img class ="evento2" src="img/eventos/2.jpg">
-             <h2 class="titulo-evento">KARAOKE</h2>
-             <p class="fechas">Septiembre 2, 2021</p>
-             <h3 class="precio p-k">$850</h3>
+             <h2 class="titulo-evento" id="t-karaoke"></h2>
+             <p class="fechas" id="fecha-karaoke"></p>
+             <h3 class="precio p-k" id="precio-karaoke"></h3>
              <a href="evento.html#karaoke" class="detalle a_eventos2">VER DETALLE</a>
              <br>
              <a href="#" class="comprar c-karaoke">COMPRAR</a>
@@ -127,9 +127,9 @@
 
          <div class="e3 evento-card lista-eventos">
              <img class ="evento3" src="img/eventos/3.jpg">
-             <h2 class="titulo-evento">CUMPLEAÑOS</h2>
-             <p class="fechas">Julio 10, 2021</p>
-             <h3 class="precio p-cum">$10.000</h3>
+             <h2 class="titulo-evento" id="t-cumple"></h2>
+             <p class="fechas" id="fecha-cumple"></p>
+             <h3 class="precio p-cum" id="precio-cumple"></h3>
              <a href="evento.html#cumpleanos" class="detalle a_eventos3">VER DETALLE</a>
              <br>
              <a href="#" class="comprar c-cumple">COMPRAR</a>
@@ -137,9 +137,9 @@
         
          <div class="e4 evento-card lista-eventos">
              <img class ="evento4" src="img/eventos/4.jpg">
-             <h2 class="titulo-evento">CASAMIENTOS</h2>
-             <p class="fechas">Septiembre 20, 2021</p>
-             <h3 class="precio p-cas">$20.000</h3>
+             <h2 class="titulo-evento" id="t-casamiento"></h2>
+             <p class="fechas" id="fecha-casamiento"></p>
+             <h3 class="precio p-cas" id="precio-casamiento"></h3>
              <a href="evento.html#casamientos" class="detalle a_eventos4">VER DETALLE</a>
             <br>
              <a href="#" class="comprar c-casamiento">COMPRAR</a>
@@ -147,9 +147,9 @@
          
           <div class="e5 evento-card lista-eventos">
              <img class ="evento5" src="img/eventos/5.jpg">
-             <h2 class="titulo-evento">EGRESADOS</h2>
-             <p class="fechas">Diciembre 12, 2021</p>
-             <h3 class="precio p-eg">$18.000</h3>
+             <h2 class="titulo-evento" id="t-egresado"></h2>
+             <p class="fechas" id="fecha-egresado">Diciembre 12, 2021</p>
+             <h3 class="precio p-eg" id="precio-egresado"></h3>
              <a href="evento.html#egresados" class="detalle a_eventos5">VER DETALLE</a>
              <br>
              <a href="#" class="comprar c-egresados">COMPRAR</a>
@@ -157,9 +157,9 @@
 
          <div class="e6 evento-card lista-eventos">
              <img class ="evento6" src="img/eventos/6.jpg">
-             <h2 class="titulo-evento">FIESTA DE 15</h2>
-             <p class="fechas">Agosto 8, 2021</p>
-             <h3 class="precio p-15">$16.000</h3>
+             <h2 class="titulo-evento" id="t-fiesta15"></h2>
+             <p class="fechas" id="fecha-fiesta15"></p>
+             <h3 class="precio p-15" id="precio-f15"></h3>
              <a href="evento.html#fiesta15" class="detalle a_eventos6">VER DETALLE</a>
              <br>
              <a href="#" class="comprar c-fiesta15">COMPRAR</a>
