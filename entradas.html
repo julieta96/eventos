@@ -10,13 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/entradas.js"></script>
-  <script type="text/javascript" src="js/carrito2.js"></script>
-  <script type="text/javascript" src="js/personalizar-invitacion.js"></script>
-  <script type="text/javascript" src="js/redireccionarPagina.js"></script>
-  <script type="text/javascript" src="js/font-awesome.js"></script>
-  <script type="text/javascript" src="js/modal.js"></script>
+  <script  type="text/javascript" src="js/font-awesome.js" ></script>
+  <script  data-main="js/config" src="js/require.js" ></script>
+  <script  type="text/javascript" src="js/validacion-entradas.js"></script>
+  
  </head>
 
   <body>
@@ -66,45 +63,45 @@
          <div class="fila1">CANTIDAD</div>
          <div class="fila1">TOTAL</div>
 
-         <div>28/01/2021</div>
-         <div class="titulo-evento">RECITALES</div>
+         <div id="fecha-recital"></div>
+         <div class="titulo-evento" id="titulo-recital"></div>
          <div><input type="submit" value="PERSONALIZAR" class="personalizar" id="recital"></div>
-         <div class="precio-r precio">3000.0</div>
+         <div class="precio-r precio"></div>
          <input type="number" class="cantidad cant-r" value="0" min="0" max="10">
          <div class="total t-r">0</div>
 
-         <div>02/09/2021</div>
-         <div class="titulo-evento">KARAOKE</div>
+         <div id="fecha-karaoke"></div>
+         <div class="titulo-evento" id="titulo-karaoke"></div>
          <div><input type="submit" value="PERSONALIZAR" class="personalizar" id="karaoke"></div>
-         <div class="precio-k precio">850</div>
+         <div class="precio-k precio"></div>
          <input type="number" class="cantidad cant-k" value="0" min="0" max="10">
          <div class="total t-k">0</div>
 
-         <div>10/07/2021</div>
-         <div class="titulo-evento">CUMPLEAÑOS</div>
+         <div id="fecha-cumple"></div>
+         <div class="titulo-evento" id="titulo-cumple"></div>
          <div><input type="submit" value="PERSONALIZAR" class="personalizar" id="cumple"></div>
-         <div class="precio-cum precio">10000.0</div>
+         <div class="precio-cum precio"></div>
          <input type="number" class="cantidad cant-cum" value="0" min="0" max="5">
          <div class="total t-cum">0</div>
 
-         <div>20/09/2021</div>
-         <div class="titulo-evento">CASAMIENTOS</div>
+         <div id="fecha-casamiento"></div>
+         <div class="titulo-evento" id="titulo-casamiento"></div>
          <div><input type="submit" value="PERSONALIZAR" class="personalizar" id="casamiento"></div>
-         <div class="precio-ca precio">20000.0</div>
+         <div class="precio-ca precio"></div>
          <input type="number" class="cantidad cant-ca" value="0" min="0" max="10">
          <div class="total t-ca">0</div>
 
-         <div>12/12/2021</div>
-         <div class="titulo-evento">EGRESADOS</div>
+         <div id="fecha-egresado"></div>
+         <div class="titulo-evento" id="titulo-egresado"></div>
          <div><input type="submit" value="PERSONALIZAR" class="personalizar" id="egresados"></div>
-         <div class="precio-eg precio">18000.0</div>
+         <div class="precio-eg precio"></div>
          <input type="number" class="cantidad cant-eg" value="0" min="0" max="100" >
          <div class="total t-eg">0</div>
 
-         <div>08/08/2021</div>
-         <div class="titulo-evento">FIESTA DE 15</div>
+         <div id="fecha-fiesta15"></div>
+         <div class="titulo-evento" id="titulo-fiesta15"></div>
          <div><input type="submit" value="PERSONALIZAR" class="personalizar" id="fiesta15"></div>
-         <div class="precio-15 precio">16000.0</div>
+         <div class="precio-15 precio"></div>
          <input type="number" class="cantidad cant-15" value="0" min="0" max="20">
          <div class="total t-15">0</div>
          </div>
