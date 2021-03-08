@@ -293,7 +293,7 @@ input[type=number]::outer-spin-button {
       border: 1px solid lightgray;
       border-top: 10px solid #CDDC39;
       width: 60%;
-      height: 60%;
+      height: 65%;
 }
 
 .modal-container .close {
