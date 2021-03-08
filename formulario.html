@@ -10,10 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/font-awesome.js"></script>
-  <script type="text/javascript" src="js/carrito.js"></script>
-  <script type="text/javascript" src="js/redireccionarPagina.js"></script>
+  <script  data-main="js/config" src="js/require.js" ></script>
+  <script type="text/javascript" src="js/validacion-formulario.js"></script>
 
 
  </head>
@@ -51,7 +50,7 @@
      </header>
 
 
-       <div class="datos">
+       <div class="datos-contenedor">
 
            <div class="titulo-inscripcion">
 
@@ -88,7 +87,7 @@
            </div>
 
          
-            <input type="button" value="000.-" class="boton1">
+            <input type="button" value="000.-" class="boton1" id="total">
             <input type="button" value="INSCRIBIRSE" class="boton2" id="inscribirse" form="formulario">
             <!--------modal----------->
             <div  id="modal" class="modal-container">
@@ -99,18 +98,15 @@
                 <div class="inscriptos">
                  
                 </div>
-                <p>se inscribio a:</p>
-                <p class="evento-inscripto"></p><br>
-                <p>Fecha y Horario:<p class="fecha-horario"></p></p>
+                <p>se inscribio a: 
+                  <p class="evento-inscripto"></p>
+                </p>
+                <p>Fecha y Horario:
+                  <p class="fecha-horario"></p>
+                </p>
 
               </div>
             </div>
-  
-         
-
-
-          
-
 
        </div>
       
