@@ -178,7 +178,7 @@ body{
   text-align: center;
  }
 
- .datos{
+ .datos-contenedor{
   grid-area: datos;
   margin: auto;
  }
