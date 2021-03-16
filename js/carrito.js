@@ -93,25 +93,25 @@ return class Carrito{
 
 	}
 
-	comprarEvento(evento){
+	agregarCantidadEvento(id, cantidad){//funciona
+        
+        let cantidadEvento = 0;
+        cantidadEvento+=cantidad;
+		this.buscarEventoId(id).setCantidad=cantidadEvento;
+		console.log(this.buscarEventoId(id).setCantidad=cantidadEvento)
+		console.log(this.buscarEventoId(id).getCantidad)
+	}
 
-		this.listaEventos[this.contador]=this.obtenerEvento(evento);
-		this.contador++;
+	comprarEvento(evento){//funciona - retorna objetoEvento agregado actualmente
 
-		let lista = this.listaEventos;
-        let size = lista.length;
-        let ultimoEvento = lista[size-1];
-         console.log(this.listaEventos)
-		let total=0;
-		let precioEvento= ultimoEvento.getPrecio;
-		let cantidadEvento= ultimoEvento.getCantidad;
+		let guardarEvento = this.obtenerEvento(evento);
+		let eventoActual = null;
+        
+        if(!this.listaEventos.includes(guardarEvento)){
+		this.listaEventos.push(guardarEvento);
+		eventoActual = guardarEvento;}
 
-		total+=precioEvento*cantidadEvento;
-
-        localStorage.setItem("totalCarrito", total);
-        this.setTotal=localStorage.getItem("totalCarrito");
-        console.log(this.getTotal)
-        return this.getTotal;
+	    return eventoActual;   
 	}
 
 	buscarEventoId(id){//funciona
@@ -133,13 +133,25 @@ return class Carrito{
 
 	}
 
+	calcularTotal(){ //obtener el objeto y llamar al precio + multiplicar por la cantidad
 
-	
+		let precio = 0;
+		let cantidad = 0;
 
-	agregarCantidadEvento(id, cantidad){
+		for(let lista in this.listaEventos){
 
-		this.buscarEventoId(id).setCantidad=cantidad;
+            precio = lista.getPrecio;
+            cantidad = lista.cantidad;
+
+		}
+         console.log(this.lista)
+         localStorage.setItem("totalCarrito", this.total);
+         this.total+=precio*cantidad;
+         this.setTotal= localStorage.getItem("totalCarrito", this.total);
+         console.log(this.getTotal);
+		 return this.getTotal;       
 	}
+
 
 	eliminarEvento(eventoId){
       //let lista = this.lista;
@@ -152,8 +164,8 @@ return class Carrito{
 
 		if(this.estaVacio()==false){
           
-        setContador=0;
-        setTotal=0;
+        this.setContador=0;
+        this.setTotal=0;
 
 		}
 
@@ -162,15 +174,15 @@ return class Carrito{
 	estaVacio(){
          
 
-		if(this.contador==0){
+		if(this.listaEventos.length==0){
 
-			setVacio=true;
+			this.setVacio=true;
 
 		}else{
-			setVacio=false;
+			this.setVacio=false;
 		}
 
-		return getVacio;
+		return this.getVacio;
 	}
 }
 
