@@ -7,8 +7,9 @@ return class Carrito{
 		this.id = id;
 		this.vacio = true;
 		this.contador = 0;
-		this.total = 0.0;
+		this.total = 0;
 		this.listaEventos = new Array();
+        localStorage.setItem("totalCarrito", this.total);
 	}
 
 
@@ -102,16 +103,17 @@ return class Carrito{
 		console.log(this.buscarEventoId(id).getCantidad)
 	}
 
-	comprarEvento(evento){//funciona - retorna objetoEvento agregado actualmente
+	comprarEvento(evento){//funciona -  agrega el evento actual
 
 		let guardarEvento = this.obtenerEvento(evento);
-		let eventoActual = null;
+		//let eventoActual = null;
         
         if(!this.listaEventos.includes(guardarEvento)){
 		this.listaEventos.push(guardarEvento);
-		eventoActual = guardarEvento;}
+		//eventoActual = guardarEvento;
+	    }
 
-	    return eventoActual;   
+	    //return eventoActual;   
 	}
 
 	buscarEventoId(id){//funciona
@@ -133,23 +135,25 @@ return class Carrito{
 
 	}
 
-	calcularTotal(){ //obtener el objeto y llamar al precio + multiplicar por la cantidad
+	calcularTotal(){ //recorrer lista y llamar al precio + multiplicar por la cantidad
 
 		let precio = 0;
 		let cantidad = 0;
-
+		let cantidadPrecio=0;
+		
 		for(let lista in this.listaEventos){
 
-            precio = lista.getPrecio;
-            cantidad = lista.cantidad;
+            precio = this.listaEventos[lista].getPrecio;
+            cantidad = this.listaEventos[lista].getCantidad;
+
+            cantidadPrecio =precio*cantidad;
 
 		}
-         console.log(this.lista)
-         localStorage.setItem("totalCarrito", this.total);
-         this.total+=precio*cantidad;
-         this.setTotal= localStorage.getItem("totalCarrito", this.total);
-         console.log(this.getTotal);
-		 return this.getTotal;       
+
+         this.total=  parseInt(this.getTotal) +  parseInt(cantidadPrecio);
+         //this.setTotal= localStorage.getItem("totalCarrito");
+         //console.log(this.getTotal)
+		 return this.total;       
 	}
 
 
@@ -180,6 +184,7 @@ return class Carrito{
 
 		}else{
 			this.setVacio=false;
+			$(".icon-basket").css("color","yellowgreen");
 		}
 
 		return this.getVacio;
