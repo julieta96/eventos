@@ -1,7 +1,7 @@
 requirejs.config({
 
     baseUrl: 'js',
-
+     waitSeconds: 200,
     paths:{
           'eventos':'eventos',
           'jquery':'jquery',
@@ -18,7 +18,10 @@ requirejs.config({
           'tarjeta':'tarjeta-personalizada',
           'tarjeta2':'tarjeta-personalizada2',
           'personalizar-invitacion':'personalizar-invitacion',
-          'formulario':'formulario'
+          'formulario':'formulario',
+          'carrito-clase':'carrito',
+          'carrito':'validacionCarrito'
+
       },
       
     shim : {
