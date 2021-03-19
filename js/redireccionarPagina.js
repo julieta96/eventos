@@ -1,4 +1,4 @@
-$(document).ready(function(){
+require(['jquery','eventos-creados'],function($,objeto){
 
 	function pageHref(){
 
@@ -20,8 +20,8 @@ $(document).ready(function(){
         $(".re").css("display","block");
         $("#recitales").siblings().css("display","none");
         $(".re").siblings().css("display","none");
-		$(".titulo").text("RECITALES");
-		$(".cambio-hora").text("28/01/2021 20hs");
+		$(".titulo").text(`${objeto.recitalDatos.getNombre}`);
+		$(".cambio-hora").text(`${objeto.recitalDatos.getFecha} ${objeto.recitalDatos.getHora}`);
 		$(".cambio-organizador").text("Iure");
 		$(".cambio-pagina").attr("href","formulario.html#recital");
 		break;
@@ -32,8 +32,8 @@ $(document).ready(function(){
         $(".ka").css("display","block");
         $(".ka").siblings().css("display","none");
         $("#karaoke").siblings().css("display","none");
-		$(".titulo").text("KARAOKE");
-		$(".cambio-hora").text("02/09/2021 23hs");
+		$(".titulo").text(`${objeto.karaokeDatos.getNombre}`);
+		$(".cambio-hora").text(`${objeto.karaokeDatos.getFecha} ${objeto.karaokeDatos.getHora}`);
 		$(".cambio-organizador").text("Organizador2");
 		$(".cambio-pagina").attr("href","formulario.html#karaoke");
 		
@@ -45,8 +45,8 @@ $(document).ready(function(){
         $(".cu").css("display","block");
         $(".cu").siblings().css("display","none");
         $("#cumpleanos").siblings().css("display","none");
-		$(".titulo").text("CUMPLEAÑOS");
-		$(".cambio-hora").text("10/07/2021 20hs");
+		$(".titulo").text(`${objeto.cumpleDatos.getNombre}`);
+		$(".cambio-hora").text(`${objeto.cumpleDatos.getFecha} ${objeto.cumpleDatos.getHora}`);
 		$(".cambio-organizador").text("Organizador3");
 		$(".cambio-pagina").attr("href","formulario.html#cumple");
 		
@@ -58,8 +58,8 @@ $(document).ready(function(){
         $(".ca").css("display","block");
         $(".ca").siblings().css("display","none");
         $("#casamientos").siblings().css("display","none");
-		$(".titulo").text("CASAMIENTOS");
-		$(".cambio-hora").text("20/09/2021 23hs");
+		$(".titulo").text(`${objeto.casamientoDatos.getNombre}`);
+		$(".cambio-hora").text(`${objeto.casamientoDatos.getFecha} ${objeto.casamientoDatos.getHora}`);
 		$(".cambio-organizador").text("Organizador4");
 		$(".cambio-pagina").attr("href","formulario.html#casamiento");
 
@@ -72,8 +72,8 @@ $(document).ready(function(){
         $(".eg").css("display","block");
         $(".eg").siblings().css("display","none");
         $("#egresados").siblings().css("display","none");
-		$(".titulo").text("EGRESADOS");
-		$(".cambio-hora").text("12/12/2021 20hs");
+		$(".titulo").text(`${objeto.egresadoDatos.getNombre}`);
+		$(".cambio-hora").text(`${objeto.egresadoDatos.getFecha} ${objeto.egresadoDatos.getHora}`);
 		$(".cambio-organizador").text("Organizador5");
 		$(".cambio-pagina").attr("href","formulario.html#egresado");
 		
@@ -85,8 +85,8 @@ $(document).ready(function(){
         $(".fi").css("display","block");
         $(".fi").siblings().css("display","none");
         $("#fiesta15").siblings().css("display","none");
-		$(".titulo").text("FIESTA DE 15");
-		$(".cambio-hora").text("08/08/2021 21hs");
+		$(".titulo").text(`${objeto.fiesta15Datos.getNombre}`);
+		$(".cambio-hora").text(`${objeto.fiesta15Datos.getFecha} ${objeto.fiesta15Datos.getHora}`);
 		$(".cambio-organizador").text("Organizador6");
 		$(".cambio-pagina").attr("href","formulario.html#fiesta15");
 		
@@ -245,18 +245,23 @@ $(document).ready(function(){
 	const infoEvento=(evento , fechaHora) => {
 
 		let inscriptos = Array.from($(".datos")).map(i => {
-        console.log(i);
         let nombre = $(i).find("#nombre").val()
         let apellido = $(i).find("#apellido").val()
         let telefono = $(i).find("#telefono").val()
         return `<p class='nombre'>${nombre}&nbsp;</p><p class='Apellido'>${apellido}&nbsp;</p><p class='telefono'>(Telefono: ${telefono}),&nbsp;</p>`;
         
     })
+	
 
     $(".inscriptos").html(inscriptos.join(""));
     $(".evento-inscripto").html(evento);
     $(".fecha-horario").html(fechaHora);
 
+	}
+
+	const total=(cantidadInscriptos , precioEvento)=>{
+
+		return cantidadInscriptos*precioEvento;
 	}
 
 	switch(pageHref()){
@@ -276,9 +281,10 @@ $(document).ready(function(){
 
 		$(".titulo-evento").attr("id","recital");
         $(location).attr("href","formulario.html#recital");
-        $(".titulo-evento").text("RECITAL");
+        $(".titulo-evento").text(`${objeto.recitalDatos.getNombre}`);
+        //total($(".datos").length ,e.recitalDatos.getPrecio)
         $("#inscribirse").click(function(){
-          infoEvento($(".titulo-evento").text() , "28/01/2021 20hs")
+          infoEvento($(".titulo-evento").text() , `${objeto.recitalDatos.getFecha} ${objeto.recitalDatos.getHora}`)
         })
        
 		break;
@@ -287,44 +293,43 @@ $(document).ready(function(){
 
 		$(".titulo-evento").attr("id","karaoke");
         $(location).attr("href","formulario.html#karaoke");
-        $(".titulo-evento").text("KARAOKE");
+        $(".titulo-evento").text(`${objeto.karaokeDatos.getNombre}`);
         $("#inscribirse").click(function(){
-         infoEvento($(".titulo-evento").text() , "02/09/2021 23hs");
+         infoEvento($(".titulo-evento").text() ,`${objeto.karaokeDatos.getFecha} ${objeto.karaokeDatos.getHora}`);
         })
 
         
 		break;
 
 		case "formulario.html#cumple":
-
 		$(".titulo-evento").attr("id","cumple");
         $(location).attr("href","formulario.html#cumple");
-        $(".titulo-evento").text("CUMPLEAÑOS");
-        infoEvento($(".titulo-evento").text() , "10/07/2021 20hs");
+        $(".titulo-evento").text(`${objeto.cumpleDatos.getNombre}`);
+        infoEvento($(".titulo-evento").text() ,`${objeto.cumpleDatos.getFecha} ${objeto.cumpleDatos.getHora}`);
 		break;
 
 		case "formulario.html#casamiento":
 
 		$(".titulo-evento").attr("id","casamiento");
         $(location).attr("href","formulario.html#casamiento");
-        $(".titulo-evento").text("CASAMIENTOS");
-        infoEvento($(".titulo-evento").text() , "20/09/2021 23hs");
+        $(".titulo-evento").text(`${objeto.casamientoDatos.getNombre}`);
+        infoEvento($(".titulo-evento").text() , `${objeto.casamientoDatos.getFecha} ${objeto.casamientoDatos.getHora}`);
 		break;
 
 		case "formulario.html#egresado":
 
 		$(".titulo-evento").attr("id","egresado");
         $(location).attr("href","formulario.html#egresado");
-        $(".titulo-evento").text("EGRESADOS");
-        infoEvento($(".titulo-evento").text() , "12/12/2021 20hs");
+        $(".titulo-evento").text(`${objeto.egresadoDatos.getNombre}`);
+        infoEvento($(".titulo-evento").text() , `${objeto.egresadoDatos.getFecha} ${objeto.egresadoDatos.getHora}`);
 		break;
 
 		case "formulario.html#fiesta15":
 
 		$(".titulo-evento").attr("id","fiesta15");
         $(location).attr("href","formulario.html#fiesta15");
-        $(".titulo-evento").text("FIESTA DE 15");
-        infoEvento($(".titulo-evento").text() , "08/08/2021 21hs");
+        $(".titulo-evento").text(`${objeto.fiesta15Datos.getNombre}`);
+        infoEvento($(".titulo-evento").text() , `${objeto.fiesta15Datos.getFecha} ${objeto.fiesta15Datos.getHora}`);
 		break;
 
 
