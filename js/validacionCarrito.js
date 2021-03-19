@@ -4,7 +4,7 @@ require(['jquery','carrito'],
 		const carrito = new c(1);
 
 		let eventoComprado=null;
-
+        let contador = localStorage.getItem("cantidadEventos") || 0; 
 		let contador10 = localStorage.getItem("contadorRecital")|| 0;
 		let contador20 = localStorage.getItem("contadorKaraoke")|| 0;
 		let contador30 = localStorage.getItem("contadorCumple")|| 0;
@@ -12,23 +12,10 @@ require(['jquery','carrito'],
 		let contador50 = localStorage.getItem("contadorEgresados")|| 0;
 		let contador60 = localStorage.getItem("contadorFiesta15")|| 0;
 
-		let totalCantidad = parseInt(contador10) + parseInt(contador20) + 
-		                    parseInt(contador30) + parseInt(contador40) + 
-		                    parseInt(contador50)+ parseInt(contador60);
-
-	    localStorage.setItem("totalCantidadEventos", totalCantidad);
-		
-
-		console.log(totalCantidad)
-		
-
 		$(".comprar").on('click',function(eventoSeleccionado){
 
-            $(".contador").text(totalCantidad);
 			eventoComprado = eventoSeleccionado.target.id;
 			carrito.comprarEvento(eventoComprado);
-			//localStorage.setItem("totalCarrito", carrito.total);
-		    //console.log(carrito.getTotal)
 
             let contadorEvento= eventoSeleccionado.target.classList[1];
 
@@ -81,19 +68,14 @@ require(['jquery','carrito'],
 				break;
 			}
 
+			$(".contador").text(contador);
+            localStorage.setItem("cantidadEventos", contador++);
+
 			console.log(carrito.calcularTotal())
 
 			
 		})
 
-		/*$("#removeEvent").click(function(eventoSeleccionadoParaEliminar){
-
-		 let eliminarEvento = eventoSeleccionadoParaEliminar.target.id;
-            
-           carrito.eliminarEvento(eliminarEvento);
-
-        })*/
-       
-
-        
+		$(".contador").text(localStorage.getItem("cantidadEventos"));
+   
 	})
