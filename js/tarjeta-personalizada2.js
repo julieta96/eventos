@@ -1,4 +1,6 @@
-$(document).ready(function(){
+require(['jquery'],
+
+  function($){
 
 
     //INPUT TITULO----------------------------------------

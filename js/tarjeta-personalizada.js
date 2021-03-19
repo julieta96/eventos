@@ -1,6 +1,7 @@
-
-
-$(document).on("keyup", "#formulario input[name='titulo-e'], #formulario input[name='fecha-hora']", 
+require(['jquery'],
+  function($){
+    
+  $(document).on("keyup", "#formulario input[name='titulo-e'], #formulario input[name='fecha-hora']", 
 
   function(event){
 
@@ -22,6 +23,7 @@ $(document).on("keyup", "#formulario input[name='titulo-e'], #formulario input[n
     
  
 
+   })
+
+
 })
-
-

@@ -1,4 +1,4 @@
-$(document).ready(function(){
+require(['jquery'],function($){
 
 	let valorId="";
 

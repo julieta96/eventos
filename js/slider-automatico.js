@@ -1,5 +1,5 @@
-$(document).ready( function(){
-     
+require(['jquery'], function($){
+
      let evento=[];
      evento[0] = 'img/slider/e1.jpg';
      evento[1] ='img/slider/e2.jpg';
@@ -8,8 +8,9 @@ $(document).ready( function(){
          
 	 let i=0;
 	
- 
-	  function cambiarImagenes(){
+	  setInterval(cambiarImagenes , 4000);
+
+	 function cambiarImagenes(){
     
 
 	  $(".cambiarImg").attr('src',evento[i]);
@@ -21,9 +22,8 @@ $(document).ready( function(){
 	  	 	i=0;
 	  	 }
 
-	  }
+	  }  
 
-	  setInterval(cambiarImagenes , 4000);
-	  
 
-})
+	  })
+
