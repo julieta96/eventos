@@ -1,33 +1,12 @@
+function verDescripcionPasos(){
 
+  setInterval(esconderTitulo(),3);
+  setInterval(agregarDescripcion(),3);
+  setInterval(borrarDescripcion(),3);
+  setInterval(mostrarTitulo(),3);
 
-
-function verDescripcionPasos() {
-
-	/*cambiarColorContenedor();*/
-
-	setInterval(esconderTitulo(),3);
-	setInterval(agregarDescripcion(),3);
-	setInterval(borrarDescripcion(),3);
-	setInterval(mostrarTitulo(),3);
-	
-}
-
-/*function cambiarColorContenedor(){
-
-	var p1=document.getElementsByClassName("paso1");
-	var p2=document.getElementsByClassName("paso2");
-	var p3=document.getElementsByClassName("paso3");
-
-	p1[0].addEventListener("mouseover",function(){
-   var  paso1Contenedor=document.getElementsByClassName("paso1")[0].style.background="yellowgreen"; } ,false);
-
-   p2[0].addEventListener("mouseover",function(){
-   var  paso2Contenedor=document.getElementsByClassName("paso2")[0].style.background="yellowgreen"; } ,false);
-
-   p3[0].addEventListener("mouseover",function(){
-   var  paso3Contenedor=document.getElementsByClassName("paso3")[0].style.background="yellowgreen"; } ,false);
-
-}*/
+    }
+  
 
 function esconderTitulo(){
 
@@ -54,7 +33,7 @@ function agregarDescripcion(){
                      "adipisicing elit.Iure, veniam fuga?<br>"+
                      "Illo adipisci maiores commodi soluta, rerum<br>"+
                      "dolorum quas tempore veritatis, atque voluptatem<br>"+
-                      "natus impeditipsam, dicta in magnam architecto."; 
+                      "natus impeditipsam, dicta in magnam architecto.";
 
 	var  d1= document.getElementsByClassName("paso1");
 	var  d2= document.getElementsByClassName("paso2");
@@ -84,7 +63,7 @@ function agregarDescripcion(){
 
 function mostrarTitulo() {
 
-	var  t1=document.getElementsByClassName("paso1");
+	  var  t1=document.getElementsByClassName("paso1");
     var  t2=document.getElementsByClassName("paso2");
     var  t3=document.getElementsByClassName("paso3");
 
@@ -125,13 +104,8 @@ function borrarDescripcion(){
     } ,false);
     
     
-
-
 }
 
-
-
-window.addEventListener("load",verDescripcionPasos,false);
-
-
+ 
+verDescripcionPasos();
 
