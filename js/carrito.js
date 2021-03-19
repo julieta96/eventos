@@ -9,8 +9,6 @@ return class Carrito{
 		this.contador = 0;
 		this.total = 0;
 		this.listaEventos = new Array();
-
-		localStorage.setItem("totalCarrito", this.total);
        
 	}
 
@@ -143,16 +141,16 @@ return class Carrito{
 		}
 
          this.total=  parseInt(this.getTotal) +  parseInt(precio);
-         //this.setTotal= localStorage.getItem("totalCarrito");
-        //console.log(this.getTotal)
-		 return this.total;       
+         localStorage.setItem("totalCarrito", this.total);
+         localStorage.getItem("totalCarrito");
+		 return this.getTotal;       
 	}
 
 
 	eliminarEvento(eventoId){
       //let lista = this.lista;
-      let index = this.lista.findIndex(e=>e.getId==eventoId);
-      let eliminar = this.lista.splice(index, 1);
+      let index = this.listaEventos.findIndex(e=>e.getId==eventoId);
+      let eliminar = this.listaEventos.splice(index, 1);
 
 	}
 
@@ -176,7 +174,7 @@ return class Carrito{
 
 		}else{
 			this.setVacio=false;
-			$(".icon-basket").css("color","yellowgreen");
+			$(".icon-basket").css("color","#cddc39");
 		}
 
 		return this.getVacio;
