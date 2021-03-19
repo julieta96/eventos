@@ -1,5 +1,7 @@
-$(document).ready(function() {
+require(['jquery'],function($) {
 	
+     let total = 0;
+
 	$(".cantidad").click(function(){
 
 	 //totalRecital
@@ -24,7 +26,14 @@ $(document).ready(function() {
 
 	$(".t-15").text($(".cant-15").val()*$(".precio-15").text());
 
+	total =  $(".t-r").text() + $(".t-k").text()+ $(".t-cum").text() + $(".t-ca").text() + $(".t-eg").text() + $(".t-15").text() ;
 
+	})
+
+
+	$(".b-scomprar").click(function(){
+
+		$(location).attr("href","index.html");
 	})
 
 
