@@ -10,17 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+ <!--<script type="text/javascript" src="js/menu_activo.js"></script>-->
+  <script  data-main="js/config" src="js/require.js" ></script>
+  <script  type="text/javascript" src="js/index.js" ></script>
 
-
-  <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/validacion_js.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script type="text/javascript" src="js/slider-automatico.js"></script>
-  <!--<script type="text/javascript" src="js/menu_activo.js"></script>-->
-  <script type="text/javascript" src="js/slider.js"></script>
-  <script type="text/javascript" src="js/carritoo.js"></script>
-  <script type="text/javascript" src="js/index.js"></script>
-  <script type="text/javascript" src="js/eventos.js"></script>
 
  </head>
   <body>
@@ -35,7 +28,7 @@
           <h2 class="icon-diamond marca">Eventos.com</h2>
           
            <div class="buscador-lupa">
-              <input type="search" id="buscador" placeholder="buscar">
+              <input type="search" id="buscador" placeholder="Buscar eventos...">
               <div class="icon-lupa" id="lupa"></div>
            </div>
            <div class="icon-basket carrito"><span class="contador">0</span></div>
@@ -58,9 +51,6 @@
 
      </header>
 
-
-
-     
      <div class="slider">
 
         <img src="img/slider/e1.jpg"  class="eventos fade cambiarImg">
@@ -105,64 +95,64 @@
       <!---eventos-->
     <section class="evento">
 
-          <div class="e1 evento-card lista-eventos">
+          <div class="e1 evento-card lista-eventos" id="">
              <img class ="evento1" src="img/eventos/1.png">
              <h2 class="titulo-evento" id="t-recital"></h2>
              <p class="fechas" id="fecha-recital"></p>
              <h3 class="precio p-r" id="precio-recital"></h3>
              <a href="evento.html#recitales" class="detalle a_eventos1">VER DETALLE</a>
              <br>
-             <a href="#" class="comprar c-recitales">COMPRAR</a>
+             <a href="#10" class="comprar recital" id="" >COMPRAR</a>
           </div>
 
-          <div class="e2 evento-card lista-eventos">
+          <div class="e2 evento-card lista-eventos" id="">
              <img class ="evento2" src="img/eventos/2.jpg">
              <h2 class="titulo-evento" id="t-karaoke"></h2>
              <p class="fechas" id="fecha-karaoke"></p>
              <h3 class="precio p-k" id="precio-karaoke"></h3>
              <a href="evento.html#karaoke" class="detalle a_eventos2">VER DETALLE</a>
              <br>
-             <a href="#" class="comprar c-karaoke">COMPRAR</a>
+             <a href="#20" class="comprar karaoke" id="">COMPRAR</a>
          </div>
 
-         <div class="e3 evento-card lista-eventos">
+         <div class="e3 evento-card lista-eventos" id="">
              <img class ="evento3" src="img/eventos/3.jpg">
              <h2 class="titulo-evento" id="t-cumple"></h2>
              <p class="fechas" id="fecha-cumple"></p>
              <h3 class="precio p-cum" id="precio-cumple"></h3>
              <a href="evento.html#cumpleanos" class="detalle a_eventos3">VER DETALLE</a>
              <br>
-             <a href="#" class="comprar c-cumple">COMPRAR</a>
+             <a href="#30" class="comprar cumple" id="">COMPRAR</a>
          </div>
         
-         <div class="e4 evento-card lista-eventos">
+         <div class="e4 evento-card lista-eventos" id="">
              <img class ="evento4" src="img/eventos/4.jpg">
              <h2 class="titulo-evento" id="t-casamiento"></h2>
              <p class="fechas" id="fecha-casamiento"></p>
              <h3 class="precio p-cas" id="precio-casamiento"></h3>
              <a href="evento.html#casamientos" class="detalle a_eventos4">VER DETALLE</a>
             <br>
-             <a href="#" class="comprar c-casamiento">COMPRAR</a>
+             <a href="#40" class="comprar casamiento" id="">COMPRAR</a>
          </div>
          
-          <div class="e5 evento-card lista-eventos">
+          <div class="e5 evento-card lista-eventos" id="">
              <img class ="evento5" src="img/eventos/5.jpg">
              <h2 class="titulo-evento" id="t-egresado"></h2>
-             <p class="fechas" id="fecha-egresado">Diciembre 12, 2021</p>
+             <p class="fechas" id="fecha-egresado"></p>
              <h3 class="precio p-eg" id="precio-egresado"></h3>
              <a href="evento.html#egresados" class="detalle a_eventos5">VER DETALLE</a>
              <br>
-             <a href="#" class="comprar c-egresados">COMPRAR</a>
+             <a href="#50" class="comprar egresados" id="">COMPRAR</a>
          </div>
 
-         <div class="e6 evento-card lista-eventos">
+         <div class="e6 evento-card lista-eventos" id="">
              <img class ="evento6" src="img/eventos/6.jpg">
              <h2 class="titulo-evento" id="t-fiesta15"></h2>
              <p class="fechas" id="fecha-fiesta15"></p>
              <h3 class="precio p-15" id="precio-f15"></h3>
              <a href="evento.html#fiesta15" class="detalle a_eventos6">VER DETALLE</a>
              <br>
-             <a href="#" class="comprar c-fiesta15">COMPRAR</a>
+             <a href="#60" class="comprar fiesta15" id="">COMPRAR</a>
          </div>
 
     </section>  
@@ -192,7 +182,7 @@
            </div>
            <div class="menu-interior">
 
-               <a href="inicio.html" id="mi">INICIO</a><br>
+               <a href="index.html" id="mi">INICIO</a><br>
                <a href="evento.html" id="mi">EVENTO</a><br>
                <a href="entradas.html" id="mi">ENTRADAS COMPRADAS</a><br>
                <a href="invitacion.html"id="mi">PERSONALIZAR INVITACION</a><br>
