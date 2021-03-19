@@ -9,7 +9,9 @@ return class Carrito{
 		this.contador = 0;
 		this.total = 0;
 		this.listaEventos = new Array();
-        localStorage.setItem("totalCarrito", this.total);
+
+		localStorage.setItem("totalCarrito", this.total);
+       
 	}
 
 
@@ -106,14 +108,10 @@ return class Carrito{
 	comprarEvento(evento){//funciona -  agrega el evento actual
 
 		let guardarEvento = this.obtenerEvento(evento);
-		//let eventoActual = null;
         
         if(!this.listaEventos.includes(guardarEvento)){
 		this.listaEventos.push(guardarEvento);
-		//eventoActual = guardarEvento;
 	    }
-
-	    //return eventoActual;   
 	}
 
 	buscarEventoId(id){//funciona
@@ -138,21 +136,15 @@ return class Carrito{
 	calcularTotal(){ //recorrer lista y llamar al precio + multiplicar por la cantidad
 
 		let precio = 0;
-		let cantidad = 0;
-		let cantidadPrecio=0;
 		
 		for(let lista in this.listaEventos){
 
             precio = this.listaEventos[lista].getPrecio;
-            cantidad = this.listaEventos[lista].getCantidad;
-
-            cantidadPrecio =precio*cantidad;
-
 		}
 
-         this.total=  parseInt(this.getTotal) +  parseInt(cantidadPrecio);
+         this.total=  parseInt(this.getTotal) +  parseInt(precio);
          //this.setTotal= localStorage.getItem("totalCarrito");
-         //console.log(this.getTotal)
+        //console.log(this.getTotal)
 		 return this.total;       
 	}
 
