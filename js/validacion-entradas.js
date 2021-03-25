@@ -1,5 +1,5 @@
-require(['jquery','eventos-creados','modal','personalizar-invitacion','redireccionarPagina','entradas','validacionCarrito'], 
-    function($,e,m,p,r,entradas,carro){
+require(['jquery','eventos-creados','modal','personalizar-invitacion','redireccionarPagina','entradas','carrito','validacionCarrito'], 
+    function($,e,m,p,r,entradas){
 
     $("#fecha-recital").text(`${e.recitalDatos.getFecha}`);
     $("#titulo-recital").text(`${e.recitalDatos.getNombre}`);
@@ -28,7 +28,7 @@ require(['jquery','eventos-creados','modal','personalizar-invitacion','redirecci
 
     r;
     entradas;
-    carro;
+    //carro;
 
 
 

@@ -1,4 +1,4 @@
-require(['redireccionarPagina','modal','formulario','validacionCarrito'],
+require(['redireccionarPagina','modal','formulario','carrito','validacionCarrito'],
 	function (r,m,f,carro) {
 		r;
 		m;
