@@ -67,15 +67,16 @@ require(['jquery','carrito'],
 
 				break;
 			}
-
+            
 			$(".contador").text(contador);
             localStorage.setItem("cantidadEventos", contador++);
-
-			console.log(carrito.calcularTotal())
 
 			
 		})
 
 		$(".contador").text(localStorage.getItem("cantidadEventos"));
+		$(".total-pago").text(localStorage.getItem("totalCarrito"));
+		//carrito.estaVacio();
+
    
 	})
