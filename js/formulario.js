@@ -39,9 +39,9 @@ require(['jquery'],
          input2.attr("placeholder" , "Apellido");
 
 
-         input3.attr("type" , "text");
-         input3.attr("id" , "telefono");
-         input3.attr("placeholder" , "Telefono");
+         input3.attr("type" , "email");
+         input3.attr("id" , "email");
+         input3.attr("placeholder" , "Email");
 
 
          formulario.append(div);
@@ -55,18 +55,15 @@ require(['jquery'],
     //Validacion de los campos 
 
 
-   // $(".formulario").on('click', '#inscribirse' ,function(){
+    $(".formulario").on('click', '#inscribirse' ,function(){
 
-    /*let inputs=$(".inscripcion");
+    let inputs=$(".inscripcion");
     let nombre = $("#nombre");
     let apellido = $("#apellido");
-    let telefono = $("#telefono");
+    let email = $("#email");
     let letras = /^[A-Za-z]+$/;
-    let numeros = /[0-9]/;*/
 
-    //e.preventDefault();
-
-    /*if(!letras.test(nombre.val())){
+    if(!letras.test(nombre.val())){
 
 
         alert("El nombre debe tener solo letras");
@@ -80,21 +77,14 @@ require(['jquery'],
     }
 
 
-    if(!numeros.test(telefono.val())){
-
-
-        alert("El telefono debe tener solo numeros");
-    }
-
-
     if(inputs.length == ""){
 
         alert("Los campos no pueden estar vacios");
         inputs.attr("required","");
-    }*/
+    }
 
 
-    //})
+    })
 
     
    
