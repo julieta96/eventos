@@ -247,8 +247,8 @@ require(['jquery','eventos-creados'],function($,objeto){
 		let inscriptos = Array.from($(".datos")).map(i => {
         let nombre = $(i).find("#nombre").val()
         let apellido = $(i).find("#apellido").val()
-        let telefono = $(i).find("#telefono").val()
-        return `<p class='nombre'>${nombre}&nbsp;</p><p class='Apellido'>${apellido}&nbsp;</p><p class='telefono'>(Telefono: ${telefono}),&nbsp;</p>`;
+        let email = $(i).find("#email").val()
+        return `<p class='nombre'>${nombre}&nbsp;</p><p class='Apellido'>${apellido}&nbsp;</p><p class='e-mail'>(Email: ${email}),&nbsp;</p>`;
         
     })
 	
@@ -272,7 +272,7 @@ require(['jquery','eventos-creados'],function($,objeto){
 		$(".modal-content >h2").css("display" , "none");
         $(".modal-content >p").css("display" , "none");
         $(".inscriptos").html(`<h2>Para inscribirse debe seleccionar 1ero el evento</h2>`);
-        window.load(function(){
+       $(document).ready(function(){
         	$(".inscriptos>.nombre ,.inscriptos>.apellido , .inscriptos>.telefono ").remove();
         })
 		break;
@@ -282,9 +282,9 @@ require(['jquery','eventos-creados'],function($,objeto){
 		$(".titulo-evento").attr("id","recital");
         $(location).attr("href","formulario.html#recital");
         $(".titulo-evento").text(`${objeto.recitalDatos.getNombre}`);
-        //total($(".datos").length ,e.recitalDatos.getPrecio)
         $("#inscribirse").click(function(){
           infoEvento($(".titulo-evento").text() , `${objeto.recitalDatos.getFecha} ${objeto.recitalDatos.getHora}`)
+          $("#total").attr("value","$ "+total($(".datos").length ,objeto.recitalDatos.getPrecio));
         })
        
 		break;
@@ -296,6 +296,7 @@ require(['jquery','eventos-creados'],function($,objeto){
         $(".titulo-evento").text(`${objeto.karaokeDatos.getNombre}`);
         $("#inscribirse").click(function(){
          infoEvento($(".titulo-evento").text() ,`${objeto.karaokeDatos.getFecha} ${objeto.karaokeDatos.getHora}`);
+         $("#total").attr("value","$ "+total($(".datos").length ,objeto.karaokeDatos.getPrecio));
         })
 
         
@@ -305,7 +306,10 @@ require(['jquery','eventos-creados'],function($,objeto){
 		$(".titulo-evento").attr("id","cumple");
         $(location).attr("href","formulario.html#cumple");
         $(".titulo-evento").text(`${objeto.cumpleDatos.getNombre}`);
+        $("#inscribirse").click(function(){
         infoEvento($(".titulo-evento").text() ,`${objeto.cumpleDatos.getFecha} ${objeto.cumpleDatos.getHora}`);
+        $("#total").attr("value","$ "+total($(".datos").length ,objeto.cumpleDatos.getPrecio));
+         })
 		break;
 
 		case "formulario.html#casamiento":
@@ -313,7 +317,10 @@ require(['jquery','eventos-creados'],function($,objeto){
 		$(".titulo-evento").attr("id","casamiento");
         $(location).attr("href","formulario.html#casamiento");
         $(".titulo-evento").text(`${objeto.casamientoDatos.getNombre}`);
+        $("#inscribirse").click(function(){
         infoEvento($(".titulo-evento").text() , `${objeto.casamientoDatos.getFecha} ${objeto.casamientoDatos.getHora}`);
+        $("#total").attr("value","$ "+total($(".datos").length ,objeto.casamientoDatos.getPrecio));
+        })
 		break;
 
 		case "formulario.html#egresado":
@@ -321,7 +328,10 @@ require(['jquery','eventos-creados'],function($,objeto){
 		$(".titulo-evento").attr("id","egresado");
         $(location).attr("href","formulario.html#egresado");
         $(".titulo-evento").text(`${objeto.egresadoDatos.getNombre}`);
+        $("#inscribirse").click(function(){
         infoEvento($(".titulo-evento").text() , `${objeto.egresadoDatos.getFecha} ${objeto.egresadoDatos.getHora}`);
+        $("#total").attr("value","$ "+total($(".datos").length ,objeto.egresadoDatos.getPrecio));
+        })
 		break;
 
 		case "formulario.html#fiesta15":
@@ -329,7 +339,10 @@ require(['jquery','eventos-creados'],function($,objeto){
 		$(".titulo-evento").attr("id","fiesta15");
         $(location).attr("href","formulario.html#fiesta15");
         $(".titulo-evento").text(`${objeto.fiesta15Datos.getNombre}`);
+        $("#inscribirse").click(function(){
         infoEvento($(".titulo-evento").text() , `${objeto.fiesta15Datos.getFecha} ${objeto.fiesta15Datos.getHora}`);
+        $("#total").attr("value","$ "+total($(".datos").length ,objeto.fiesta15Datos.getPrecio));
+        })
 		break;
 
 
