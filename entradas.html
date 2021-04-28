@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script  type="text/javascript" src="js/font-awesome.js" ></script>
   <script  data-main="js/config" src="js/require.js" ></script>
-  <script  type="text/javascript" src="js/validacion-entradas.js"></script>
+  <script  type="text/javascript" src="js/entradas.js"></script>
   
  </head>
 
@@ -67,42 +67,66 @@
          <div class="titulo-evento" id="titulo-recital"></div>
          <div><input type="submit" value="PERSONALIZAR" class="personalizar" id="recital"></div>
          <div class="precio-r precio"></div>
-         <input type="number" class="cantidad cant-r" value="0" min="0" max="10">
+         <div class="contenedor-cantidad">
+             <i class="fas fa-plus cant-re-p"></i>
+             <div class="cantidad cant-re">0</div>
+             <i class="fas fa-minus cant-re-m"></i>
+         </div>
          <div class="total t-r">0</div>
 
          <div id="fecha-karaoke"></div>
          <div class="titulo-evento" id="titulo-karaoke"></div>
          <div><input type="submit" value="PERSONALIZAR" class="personalizar" id="karaoke"></div>
          <div class="precio-k precio"></div>
-         <input type="number" class="cantidad cant-k" value="0" min="0" max="10">
+         <div class="contenedor-cantidad">
+             <i class="fas fa-plus cant-kk-p"></i>
+             <div class="cantidad cant-kk">0</div>
+             <i class="fas fa-minus cant-kk-m"></i>
+         </div>
          <div class="total t-k">0</div>
 
          <div id="fecha-cumple"></div>
          <div class="titulo-evento" id="titulo-cumple"></div>
          <div><input type="submit" value="PERSONALIZAR" class="personalizar" id="cumple"></div>
          <div class="precio-cum precio"></div>
-         <input type="number" class="cantidad cant-cum" value="0" min="0" max="5">
+         <div class="contenedor-cantidad">
+             <i class="fas fa-plus cant-cm-p"></i>
+             <div class="cantidad cant-cm">0</div>
+             <i class="fas fa-minus cant-cm-m"></i>
+         </div>
          <div class="total t-cum">0</div>
 
          <div id="fecha-casamiento"></div>
          <div class="titulo-evento" id="titulo-casamiento"></div>
          <div><input type="submit" value="PERSONALIZAR" class="personalizar" id="casamiento"></div>
          <div class="precio-ca precio"></div>
-         <input type="number" class="cantidad cant-ca" value="0" min="0" max="10">
+         <div class="contenedor-cantidad">
+             <i class="fas fa-plus cant-ca-p"></i>
+             <div class="cantidad cant-ca">0</div>
+             <i class="fas fa-minus cant-ca-m"></i>
+         </div>
          <div class="total t-ca">0</div>
 
          <div id="fecha-egresado"></div>
          <div class="titulo-evento" id="titulo-egresado"></div>
          <div><input type="submit" value="PERSONALIZAR" class="personalizar" id="egresados"></div>
          <div class="precio-eg precio"></div>
-         <input type="number" class="cantidad cant-eg" value="0" min="0" max="100" >
+         <div class="contenedor-cantidad">
+             <i class="fas fa-plus cant-eg-p"></i>
+             <div class="cantidad cant-eg">0</div>
+             <i class="fas fa-minus cant-eg-m"></i>
+         </div>
          <div class="total t-eg">0</div>
 
          <div id="fecha-fiesta15"></div>
          <div class="titulo-evento" id="titulo-fiesta15"></div>
          <div><input type="submit" value="PERSONALIZAR" class="personalizar" id="fiesta15"></div>
          <div class="precio-15 precio"></div>
-         <input type="number" class="cantidad cant-15" value="0" min="0" max="20">
+         <div class="contenedor-cantidad">
+             <i class="fas fa-plus cant-15-p"></i>
+             <div class="cantidad cant-15">0</div>
+             <i class="fas fa-minus cant-15-m"></i>
+         </div>
          <div class="total t-15">0</div>
          </div>
 
