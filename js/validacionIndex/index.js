@@ -1,4 +1,4 @@
-require(['lib/jquery','eventos-creados' ,'validacionIndex/slider','validacionIndex/slider-automatico','validacionIndex/validacion_js','carrito','validacionCarrito'],
+require(['jquery','clases/instancias/eventos' ,'validacionIndex/slider','validacionIndex/slider-automatico','validacionIndex/validacion_js','clases/carrito','clases/instancias/validacionCarrito'],
 
  function($,objetos ,slider,sliderA,pasos,c,carro){
 
