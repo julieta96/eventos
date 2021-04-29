@@ -1,4 +1,4 @@
-require(['jquery','eventos-creados'],function($,objeto){
+require(['jquery','clases/instancias/eventos','clases/instancias/organizadores'],function($,objeto,org){
 
 	function pageHref(){
 
@@ -22,7 +22,7 @@ require(['jquery','eventos-creados'],function($,objeto){
         $(".re").siblings().css("display","none");
 		$(".titulo").text(`${objeto.recitalDatos.getNombre}`);
 		$(".cambio-hora").text(`${objeto.recitalDatos.getFecha} ${objeto.recitalDatos.getHora}`);
-		$(".cambio-organizador").text("Iure");
+		$(".cambio-organizador").text(`${org.luz.getNombre} ${org.luz.getApellido}`);
 		$(".cambio-pagina").attr("href","formulario.html#recital");
 		break;
 
@@ -34,7 +34,7 @@ require(['jquery','eventos-creados'],function($,objeto){
         $("#karaoke").siblings().css("display","none");
 		$(".titulo").text(`${objeto.karaokeDatos.getNombre}`);
 		$(".cambio-hora").text(`${objeto.karaokeDatos.getFecha} ${objeto.karaokeDatos.getHora}`);
-		$(".cambio-organizador").text("Organizador2");
+		$(".cambio-organizador").text(`${org.janet.getNombre} ${org.janet.getApellido}`);
 		$(".cambio-pagina").attr("href","formulario.html#karaoke");
 		
 		break;
@@ -47,7 +47,7 @@ require(['jquery','eventos-creados'],function($,objeto){
         $("#cumpleanos").siblings().css("display","none");
 		$(".titulo").text(`${objeto.cumpleDatos.getNombre}`);
 		$(".cambio-hora").text(`${objeto.cumpleDatos.getFecha} ${objeto.cumpleDatos.getHora}`);
-		$(".cambio-organizador").text("Organizador3");
+		$(".cambio-organizador").text(`${org.camilo.getNombre} ${org.camilo.getApellido}`);
 		$(".cambio-pagina").attr("href","formulario.html#cumple");
 		
 		break;
@@ -60,7 +60,7 @@ require(['jquery','eventos-creados'],function($,objeto){
         $("#casamientos").siblings().css("display","none");
 		$(".titulo").text(`${objeto.casamientoDatos.getNombre}`);
 		$(".cambio-hora").text(`${objeto.casamientoDatos.getFecha} ${objeto.casamientoDatos.getHora}`);
-		$(".cambio-organizador").text("Organizador4");
+		$(".cambio-organizador").text(`${org.carlos.getNombre} ${org.carlos.getApellido}`);
 		$(".cambio-pagina").attr("href","formulario.html#casamiento");
 
 		
@@ -74,7 +74,7 @@ require(['jquery','eventos-creados'],function($,objeto){
         $("#egresados").siblings().css("display","none");
 		$(".titulo").text(`${objeto.egresadoDatos.getNombre}`);
 		$(".cambio-hora").text(`${objeto.egresadoDatos.getFecha} ${objeto.egresadoDatos.getHora}`);
-		$(".cambio-organizador").text("Organizador5");
+		$(".cambio-organizador").text(`${org.luis.getNombre} ${org.luis.getApellido}`);
 		$(".cambio-pagina").attr("href","formulario.html#egresado");
 		
 		break;
@@ -87,7 +87,7 @@ require(['jquery','eventos-creados'],function($,objeto){
         $("#fiesta15").siblings().css("display","none");
 		$(".titulo").text(`${objeto.fiesta15Datos.getNombre}`);
 		$(".cambio-hora").text(`${objeto.fiesta15Datos.getFecha} ${objeto.fiesta15Datos.getHora}`);
-		$(".cambio-organizador").text("Organizador6");
+		$(".cambio-organizador").text(`${org.paola.getNombre} ${org.paola.getApellido}`);
 		$(".cambio-pagina").attr("href","formulario.html#fiesta15");
 		
 		break;
@@ -96,17 +96,38 @@ require(['jquery','eventos-creados'],function($,objeto){
 
 	}
 
-	//para pagina entradas---------------------------------------------------------------------------------
+	//para pagina entradas----------------------------------------------------------------------------------
+
+
+	if(pageHref()=="entradas.html"){
+
+		let botonesPersonalizar=  $(".personalizar");
+
+		botonesPersonalizar.each(function(){
+
+		 	let eventoPersonalizado = $(this).attr("id");
+		 	let buscarTarjetaPersonalizada = localStorage.getItem(`${eventoPersonalizado}Modificado`);
+		 	
+		 	 if( buscarTarjetaPersonalizada == eventoPersonalizado ){
+
+			   $(this).removeClass('personalizar').addClass('m-personalizar');
+			   $(this).attr("value","MODIFICAR PERSONALIZACION");  }
+		 })
+		  
+
+		}
+
+		
+
+	//para pagina invitacion---------------------------------------------------------------------------------
 
 	const getData=(tituloE , tituloColorE, tituloSizeE ,ubicacionTituloE, fechaHoraE , fechaHoraColorE, fechaHoraSizeE, ubicacionFechaHoraE,fondoE)=>{
+           
+        let idBoton="";
 
 		$(".b-confirmar").click(function(){
 
-		if($(".titulo-e").val()!="Titulo" && $(".fecha-hora").val()!="fecha, hora"){
-
-            $(".personalizar").removeClass('personalizar').addClass('m-personalizar');
-			$(".personalizar").text("MODIFICAR PERSONALIZACION");
-
+	
 			localStorage.setItem(tituloE,$(".titulo-e").val());
 			localStorage.setItem(tituloColorE,$("#titulo-e").css("color"));
 			localStorage.setItem(tituloSizeE,$("#titulo-e").css("font-size"));
@@ -117,10 +138,14 @@ require(['jquery','eventos-creados'],function($,objeto){
 			localStorage.setItem(fechaHoraSizeE,$("#fecha-hora").css("font-size"));
 			localStorage.setItem(ubicacionFechaHoraE,$("#fecha-hora").css("text-align"));
 
-			localStorage.setItem(fondoE,$(".tarjeta").css("background-color"));		
-				
-		}
+			localStorage.setItem(fondoE,$(".tarjeta").css("background-color"));	
 
+			idBoton=$(this).attr("id");
+
+			localStorage.setItem(`${idBoton}Modificado`, idBoton);
+
+		
+				
 	})
 
 		//guardo valores
@@ -136,15 +161,15 @@ require(['jquery','eventos-creados'],function($,objeto){
 			$("#fecha-hora").css("font-size" ,localStorage.getItem(fechaHoraSizeE));
 			$("#fecha-hora").css("text-align" ,localStorage.getItem(ubicacionFechaHoraE));
 
-			$(".tarjeta").css("background-color",localStorage.getItem(fondoE));	
-
-
+			$(".tarjeta").css("background-color",localStorage.getItem(fondoE));
 
 	}
 
 	switch(pageHref()){
 
 		case "invitacion.html#recital":
+
+		 $(".b-confirmar").attr("id", "recital");
           
           getData(
           	"recital-titulo" ,
@@ -161,6 +186,8 @@ require(['jquery','eventos-creados'],function($,objeto){
 
 		case "invitacion.html#karaoke":
 
+		$(".b-confirmar").attr("id", "karaoke");
+
 		 getData(
           	"karaoke-titulo" ,
           	"karaoke-colorTitulo",
@@ -174,6 +201,8 @@ require(['jquery','eventos-creados'],function($,objeto){
 		break;
 
 		case "invitacion.html#cumple":
+
+		$(".b-confirmar").attr("id", "cumple");
 
 		  getData(
           	"cumple-titulo" ,
@@ -189,6 +218,8 @@ require(['jquery','eventos-creados'],function($,objeto){
 		break;
 
 		case "invitacion.html#casamiento":
+
+		$(".b-confirmar").attr("id", "casamiento");
 
 		  getData(
           	"casamiento-titulo" ,
@@ -206,6 +237,8 @@ require(['jquery','eventos-creados'],function($,objeto){
 
 		case "invitacion.html#egresados":
 
+		$(".b-confirmar").attr("id", "egresados");
+
 		  getData(
           	"egresados-titulo" ,
           	"egresados-colorTitulo",
@@ -220,6 +253,8 @@ require(['jquery','eventos-creados'],function($,objeto){
 		break;
 
 		case "invitacion.html#fiesta15":
+
+		$(".b-confirmar").attr("id", "fiesta15");
 
 	     getData(
           	"fiesta15-titulo" ,
