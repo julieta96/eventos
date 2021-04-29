@@ -50,12 +50,14 @@ body{
 
  .marca{
     text-align: left;
+     cursor: pointer;
 }
 
 
  #buscador{
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 

@@ -117,11 +117,13 @@ body{
     margin: auto;
     height: 30px;
     width:100% ;
+    text-align: center;
 }
 
 .marca{
     font-family: 'Cinzel', serif;
     color: #fff;
+     cursor: pointer;
 }
 
 #menu{

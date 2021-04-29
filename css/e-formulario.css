@@ -57,6 +57,7 @@ body{
 
  .marca{
     text-align: left;
+     cursor: pointer;
 }
 
 #buscador{
@@ -66,6 +67,7 @@ body{
     outline: 0;
     background: #E8F0FE;
     border: 0;
+    text-align: center;
    
 }
 
@@ -226,10 +228,9 @@ body{
  }
 
 
- .agregar >p{
-    color:#000;
-    background: #F25E3D;
-    border-radius: 50px;
+ .agregar >i{
+  
+    color: #F25E3D;
     cursor: pointer;
     height: 40px;
     width: 40px;
