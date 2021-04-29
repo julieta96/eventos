@@ -52,12 +52,14 @@ body{
 
  .marca{
     text-align: left;
+     cursor: pointer;
 }
 
 
  #buscador{
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 
@@ -192,16 +194,29 @@ body{
   border-bottom: 1px solid yellowgreen;
   background:  #cddc39;
 }
-.tabla>div , .tabla>input{
+.tabla>div , .tabla>input , .tabla >i{
  
- color:#E8F0FE;
+ color: #000/*#E8F0FE*/;
  text-align: center;
  padding:10px;
- background-color: #6E8C03;
+ background-color: #9ACD32/*#6E8C03*/;
  border-right: 1px solid yellowgreen;
  border-left: 1px solid yellowgreen;
 
 }
+
+.contenedor-cantidad{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.fa-plus , .fa-minus{
+  cursor: pointer;
+}
+
+
 
 
 .tabla>input{
@@ -327,6 +342,7 @@ input[type=number]::outer-spin-button {
   margin: auto;
   /*border: 1px solid red;*/
   text-align: center;
+  height: 65%;
 }
 
 
@@ -356,12 +372,22 @@ input[type=number]::outer-spin-button {
   /*border: 0;*/
 }
 
-
-
 .pagar{
 
   width:700px;
   margin-left: 30px;
+}
+
+.total{
+  display: inline-block;
+}
+
+.total-pago{
+  display: inline-block;
+}
+
+.medio-pago{
+  margin-top: 0px;
 }
 
 
