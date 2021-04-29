@@ -3,14 +3,15 @@ requirejs.config({
     baseUrl: 'js',
      waitSeconds: 200,
     paths:{
-          'eventos':'eventos',
+          'eventoV':'validacionEvento/eventos',
+          'eventoC':'clases/evento',
+          'eventos':'clases/instancias/eventos',
+          'eventosD':'validacionEvento/eventos-detalle',
           'jquery':'jquery',
-          'pasos':'validacion_js',
-          'index':'index',
-          'slider':'slider',
-          'sliderautomatico':'slider-automatico',
-          'objetos':'eventos-creados',
-          'eventos-relacionados':'eventos-relacionados',
+          'pasos':'validacionIndex/validacion_js',
+          'index':'validacionIndex/index',
+          'slider':'validacionIndex/slider',
+          'sliderautomatico':'validacionIndex/slider-automatico',
           'modal':'modal',
           'invitacion':'personalizar-invitacion',
           'entradas':'entradas.js',
@@ -19,8 +20,11 @@ requirejs.config({
           'tarjeta2':'tarjeta-personalizada2',
           'personalizar-invitacion':'personalizar-invitacion',
           'formulario':'formulario',
-          'carrito-clase':'carrito',
-          'carrito':'validacionCarrito'
+          'carritoC':'clases/carrito',
+          'carrito':'clases/instancias/validacionCarrito',
+          'organizador':'clases/organizador',
+          'organizadores':'clases/instancias/organizadores',
+          'validacionFormularioContacto':'validacionFormularioContacto'
 
       },
       
