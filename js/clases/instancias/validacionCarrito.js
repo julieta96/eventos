@@ -3,7 +3,7 @@ require(['jquery','clases/carrito'],
 
 		const carrito = new c(1);
 
-		let eventoComprado=null;
+		//let eventoComprado=null;
         let contador = localStorage.getItem("cantidadEventos") || 0; 
 		let contador10 = localStorage.getItem("contadorRecital")|| 0;
 		let contador20 = localStorage.getItem("contadorKaraoke")|| 0;
@@ -14,8 +14,9 @@ require(['jquery','clases/carrito'],
 
 		$(".comprar").on('click',function(eventoSeleccionado){
 
-			eventoComprado = eventoSeleccionado.target.id;
+			let eventoComprado = eventoSeleccionado.target.id;
 			carrito.comprarEvento(eventoComprado);
+			console.log(eventoComprado);
 
             let contadorEvento= eventoSeleccionado.target.classList[1];
 
@@ -64,7 +65,7 @@ require(['jquery','clases/carrito'],
 			let listaDeCompras = carrito.getListaEventos;
 
 			localStorage.setItem('compra', JSON.stringify(listaDeCompras));
-
+             console.log(listaDeCompras);
 
 			contador= parseInt(contador10)+parseInt(contador20)+parseInt(contador30)+
 			parseInt(contador40)+parseInt(contador50)+parseInt(contador60);
