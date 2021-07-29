@@ -5,50 +5,44 @@ require(['jquery'],
 
     //INPUT TITULO----------------------------------------
 
-    let inputNegroT = document.querySelector("#c-negro-t");
-    let inputBlancoT = document.querySelector("#c-blanco-t");
-    let inputRojoT = document.querySelector("#c-rojo-t");
-    let inputAzulT = document.querySelector("#c-azul-t");
-    let inputVerdeT = document.querySelector("#c-verde-t");
-
-       inputNegroT.addEventListener("click",function(){
+      $("#c-negro-t").click(function(){
 
 
-          $('.titulo').css("color","#000");
- 
-      })
+              $('.titulo').css("color","#000");
+     
+          })
 
-   
-  inputBlancoT.addEventListener("click",function(){
-
-
-          $('.titulo').css("color","#fff");
- 
-      })
+       
+     $("#c-blanco-t").click(function(){
 
 
-  inputRojoT.addEventListener("click",function(){
+              $('.titulo').css("color","#fff");
+     
+          })
 
 
-          $('.titulo').css("color","#f00");
- 
-      })
+      $("#c-rojo-t").click(function(){
 
 
-  inputAzulT.addEventListener("click",function(){
+              $('.titulo').css("color","#f00");
+     
+          })
 
 
-          $('.titulo').css("color","#00f");
- 
-      })
+      $("#c-azul-t").click(function(){
 
 
-  inputVerdeT.addEventListener("click",function(){
+              $('.titulo').css("color","#00f");
+     
+          })
 
 
-          $('.titulo').css("color","#0f0");
- 
-      })
+      $("#c-azul-t").click(function(){
+
+
+              $('.titulo').css("color","#0f0");
+     
+          })
 
 
 //-------------------------------------------------
@@ -56,196 +50,167 @@ require(['jquery'],
 
 //INPUT FH-----------------------------------------
 
-    let inputNegroFH = document.querySelector("#c-negro-fh");
-    let inputBlancoFH = document.querySelector("#c-blanco-fh");
-    let inputRojoFH = document.querySelector("#c-rojo-fh");
-    let inputAzulFH = document.querySelector("#c-azul-fh");
-    let inputVerdeFH = document.querySelector("#c-verde-fh");
-
-    inputNegroFH.addEventListener("click",function(){
+      $("#c-negro-fh").click(function(){
 
 
-          $('#fecha-hora').css("color","#000");
- 
-      })
+              $('#fecha-hora').css("color","#000");
+     
+          })
 
-   
-   inputBlancoFH.addEventListener("click",function(){
-
-
-          $('#fecha-hora').css("color","#fff");
- 
-      })
+       
+      $("#c-blanco-fh").click(function(){
 
 
-   inputRojoFH.addEventListener("click",function(){
+              $('#fecha-hora').css("color","#fff");
+     
+          })
 
 
-          $('#fecha-hora').css("color","#f00");
- 
-      })
+      $("#c-rojo-fh").click(function(){
 
 
-   inputAzulFH.addEventListener("click",function(){
+              $('#fecha-hora').css("color","#f00");
+     
+          })
 
 
-          $('#fecha-hora').css("color","#00f");
- 
-      })
+      $("#c-azul-fh").click(function(){
 
 
-   inputVerdeFH.addEventListener("click",function(){
+              $('#fecha-hora').css("color","#00f");
+     
+          })
 
 
-          $('#fecha-hora').css("color","#0f0");
- 
-      })
+      $("#c-verde-fh").click(function(){
+
+
+              $('#fecha-hora').css("color","#0f0");
+     
+          })
 
    //---------------------------------------------------
 
    //FONTSIZE TITULO------------------------------------
 
-    let fontSize20T= document.querySelector("#size20-t");
-    let fontSize28T= document.querySelector("#size28-t");
-    let fontSize32T= document.querySelector("#size32-t");
-    let fontSize48T= document.querySelector("#size48-t");
-    let fontSize60T= document.querySelector("#size60-t");
+      $("#size20-t").click(function(){
 
 
-    fontSize20T.addEventListener("click",function(){
+        $('.titulo').css("font-size","20px");
 
 
-    $('.titulo').css("font-size","20px");
+      })
 
 
-  })
+     $("#size28-t").click(function(){
 
 
-  fontSize28T.addEventListener("click",function(){
+        $('.titulo').css("font-size","28px");
 
 
-    $('.titulo').css("font-size","28px");
+      })
 
 
-  })
+     $("#size32-t").click(function(){
 
 
-  fontSize32T.addEventListener("click",function(){
+        $('.titulo').css("font-size","32px");
 
 
-    $('.titulo').css("font-size","32px");
+      })
+
+      $("#size48-t").click(function(){
 
 
-  })
-
-   fontSize48T.addEventListener("click",function(){
+        $('.titulo').css("font-size","48px");
 
 
-    $('.titulo').css("font-size","48px");
+      })
+
+      $("#size60-t").click(function(){
 
 
-  })
-
-  fontSize60T.addEventListener("click",function(){
+        $('.titulo').css("font-size","60px");
 
 
-    $('.titulo').css("font-size","60px");
-
-
-  })
+      })
 
 //---------------------------------------------------------
 
 //FONT SIZE FH--------------------------------------------
 
-
-    let fontSize20FH= document.querySelector("#size20-fh");
-    let fontSize28FH= document.querySelector("#size28-fh");
-    let fontSize32FH= document.querySelector("#size32-fh");
-    let fontSize48FH= document.querySelector("#size48-fh");
-    let fontSize60FH= document.querySelector("#size60-fh");
-
-     fontSize20FH.addEventListener("click",function(){
+    $("#size20-fh").click(function(){
 
 
-    $('#fecha-hora').css("font-size","20px");
+      $('#fecha-hora').css("font-size","20px");
 
 
-  })
+    })
 
 
-  fontSize28FH.addEventListener("click",function(){
+    $("#size28-fh").click(function(){
 
 
-    $('#fecha-hora').css("font-size","28px");
+      $('#fecha-hora').css("font-size","28px");
 
 
-  })
+    })
 
 
-  fontSize32FH.addEventListener("click",function(){
+    $("#size32-fh").click(function(){
 
 
-    $('#fecha-hora').css("font-size","32px");
+      $('#fecha-hora').css("font-size","32px");
 
 
-  })
+    })
 
-   fontSize48FH.addEventListener("click",function(){
-
-
-    $('#fecha-hora').css("font-size","48px");
+     $("#size48-fh").click(function(){
 
 
-  })
+      $('#fecha-hora').css("font-size","48px");
+
+
+    })
 
 
   //-------------------------------------------------
 
-  //UBICACION TITULO---------------------------------
+  //UBICACION TIT$-click-
+      $("#ub-1T").click(function(){
 
-   let ubTLeft = document.querySelector("#ub-1T");
-   let ubTCenter = document.querySelector("#ub-2T");
-   let ubTRight =document.querySelector("#ub-3T");
+        $('.titulo').css("text-align" , "left");
+      })
 
-  ubTLeft.addEventListener("click", function(){
+       $("#ub-2T").click(function(){
 
-    $('.titulo').css("text-align" , "left");
-  })
+        $('.titulo').css("text-align" , "center");
+      })
 
-   ubTCenter.addEventListener("click", function(){
+     $("#ub-3T").click(function(){
 
-    $('.titulo').css("text-align" , "center");
-  })
-
-  ubTRight.addEventListener("click", function(){
-
-    $('.titulo').css("text-align" ,"right");
-  })
+        $('.titulo').css("text-align" ,"right");
+      })
 
 
   //-------------------------------------------------
 
   //UBICACION FH------------------------------------
 
-    let ubFHLeft = document.querySelector("#ub-1FH");
-    let ubFHCenter = document.querySelector("#ub-2FH");
-    let ubFHRight =document.querySelector("#ub-3FH");
+     $("#ub-1FH").click(function(){
 
-   ubFHLeft.addEventListener("click", function(){
+      $('#fecha-hora').css("text-align" , "left");
+      })
 
-    $('#fecha-hora').css("text-align" , "left");
-    })
+     $("#ub-2FH").click(function(){
 
-   ubFHCenter.addEventListener("click", function(){
+      $('#fecha-hora').css("text-align" , "center");
+     })
 
-    $('#fecha-hora').css("text-align" , "center");
-   })
+     $("#ub-3FH").click(function(){
 
-  ubFHRight.addEventListener("click", function(){
-
-    $('#fecha-hora').css("text-align" ,"right");
-   })
+      $('#fecha-hora').css("text-align" ,"right");
+     })
 
 
   //-----------------------------------------------
@@ -260,7 +225,7 @@ require(['jquery'],
 
     
 
-   bNegroT.addEventListener("click" , function(){
+   $("#b-negro").click(function(){
 
 
       $('.tarjeta').css("background","#000");
@@ -271,7 +236,7 @@ require(['jquery'],
    })
 
 
-   bBlancoT.addEventListener("click" , function(){
+   $("#b-blanco").click(function(){
 
 
       $('.tarjeta').css("background","#fff");
@@ -282,7 +247,7 @@ require(['jquery'],
    })
 
 
-    bRojoT.addEventListener("click" , function(){
+   $("#b-rojo").click(function(){
 
 
       $('.tarjeta').css("background","#f00");
@@ -292,7 +257,7 @@ require(['jquery'],
 
    }) 
 
-    bAzulT.addEventListener("click" , function(){
+   $("#b-azul").click(function(){
 
 
       $('.tarjeta').css("background","blue");
@@ -303,7 +268,7 @@ require(['jquery'],
    })  
 
 
-    bVerdeT.addEventListener("click" , function(){
+    $("#b-verde").click(function(){
 
 
       $('.tarjeta').css("background","green");
