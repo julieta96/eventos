@@ -6,12 +6,13 @@
 
   <link rel="stylesheet" type="text/css" href="css/e-invitacion.css">
   <link rel="stylesheet" type="text/css" href="css/fontello.css">
-  
+
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script  data-main="js/config" src="js/require.js" ></script>
   <script  type="text/javascript" src="js/validacionInvitacion/invitacion.js" ></script>
+  <script src="https://kit.fontawesome.com/b883f5a3c0.js" crossorigin="anonymous"></script>
  
  </head>
   <body>
@@ -57,7 +58,10 @@
         <a href="invitacion.html#recital" class="a-titulo-principal">
           <h3 class="titulo-principal">Personalizacion de invitacion</h3>
         </a>
-        <br>
+
+        <button type="button" class="imprimir">
+          <img src="img/print.png" class="print">
+        </button>
 
             
         <div class="tarjeta-personalizacion">
@@ -146,7 +150,7 @@
 
 
 
-          <div class="tarjeta">
+          <div class="tarjeta" id="idTarjeta">
 
             <h3 class="titulo"  id="titulo-e">Titulo</h3>
             <p id="fecha-hora" >fecha, hora </p>

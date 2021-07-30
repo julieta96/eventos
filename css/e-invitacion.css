@@ -172,6 +172,20 @@ body{
 .a-titulo-principal{
 
   text-decoration: none;
+
+}
+
+.imprimir{
+  background: #000;
+  border: 0;
+}
+
+.print{
+
+  width: 50px;
+  margin: auto;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .titulo-principal{
@@ -202,6 +216,7 @@ body{
   justify-content: center;
 
 }
+
 
 
 .tarjeta-personalizacion >div{
