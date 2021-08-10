@@ -62,11 +62,27 @@
 
        </div>
 
-       <form class="form-contacto">
-          <input type="text" id="nombre" class="nombre" placeholder="Nombre" ><br><br>
-          <input type="text" id="apellido" class="apellido" placeholder="Apellido" ><br><br>
-          <input type="email" id="email1" class="email1" placeholder="E-mail" ><br><br>
-          <input type="text" id="telefono" class="telefono" placeholder="Telefono"><br><br>
+       <form class="form-contacto" id="form-contacto">
+          <input type="text" id="nombre" class="nombre" placeholder="Nombre" autocomplete="off">
+          <br>
+          <p id="nombre-alert">El nombre debe contener letras y no mas de 20 carecteres</p>
+          <br>
+          <input type="text" id="apellido" class="apellido" placeholder="Apellido" autocomplete="off">
+          <br>
+          <p id="apellido-alert">El apellido debe contener letras y no mas de 30 carecteres</p>
+          <br>
+          <input type="email" id="email1" class="email1" placeholder="E-mail" autocomplete="off">
+          <br>
+          <p id="email1-alert">El email debe contener letras, numeros, 1 arroba, 1 punto 
+            <br>
+           como maximo 2 guion bajo y  no mas 40 carecteres</p>
+          <br>
+          <input type="text" id="telefono" class="telefono" placeholder="Telefono" autocomplete="off">
+          <br>
+          <p id="telefono-alert">El telefono debe contener solo numeros, no mas de 10
+            <br>
+           caracteres</p>
+          <br>
           <textarea placeholder="comentarios" id="comentarios"></textarea><br><br>
           <input type="submit" id="b-enviar" value="ENVIAR" >
       </form>

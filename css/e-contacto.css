@@ -222,6 +222,15 @@ body{
 
  }
 
+ .form-contacto > #nombre-alert, .form-contacto > #apellido-alert,
+ .form-contacto > #telefono-alert, .form-contacto > #email1-alert{
+  display: none;
+  font-weight: bold;
+  color: #FF5252;
+  font-size: 14px;
+  text-align: center;
+ }
+
 
  .datos-empresa{
   color: white;
