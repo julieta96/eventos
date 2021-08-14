@@ -1,5 +1,5 @@
-require(['jquery','clases/instancias/eventos','modal','personalizar-invitacion','redireccionarPagina','validacionEntradas/entradas','clases/carrito','clases/instancias/validacionCarrito'], 
-    function($,e,m,p,r,entradas){
+require(['jquery','clases/instancias/eventos','modal','personalizar-invitacion','redireccionarPagina','validacionEntradas/entradas','clases/carrito','clases/instancias/validacionCarrito','events-search'], 
+    function($,e,m,p,r,entradas, search){
 
       $(".marca").click(function(){
      $(location).attr("href","index.html");
@@ -97,6 +97,8 @@ require(['jquery','clases/instancias/eventos','modal','personalizar-invitacion',
 
 		$(location).attr("href","index.html");
 	})
+
+  search;
 
 
 

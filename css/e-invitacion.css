@@ -21,8 +21,10 @@ body{
 /*-----HEADER------*/
 
 .header{
-    height: 80%;
+    height: 22%;
     padding-bottom: 18px;
+     position:fixed;
+    z-index: 1000000000000000; 
 }
 
 #menu{
@@ -36,6 +38,7 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    background: #000;
 }
 
  .header .header1 {
@@ -47,6 +50,7 @@ body{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: 1fr;
+    background: #000;
 }
 
  .marca{
@@ -59,6 +63,41 @@ body{
     display: flex;
     justify-content: center;
      text-align: center;
+}
+
+#resultado{
+  background: #000;
+  z-index: 1000;
+  display: flex;
+  flex-direction:column;
+  border: 2px solid #9acd32;
+  align-content: center;
+  padding: 5px;
+  grid-column: 2/3;
+  margin-top: 0%;
+  border-top: 0;
+
+}
+
+#resultado >li{
+  list-style: none;
+  flex-direction: row;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+}
+
+
+#resultado li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+#resultado> .link-evento:hover ,#resultado> li a:hover {
+  background: #cddc39;
+  color: #000;
 }
 
 
@@ -202,6 +241,7 @@ body{
   justify-content: center;
   text-align: center;
   margin-bottom: 30px;
+  padding-top: 9%;
   
 
 }

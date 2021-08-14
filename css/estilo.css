@@ -33,8 +33,7 @@ background:/*#ffffff*/#000;
     height: 22%;
     padding-bottom: 18px;
     position:fixed;
-    z-index: 1000000000000000;
-    
+    z-index: 1000000000000000;  
 }
 
 #menu{
@@ -92,6 +91,7 @@ background:/*#ffffff*/#000;
   display: flex;
   flex-direction:row;
   justify-content: space-evenly;
+  padding-bottom: 0;
   
 }
 
@@ -110,7 +110,7 @@ input#buscador {
 }
 
  #resultado{
-  background: #fff;
+  background: #000;
   z-index: 1000;
   display: flex;
   flex-direction:column;
@@ -118,7 +118,8 @@ input#buscador {
   align-content: center;
   padding: 5px;
   grid-column: 2/3;
-  margin-top: 0;
+  margin-top: 0%;
+  border-top: 0;
 
 }
 
@@ -127,17 +128,23 @@ input#buscador {
   flex-direction: row;
   text-align: center;
   cursor: pointer;
+  color: #fff;
 }
 
-#resultado> li:hover{
-  background: #cddc39;
-}
 
 #resultado li a {
   text-decoration: none;
   font-weight: bold;
+  color: #fff;
+}
+
+
+#resultado> .link-evento:hover ,#resultado> li a:hover {
+  background: #cddc39;
   color: #000;
 }
+
+
 
 .icon-basket{
     font-size: 20px;

@@ -23,8 +23,10 @@ body{
 /*-----HEADER------*/
 
 .header{
-    height: 80%;
+    height: 22%;
     padding-bottom: 18px;
+    position:fixed;
+    z-index: 1000000000000000;
 }
 
 #menu{
@@ -49,6 +51,7 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    background: #000;
 }
 
 .header .marca{
@@ -120,6 +123,43 @@ body{
     text-align: center;
 }
 
+ #resultado{
+  background: #000;
+  z-index: 1000;
+  display: flex;
+  flex-direction:column;
+  border: 2px solid #9acd32;
+  align-content: center;
+  padding: 5px;
+  grid-column: 2/3;
+  margin-top: 0%;
+  border-top: 0;
+
+}
+
+
+#resultado >li{
+  list-style: none;
+  flex-direction: row;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+}
+
+
+#resultado li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+#resultado> .link-evento:hover ,#resultado> li a:hover {
+  background: #cddc39;
+  color: #000;
+}
+
+
 .marca{
     font-family: 'Cinzel', serif;
     color: #fff;
@@ -167,6 +207,7 @@ input#buscador {
   display: flex;
   flex-direction:row;
   justify-content: space-evenly;
+  padding-bottom: 0;
   
 }
 
@@ -193,6 +234,7 @@ input#buscador {
   justify-content: center;
   margin: auto;
   margin-bottom: 5%;
+  padding-top: 12%;
 
 }
 

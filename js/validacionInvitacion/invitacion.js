@@ -1,18 +1,19 @@
-require(['jquery','redireccionarPagina','validacionInvitacion/tarjeta-personalizada','validacionInvitacion/tarjeta-personalizada2','personalizar-invitacion','clases/carrito','clases/instancias/validacionCarrito'],
+require(['jquery','redireccionarPagina','validacionInvitacion/tarjeta-personalizada','validacionInvitacion/tarjeta-personalizada2','personalizar-invitacion','clases/carrito','clases/instancias/validacionCarrito','events-search'],
 
-	function($,r,t,t2,i,carro) {
+	function($,r,t,t2,i,carro, search) {
 
 		r;
 		t;
 		t2;
 		i;
 		carro;
+        search;
 
 	 $(".marca").click(function(){
      $(location).attr("href","index.html");
      })
 
-     //let id = $(".tarjeta").attr("id");
+     
 
       let idTarjeta = $(".tarjeta").attr("id");
 
@@ -34,5 +35,6 @@ require(['jquery','redireccionarPagina','validacionInvitacion/tarjeta-personaliz
      	
      })
 
+    
 		
 	})

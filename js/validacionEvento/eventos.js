@@ -1,4 +1,5 @@
-require(['jquery', 'validacionEvento/eventos-detalle','redireccionarPagina','clases/carrito','clases/instancias/validacionCarrito'], function($,er,r,carro){
+require(['jquery', 'validacionEvento/eventos-detalle','redireccionarPagina','clases/carrito','clases/instancias/validacionCarrito','events-search'], 
+	function($,er,r,carro, search){
 
 	er;
 	r;
@@ -6,4 +7,6 @@ require(['jquery', 'validacionEvento/eventos-detalle','redireccionarPagina','cla
 	$(".marca").click(function(){
      $(location).attr("href","index.html");
      })
+
+	search;
 })
