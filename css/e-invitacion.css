@@ -30,6 +30,7 @@ body{
 #menu{
    
    padding: 5px;
+   border-bottom: 10px solid #000;
 }
 
  .header1 {

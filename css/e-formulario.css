@@ -29,6 +29,7 @@ body{
 #menu{
    
    padding: 5px;
+   border-bottom: 10px solid #000;
 }
 
 #menu .opciones .activo a {
