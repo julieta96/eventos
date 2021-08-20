@@ -4,7 +4,8 @@
   <meta charset= "utf-8">
   <meta name="viewport" content="width=device-width , user-scalable=no , initial-scale=1 , maximum-scale=1 , minium-scale=1">
 
-  <link rel="stylesheet" type="text/css" href="css/e-entrada.css">
+  <link rel="stylesheet" type="text/css" href="css/estilo.css">
+  <link rel="stylesheet" type="text/css" href="css/entrada.css">
   <link rel="stylesheet" type="text/css" href="css/fontello.css">
   
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"> 
@@ -18,7 +19,7 @@
 
   <body>
 
-    <div class="contenedor">
+    <div class="contenedor-entradas">
 
      <header class="header">
 
@@ -38,7 +39,7 @@
        </div>
 
       <nav id="menu">
-        <ul class="opciones">
+        <ul id="opciones">
           <li><a href="index.html">INICIO</a></li>
           <li><a href="evento.html">EVENTO</a></li>
           <li class="activo"><a href="entradas.html">ENTRADAS COMPRADAS</a></li>
@@ -58,80 +59,80 @@
 
       <h2 class="titulo-entradas">RESUMEN DE ENTRADAS COMPRADAS</h2>
 
-    <div class="tabla">
-         <div class="fila1">FECHA</div>
-         <div class="fila1">TITULO</div>
-         <div class="fila1">ESTADO</div>
-         <div class="fila1">PRECIO UNITARIO</div>
-         <div class="fila1">CANTIDAD</div>
-         <div class="fila1">TOTAL</div>
+        <div class="tabla">
+             <div class="fila1">FECHA</div>
+             <div class="fila1">TITULO</div>
+             <div class="fila1">ESTADO</div>
+             <div class="fila1">PRECIO UNITARIO</div>
+             <div class="fila1">CANTIDAD</div>
+             <div class="fila1">TOTAL</div>
 
-         <div id="fecha-recital"></div>
-         <div class="titulo-evento" id="titulo-recital"></div>
-         <div><input type="submit" value="PERSONALIZAR" class="personalizar" id="recital"></div>
-         <div class="precio-r precio"></div>
-         <div class="contenedor-cantidad">
-             <i class="fas fa-plus cant-re-p"></i>
-             <div class="cantidad cant-re">0</div>
-             <i class="fas fa-minus cant-re-m"></i>
-         </div>
-         <div class="total t-r">0</div>
+             <div id="fecha-recital"></div>
+             <div class="titulo-evento" id="titulo-recital"></div>
+             <div><input type="submit" value="PERSONALIZAR" class="personalizar" id="recital"></div>
+             <div class="precio-r precio"></div>
+             <div class="contenedor-cantidad">
+                 <i class="fas fa-plus cant-re-p"></i>
+                 <div class="cantidad cant-re">0</div>
+                 <i class="fas fa-minus cant-re-m"></i>
+             </div>
+             <div class="total t-r">0</div>
 
-         <div id="fecha-karaoke"></div>
-         <div class="titulo-evento" id="titulo-karaoke"></div>
-         <div><input type="submit" value="PERSONALIZAR" class="personalizar" id="karaoke"></div>
-         <div class="precio-k precio"></div>
-         <div class="contenedor-cantidad">
-             <i class="fas fa-plus cant-kk-p"></i>
-             <div class="cantidad cant-kk">0</div>
-             <i class="fas fa-minus cant-kk-m"></i>
-         </div>
-         <div class="total t-k">0</div>
+             <div id="fecha-karaoke"></div>
+             <div class="titulo-evento" id="titulo-karaoke"></div>
+             <div><input type="submit" value="PERSONALIZAR" class="personalizar" id="karaoke"></div>
+             <div class="precio-k precio"></div>
+             <div class="contenedor-cantidad">
+                 <i class="fas fa-plus cant-kk-p"></i>
+                 <div class="cantidad cant-kk">0</div>
+                 <i class="fas fa-minus cant-kk-m"></i>
+             </div>
+             <div class="total t-k">0</div>
 
-         <div id="fecha-cumple"></div>
-         <div class="titulo-evento" id="titulo-cumple"></div>
-         <div><input type="submit" value="PERSONALIZAR" class="personalizar" id="cumple"></div>
-         <div class="precio-cum precio"></div>
-         <div class="contenedor-cantidad">
-             <i class="fas fa-plus cant-cm-p"></i>
-             <div class="cantidad cant-cm">0</div>
-             <i class="fas fa-minus cant-cm-m"></i>
-         </div>
-         <div class="total t-cum">0</div>
+             <div id="fecha-cumple"></div>
+             <div class="titulo-evento" id="titulo-cumple"></div>
+             <div><input type="submit" value="PERSONALIZAR" class="personalizar" id="cumple"></div>
+             <div class="precio-cum precio"></div>
+             <div class="contenedor-cantidad">
+                 <i class="fas fa-plus cant-cm-p"></i>
+                 <div class="cantidad cant-cm">0</div>
+                 <i class="fas fa-minus cant-cm-m"></i>
+             </div>
+             <div class="total t-cum">0</div>
 
-         <div id="fecha-casamiento"></div>
-         <div class="titulo-evento" id="titulo-casamiento"></div>
-         <div><input type="submit" value="PERSONALIZAR" class="personalizar" id="casamiento"></div>
-         <div class="precio-ca precio"></div>
-         <div class="contenedor-cantidad">
-             <i class="fas fa-plus cant-ca-p"></i>
-             <div class="cantidad cant-ca">0</div>
-             <i class="fas fa-minus cant-ca-m"></i>
-         </div>
-         <div class="total t-ca">0</div>
+             <div id="fecha-casamiento"></div>
+             <div class="titulo-evento" id="titulo-casamiento"></div>
+             <div><input type="submit" value="PERSONALIZAR" class="personalizar" id="casamiento"></div>
+             <div class="precio-ca precio"></div>
+             <div class="contenedor-cantidad">
+                 <i class="fas fa-plus cant-ca-p"></i>
+                 <div class="cantidad cant-ca">0</div>
+                 <i class="fas fa-minus cant-ca-m"></i>
+             </div>
+             <div class="total t-ca">0</div>
 
-         <div id="fecha-egresado"></div>
-         <div class="titulo-evento" id="titulo-egresado"></div>
-         <div><input type="submit" value="PERSONALIZAR" class="personalizar" id="egresados"></div>
-         <div class="precio-eg precio"></div>
-         <div class="contenedor-cantidad">
-             <i class="fas fa-plus cant-eg-p"></i>
-             <div class="cantidad cant-eg">0</div>
-             <i class="fas fa-minus cant-eg-m"></i>
-         </div>
-         <div class="total t-eg">0</div>
+             <div id="fecha-egresado"></div>
+             <div class="titulo-evento" id="titulo-egresado"></div>
+             <div><input type="submit" value="PERSONALIZAR" class="personalizar" id="egresados"></div>
+             <div class="precio-eg precio"></div>
+             <div class="contenedor-cantidad">
+                 <i class="fas fa-plus cant-eg-p"></i>
+                 <div class="cantidad cant-eg">0</div>
+                 <i class="fas fa-minus cant-eg-m"></i>
+             </div>
+             <div class="total t-eg">0</div>
 
-         <div id="fecha-fiesta15"></div>
-         <div class="titulo-evento" id="titulo-fiesta15"></div>
-         <div><input type="submit" value="PERSONALIZAR" class="personalizar" id="fiesta15"></div>
-         <div class="precio-15 precio"></div>
-         <div class="contenedor-cantidad">
-             <i class="fas fa-plus cant-15-p"></i>
-             <div class="cantidad cant-15">0</div>
-             <i class="fas fa-minus cant-15-m"></i>
-         </div>
-         <div class="total t-15">0</div>
-         </div>
+             <div id="fecha-fiesta15"></div>
+             <div class="titulo-evento" id="titulo-fiesta15"></div>
+             <div><input type="submit" value="PERSONALIZAR" class="personalizar" id="fiesta15"></div>
+             <div class="precio-15 precio"></div>
+             <div class="contenedor-cantidad">
+                 <i class="fas fa-plus cant-15-p"></i>
+                 <div class="cantidad cant-15">0</div>
+                 <i class="fas fa-minus cant-15-m"></i>
+             </div>
+             <div class="total t-15">0</div>
+          </div>
 
 
 
@@ -179,9 +180,9 @@
          <br>
 
         <div class="casilla-de-mail">
-          <input type="text" placeholder="INGRESA TU E-MAIL" name="email" class="email" autocomplete="off"><input type="submit" name="enviar" class="suscribirse" value="ENVIAR">
+          <input type="text" placeholder="INGRESA TU E-MAIL" name="email" class="e-mail" autocomplete="off"><input type="submit" name="enviar" class="suscribirse" value="ENVIAR">
         </div>
-        <div class="menu-interior">
+        <div class="menu-inferior">
           <a href="index.html" id="mi">INICIO</a><br>
           <a href="evento.html" id="mi">EVENTO</a><br>
           <a href="entradas.html" id="mi">ENTRADAS COMPRADAS</a><br>

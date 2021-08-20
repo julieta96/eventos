@@ -1,11 +1,5 @@
-body{
-    margin:0;
-    padding: 0;
-    background-color: black;
-    font-family: 'Roboto', sans-serif;
-}
 
-.contenedor4{
+.contenedor-invitacion{
 
     display: grid;
     grid-gap: 10px;
@@ -20,97 +14,6 @@ body{
 
 /*-----HEADER------*/
 
-.header{
-    height: 22%;
-    padding-bottom: 18px;
-     position:fixed;
-    z-index: 1000000000000000; 
-}
-
-#menu{
-   
-   padding: 5px;
-   border-bottom: 10px solid #000;
-}
-
- .header1 {
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background: #000;
-}
-
- .header .header1 {
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 1fr;
-    background: #000;
-}
-
- .marca{
-    text-align: left;
-    cursor: pointer;
-}
-
-
- #buscador{
-    display: flex;
-    justify-content: center;
-     text-align: center;
-}
-
-#resultado{
-  background: #000;
-  z-index: 1000;
-  display: flex;
-  flex-direction:column;
-  border: 2px solid #9acd32;
-  align-content: center;
-  padding: 5px;
-  grid-column: 2/3;
-  margin-top: 0%;
-  border-top: 0;
-
-}
-
-#resultado >li{
-  list-style: none;
-  flex-direction: row;
-  text-align: center;
-  cursor: pointer;
-  color: #fff;
-}
-
-
-#resultado li a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #fff;
-}
-
-
-#resultado> .link-evento:hover ,#resultado> li a:hover {
-  background: #cddc39;
-  color: #000;
-}
-
-
-.icon-basket{
-   font-size: 20px;
-   grid-column: 3/-1 ;
-   line-height: 50px;
-   text-align: center;
-   color: #fff;
-   line-height: 70px;
-   cursor: pointer;
-}
 
 .contador{
   color: yellowgreen;
@@ -118,37 +21,6 @@ body{
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
   display: inline-block;
-}
-
-.icon-lupa{
-    color: #fff;
-}
-
-#menu ul li{
-    display: inline-block;
-    margin-right: 10px;  
-
-}
-
-#menu ul li a{
-    font-family: 'Roboto', sans-serif;
-    color:black;
-    font-weight:300;
-    margin-right: 10px;
-    margin-left: 50px;
-    
-}
-
-.opciones li a{
-  text-decoration:none;
-}
-
-
-#menu .opciones .activo a {
-  
-  font-weight: bold;
-  color: #000;
-  
 }
 
 
@@ -168,44 +40,6 @@ body{
     border: 0;
    
 }
-
-.buscador-lupa {
-
-  width: 500px;
-  padding: 5px;
-  display: flex;
-  flex-direction:row;
-  justify-content: space-evenly;
-  
-}
-
-.icon-lupa{
-  color: #fff;
-  text-align: center;
-  margin: auto;
-  cursor: pointer;
-  padding: 6px;
-  background: yellowgreen;
-    
-}
-
-
-.marca{
-    font-family: 'Cinzel', serif;
-    color: #fff;
-}
-#menu{
-    
-    background-color: yellowgreen;
-    grid-gap: 0;
-
-}
-
-#menu a:hover{
-    color: white;
-}
-
-
 
 /*--------------------------------------------------------------*/
 
@@ -232,6 +66,7 @@ body{
 
   text-align: center;
   color: white;
+
 }
 
 .section-invitacion-personalizada{
@@ -450,16 +285,6 @@ input[type="text"]{
 
 }
 
-/*.ub-1:before , .ub-2:before , .ub-3:before{
-  content: '';
-  background-color: black;
-  width: 10px;
-  height: 10px;
-  z-index: 1;
-
-
-}*/
-
 
 .position{
 
@@ -524,121 +349,8 @@ margin-left: 0px;
     border-top: 1px solid yellowgreen;
 }
 
-footer .copyright{
-    color: white;
-    text-align: center;
-    padding-bottom: 10px;
-
-}
-
-#footer{
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-template-rows: repeat(1,1fr);
-  grid-template-areas: "email menui redes"
-                       /*"copy copy copy"*/;
-
- padding-top: 15px;
- border-top: 1px solid yellowgreen;
-
-}
 
 
-
-.email{
-
-  border:0;
-  font-family: 'Roboto', sans-serif;
-  background-color: #E8F0FE/*#F25E3D*/;
-  height: 30px;
-  width: 200px;
-  outline: 0;
-}
-
-.email::placeholder{
-  background-color: #E8F0FE;
-  color: #000;
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
-  font-weight: 5px;
-
-}
-
-.casilla-de-mail{
-
- grid-area: email;
- /* margin-left: 20px;*/
- margin: auto;
-
-}
-
-
-.suscribirse{
-  border: 0;
-  font-family: 'Roboto', sans-serif;
-  height: 32px;
-  background-color: yellowgreen;
-  font-weight: bold;
-  outline: 0;
-}
-
-.suscribirse:hover{
-  background-color: #F25E3D;
-}
-.menu-interior>a{
-  text-decoration: none;
-  color: yellowgreen;
-  margin: auto;
-  
-}
-
-
-#mi{
-  text-align: center;
-}
-
-#mi:hover{
-  /*text-decoration:overline;
-  text-decoration-color: black;*/
-  font-weight: bold;
-  color:#F25E3D;
-}
-
-.menu-interior{
-  grid-area: menui;
-  margin: auto;
-  text-align: center;
-}
-
-.redes{
-  color: yellowgreen;
-  display:inline-block;
-  grid-area: redes;
-  margin:auto;
-  font-size: 20px;
-  /*margin-right: 50px;*/
-  text-align: center;
-
-}
-
-.redes span{
-  margin-right: 25px;
-}
-
-.redes span:hover{
-
- color:#F25E3D;
-
-}
-
-.copyright{
-  
- /* grid-area: copy;*/
-  text-align: center;
-  margin-bottom: 0px;
-  padding-top: 8px;
-  font-size: 10px;
-}
 
 
 
