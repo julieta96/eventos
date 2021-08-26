@@ -306,3 +306,121 @@
   padding: 0;
 
 }
+
+/**RESPONSIVE-------------------------------------------*/
+
+@media screen and (min-width: 50px) and (max-width: 900px){
+
+
+
+
+   .contenedor .slider{
+    height: auto;  
+
+  }
+
+  .slider img{
+
+  height: auto;
+  }
+
+.contenedor .slider{
+
+  padding-top: 2px;
+  }
+
+
+.dot-slider{
+ 
+   padding-top: 8px;
+
+}
+
+.dot-slider >.dot{
+  height: 8px;
+  width: 8px;
+}
+
+.dot-slider>.active {
+  background: #cddc39;
+}
+
+.dot:hover {
+
+  background: #cddc39;
+
+}
+
+.contenedor .pasos {
+  
+  flex-direction: column;
+  width: 100%;
+  
+}
+
+.contenedor .pasos .paso1, .contenedor .pasos .paso2 , .contenedor .pasos .paso3{
+
+  margin-bottom: 2px;
+  font-size: 10px;
+  padding: 0;
+  width: 100%;
+}
+
+.evento div{
+  margin-bottom: 2%;
+}
+
+.evento .e1 , .evento .e2 ,
+ .evento .e3 , .evento .e4 ,
+  .evento .e5 , .evento .e6{
+
+    height: 350px;
+  }
+
+.evento .e1 img , .evento .e2 img ,
+ .evento .e3  img, .evento .e4 img ,
+  .evento .e5  img, .evento .e6 img{
+
+    width: 239px;
+    height: 246px;
+  }
+
+  .evento-card h2{
+
+    font-size: 12px;
+
+  }
+
+  .evento-card h3 , .evento-card p{
+
+    font-size: 11px;
+
+  }
+ .evento-card br{
+
+  display: none;
+
+ }
+ .evento-card a{
+
+  font-size: 12px;
+  padding: 0;
+  margin-bottom: 1px;
+ }
+
+ .titulo-medios{
+
+  font-size: 12px;
+ }
+
+ .mp1 , .mp2 , .mp3 {
+    width: 65px;
+    height: 30px;
+  }
+
+}
+
+
+
+
+

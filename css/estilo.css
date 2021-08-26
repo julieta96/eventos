@@ -21,6 +21,10 @@ background:#000;
     background-color: black;
 }
 
+.button-menu-responsive{
+  display: none;
+}
+
 
 #menu{
    
@@ -29,7 +33,6 @@ background:#000;
   background-color: yellowgreen;
 
 }
-
 
 .header .header1 {
 
@@ -134,7 +137,8 @@ input#buscador {
 }
 
 
-#resultado> .link-evento:hover ,#resultado> li a:hover {
+#resultado> .link-evento:hover ,
+#resultado> li a:hover {
   background: #cddc39;
   color: #000;
 }
@@ -160,7 +164,7 @@ input#buscador {
 }
 
 
-.icon-lupa{
+#lupa{
   color: #fff;
   text-align: center;
   margin: auto;
@@ -177,7 +181,8 @@ input#buscador {
 
 }
 
-#menu ul li a{
+
+#menu ul li a, #menu-responsive ul li a{
     font-family: 'Roboto', sans-serif;
     color:black;
     font-weight:300;
@@ -186,7 +191,7 @@ input#buscador {
     
 }
 
-#opciones li a{
+#opciones li a, #opciones-responsive li a{
   text-decoration:none;
 }
 
@@ -358,5 +363,238 @@ footer >.copyright{
   font-size: 12px; 
   height: 100%;
   width: 100%;
+}
+
+
+
+/*RESPONSIVE-------------*/
+@media screen and (min-width: 50px) and (max-width: 900px){
+
+  .header1{ 
+    margin: auto;
+    width:auto;
+    display: flex;
+    flex-shrink: 100%;
+    height: 0%;
+
+  }
+
+  .hedaer1 .buscador-lupa , .header1 .resultado{
+    display: none;
+  }
+
+
+ .header{
+
+  margin-bottom: 0px;
+  height: 10%;
+  width: 100%;
+  border-bottom: 2px solid yellowgreen;
+  padding-bottom: 0;
+  position: fixed;
+
+  }
+
+   .buscador-lupa{
+    display: none;
+
+  }
+
+  #lupa{
+  
+    text-align: left;
+    display: inline-block;
+    width: 5%;
+  }
+
+
+  #resultado{
+
+    margin-bottom: 5%;
+  }
+
+  .carrito{
+   grid-column: 3/-1;
+   padding: 0%;
+   margin-right: 10%;
+   line-height: 0;
+   margin-top: -18%;
+   text-align: right;
+   
+  
+  }
+
+  #menu{
+    display: none;
+  }
+
+  .marca{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    grid-column: span 3;
+    font-size: 20px;
+  }
+
+ .mostrar-menu{
+  display: block;
+ }
+
+ .contenedorBuscador{
+  display: flex;
+  flex-direction: column;
+  background: yellowgreen;
+  padding: 0;
+  margin: 0;
+  height: 2%;
+ }
+
+ .contenedorBuscador > input , .contenedorBuscador >div{
+   display: inline-block;
+
+ }
+
+ 
+ .nav-responsive{
+  width:100%;
+  background:red;
+  height: 100%;
+  bottom:0;
+  margin:0;
+  padding:0;
+  position:absolute;
+  background: #000;
+  position: fixed;
+  top: 10%;
+  padding-top: 10%;
+ 
+ }
+
+  .nav-responsive ul li{
+
+    margin-bottom: 20px; 
+    text-align: left;
+    list-style: none;
+    text-decoration: none; 
+    padding: 5px;
+}
+
+
+.nav-responsive ul li a{
+    font-family: 'Roboto', sans-serif;
+    color:yellowgreen;
+    font-weight:300;
+    margin-right: 10px;
+    margin-left: 50px; 
+}
+
+.nav-responsive ul li a:hover , #opciones li:hover{
+  background: yellowgreen;
+  color: #000;
+
+}
+
+#buscador{
+  display: none;
+  background: #fff;
+  color: #000;
+  width: 90%;
+  border: 0;
+  outline: 0;
+  display: inline-block;
+  padding: 0;
+}
+#opciones{
+  margin: 0;
+  padding: 0;
+}
+
+ #opciones li a{
+  text-decoration:none;
+  list-style: none;
+  text-align: left;
+  display: block;
+}
+
+  .button-menu-responsive{
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-top: 0;
+  grid-column: 1/2;
+  grid-row: 1/4;
+  cursor: pointer;
+
+}
+
+.button-menu-responsive img{
+  display: block;
+  width: 30px;
+  height: 30px;
+  
+}
+
+
+
+.casilla-de-mail {
+ 
+margin: auto;
+ grid-row: 1/2;
+ grid-column: 1/6;
+
+}
+
+
+.email{
+  font-size: 11px;
+}
+
+.menu-inferior{
+
+ display: none;
+}
+
+
+.redes{
+
+  grid-row: 3/4;
+ grid-column: 1/6;
+ font-size: 11px;
+  
+}
+
+footer >.copyright{
+ 
+  padding-top: 2px;
+  height: 5px;
+  grid-row: 4/6;
+ grid-column: 1/6;
+
+}
+
+p.copyright.footer-fila2{
+  font-size: 11px;
+}
+input.e-mail, input.suscribirse{
+  font-size: 11px;
+}
+
+input.e-mail{
+  
+  height: 20px;
+}
+input.suscribirse{
+  height: 22px;
+}
+.casilla-de-mail ,
+.menu-inferior,
+.redes,
+footer >.copyright{
+
+  margin-bottom: 10px;
+
+}
+
 }
 
