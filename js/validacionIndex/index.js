@@ -1,6 +1,6 @@
-require(['jquery','clases/instancias/eventos' ,'validacionIndex/slider','validacionIndex/slider-automatico','validacionIndex/validacion_js','clases/carrito','clases/instancias/validacionCarrito','events-search','menu_responsive'],
+require(['jquery','backIndex','clases/instancias/eventos' ,'validacionIndex/slider','validacionIndex/slider-automatico','validacionIndex/validacion_js','clases/carrito','clases/instancias/validacionCarrito','events-search','menu_responsive'],
 
- function($,objetos ,slider,sliderA,pasos,c,carro, search, mr){
+ function($,b,objetos ,slider,sliderA,pasos,c,carro, search, mr){
 
      $(".marca").click(function(){
      $(location).attr("href","index.html");
