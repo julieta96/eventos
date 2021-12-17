@@ -371,14 +371,17 @@ justify-content: center;
 }
 
 
- #f-izq ,#f-der{
- color: white;
- font-size: 20px;
- width: 5%;
- justify-content:space-between;
- margin: auto;
- cursor: pointer;
-
+ div#f-izq.icon-left-open ,div#f-der.icon-right-open{
+ color: #cddc39;
+  font-weight: bold;
+  height: 99%;
+  width: 45px;
+  line-height: 350px;
+  font-size: 25px;
+  text-align: center;
+  background: yellowgreen;
+  z-index: 1;
+  cursor: pointer;
 }
 
 
