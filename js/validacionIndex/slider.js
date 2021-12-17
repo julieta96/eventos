@@ -1,7 +1,7 @@
-require(['jquery'], function($){
+require(['jquery'], ($)=>{
 
 
-$( ".dot" ).click(function( event ) {
+$( ".dot" ).click(( event ) =>{
 
    let eventoImg = event.target.classList[1] ;
 

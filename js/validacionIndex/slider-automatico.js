@@ -1,4 +1,4 @@
-require(['jquery'], function($){
+require(['jquery'], ($)=>{
 
      let evento=[];
      evento[0] = 'img/slider/e1.jpg';
@@ -8,9 +8,9 @@ require(['jquery'], function($){
          
 	 let i=0;
 	
-	  setInterval(cambiarImagenes , 4000);
+	  
 
-	 function cambiarImagenes(){
+	 const cambiarImagenes = () =>{
     
 
 	  $(".cambiarImg").attr('src',evento[i]);
@@ -26,6 +26,7 @@ require(['jquery'], function($){
 
 	  }  
 
+	  setInterval(cambiarImagenes , 4000);
 
 	  })
 
