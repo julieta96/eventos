@@ -1,12 +1,14 @@
 require(['jquery','backIndex','redireccionarPagina','validacionInvitacion/tarjeta-personalizada','validacionInvitacion/tarjeta-personalizada2','personalizar-invitacion','clases/carrito','clases/instancias/validacionCarrito','events-search'],
 
-	function($,b,r,t,t2,i,carro, search) {
+	function($,backIndex,redireccionarPagina,tarjetaPersonalizada,tarjetaPersonalizada2,personalizarInvitacion,carroClase, carroObjeto, busquedaEvento) {
 
-		r;
-		t;
-		t2;
-		i;
-		carro;
+		backIndex;
+		redireccionarPagina;
+		tarjetaPersonalizada;
+		tarjetaPersonalizada2;
+		personalizarInvitacion;
+		carroClase;
+		carroObjeto;
 
     let idTarjeta = $(".tarjeta").attr("id");
 
@@ -28,7 +30,7 @@ require(['jquery','backIndex','redireccionarPagina','validacionInvitacion/tarjet
      	
      })
 
-      search;
+      busquedaEvento;
 
     
 		
