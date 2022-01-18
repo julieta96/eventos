@@ -1,4 +1,4 @@
-require(['jquery','backIndex','clases/instancias/eventos' ,'validacionIndex/slider','validacionIndex/slider-automatico','validacionIndex/validacion_js','clases/carrito','clases/instancias/validacionCarrito','events-search','menu_responsive'],
+require(['jquery','backIndex','clases/instancias/eventos' ,'validacionIndex/slider','validacionIndex/slider-automatico','validacionIndex/pasos-a-comprar-evento','clases/carrito','clases/instancias/validacionCarrito','events-search','menu_responsive'],
 
  ($,b,objetos ,slider,sliderA,pasos,c,carro, search, mr)=>{
 
