@@ -1,4 +1,4 @@
-# EVENTOS
+## EVENTOS
 
 _APP Web (proyecto frontend), contiene una variedad de eventos para organizar,
 en el cual el usuario podra comprar e inscribirse + personalizar la tarjeta de invitacion e imprimirla.
