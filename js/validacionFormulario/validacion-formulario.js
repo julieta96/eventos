@@ -55,13 +55,9 @@ require(['jquery','clases/testCharacter'],
 
        $(input).css("background","#4CAF50");
 
-       //$(input).removeClass("bg-red");
-       //$(input).addClass("bg-green");
       }else{
 
        $(input).css("background","#FF5252");
-       //$(input).removeClass("bg-green");
-       //$(input).addClass("bg-red");
       }
         
     }
