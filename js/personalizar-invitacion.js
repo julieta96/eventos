@@ -1,9 +1,9 @@
-require(['jquery'],function($){
+require(['jquery'],($)=>{
 
 	let valorId="";
 
 
-	$(".personalizar").click(function(){
+	$(".personalizar").click(()=>{
 		
 		valorId= $(this).attr("id");
 		$(location).attr("href",`invitacion.html#${valorId}`);
@@ -12,6 +12,4 @@ require(['jquery'],function($){
 
 	$(".a-titulo-principal").attr("href",`invitacion.html#${valorId}`);
 
-
-	
 })
