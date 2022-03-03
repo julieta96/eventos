@@ -19,8 +19,6 @@ require(['jquery', 'lib/jsPDF/jspdf'] , ($,pdf) =>{
 
 	});
 
-	console.log(localStorage.getItem("compra"));
-
 
     $(".imprimir-comprobante").click(()=>{
 
