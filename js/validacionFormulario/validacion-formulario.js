@@ -1,6 +1,71 @@
-require(['jquery'],
+require(['jquery','clases/testCharacter'],
 
-    function($){
+    ($,t)=>{
+
+        let input = $("input");
+
+        $("input").each((i)=>{
+
+
+      $(input[i]).keyup(validation);
+      $(input[i]).blur(validation);
+        
+    
+    });
+        
+        const test = new t();
+       
+        function validation(e){
+
+            switch(e.target.id){
+                
+                case "nombre":
+                 let nombre =$("#nombre");
+                $("#nombre").each((i)=>{
+                    validarCampos(test.letters($(nombre[i]).val()), e.target);
+                 });
+                break;
+
+                case "apellido":
+                 let apellido = $("#apellido");
+                 $("#apellido").each((i)=>{
+                    validarCampos(test.letters($(apellido[i]).val()), e.target);
+                });
+                break;
+
+                case "email":
+                 let email = $("#email");
+                 $("#email").each((i)=>{
+                   
+                   validarCampos(test.lettersNumbersCharacters($(email[i]).val()), e.target);
+                 });
+                break;
+            }
+
+
+
+
+        }
+
+
+
+    const validarCampos=(test,input)=>{
+
+      if(test){
+
+       $(input).css("background","#4CAF50");
+
+       //$(input).removeClass("bg-red");
+       //$(input).addClass("bg-green");
+      }else{
+
+       $(input).css("background","#FF5252");
+       //$(input).removeClass("bg-green");
+       //$(input).addClass("bg-red");
+      }
+        
+    }
+
 
 
    $(".formulario").on('click', '.remove' , function(){
@@ -10,13 +75,13 @@ require(['jquery'],
    })
 
 
-    $(".formulario").on('click', '.no-remove', function(){
+    $(".formulario").on('click', '.no-remove', ()=>{
        
          $('.borrar-dato').val('');
    })
 
 
-    $(".add").click(function(){
+    $(".add").click(()=>{
          
          const formulario = $(".formulario");
          const div = $("<div>");
@@ -33,15 +98,18 @@ require(['jquery'],
          input1.attr("type" , "text");
          input1.attr("id" , "nombre");
          input1.attr("placeholder" , "Nombre");
+         input1.attr("autocomplete","off");
 
          input2.attr("type" , "text");
          input2.attr("id" , "apellido");
          input2.attr("placeholder" , "Apellido");
+         input2.attr("autocomplete","off");
 
 
          input3.attr("type" , "email");
          input3.attr("id" , "email");
          input3.attr("placeholder" , "Email");
+         input3.attr("autocomplete","off");
 
 
          formulario.append(div);
@@ -52,42 +120,5 @@ require(['jquery'],
     	
     })
     
-    //Validacion de los campos 
-
-
-    $(".formulario").on('click', '#inscribirse' ,function(){
-
-    let inputs=$(".inscripcion");
-    let nombre = $("#nombre");
-    let apellido = $("#apellido");
-    let email = $("#email");
-    let letras = /^[A-Za-z]+$/;
-
-    if(!letras.test(nombre.val())){
-
-
-        alert("El nombre debe tener solo letras");
-    }
-
-
-    if(!letras.test(apellido.val())){
-
-
-        alert("El apellido debe tener solo letras");
-    }
-
-
-    if(inputs.length == ""){
-
-        alert("Los campos no pueden estar vacios");
-        inputs.attr("required","");
-    }
-
-
-    })
-
-    
-   
-
 
 })
