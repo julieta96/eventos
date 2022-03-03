@@ -1,9 +1,5 @@
-require(['jquery','backIndex','clases/instancias/eventos','modal','personalizar-invitacion','redireccionarPagina','validacionEntradas/entradas','clases/carrito','clases/instancias/validacionCarrito','events-search'], 
-    function($,b,e,m,p,r,entradas, search){
-
-     /* $(".marca").click(function(){
-     $(location).attr("href","index.html");
-     })*/
+require(['jquery','backIndex','clases/instancias/eventos','modal','personalizar-invitacion','redireccionarPagina','validacionEntradas/entradas','validacionEntradas/total-compra','clases/carrito','clases/instancias/validacionCarrito','events-search'], 
+    function($,backIndex,eventos,modal,personalizarInvitacion,redireccionarPagina,entradas,totalCompra,carrito,validacionCarrito,search){
 
    $(".fas").click(function(e){
 
@@ -50,34 +46,34 @@ require(['jquery','backIndex','clases/instancias/eventos','modal','personalizar-
     
   })
 
-    $("#fecha-recital").text(`${e.recitalDatos.getFecha}`);
-    $("#titulo-recital").text(`${e.recitalDatos.getNombre}`);
-    $(".precio-r").text(`${e.recitalDatos.getPrecio}`);
+    $("#fecha-recital").text(`${eventos.recitalDatos.getFecha}`);
+    $("#titulo-recital").text(`${eventos.recitalDatos.getNombre}`);
+    $(".precio-r").text(`${eventos.recitalDatos.getPrecio}`);
     $(".cant-re").text(localStorage.getItem("contador-re"));
 
-    $("#fecha-karaoke").text(`${e.karaokeDatos.getFecha}`);
-    $("#titulo-karaoke").text(`${e.karaokeDatos.getNombre}`);
-    $(".precio-k").text(`${e.karaokeDatos.getPrecio}`);
+    $("#fecha-karaoke").text(`${eventos.karaokeDatos.getFecha}`);
+    $("#titulo-karaoke").text(`${eventos.karaokeDatos.getNombre}`);
+    $(".precio-k").text(`${eventos.karaokeDatos.getPrecio}`);
     $(".cant-kk").text(localStorage.getItem("contador-kk"));
 
-    $("#fecha-cumple").text(`${e.cumpleDatos.getFecha}`);
-    $("#titulo-cumple").text(`${e.cumpleDatos.getNombre}`);
-    $(".precio-cum").text(`${e.cumpleDatos.getPrecio}`);
+    $("#fecha-cumple").text(`${eventos.cumpleDatos.getFecha}`);
+    $("#titulo-cumple").text(`${eventos.cumpleDatos.getNombre}`);
+    $(".precio-cum").text(`${eventos.cumpleDatos.getPrecio}`);
     $(".cant-cm").text(localStorage.getItem("contador-cm"));
 
-    $("#fecha-casamiento").text(`${e.casamientoDatos.getFecha}`);
-    $("#titulo-casamiento").text(`${e.casamientoDatos.getNombre}`);
-    $(".precio-ca").text(`${e.casamientoDatos.getPrecio}`);
+    $("#fecha-casamiento").text(`${eventos.casamientoDatos.getFecha}`);
+    $("#titulo-casamiento").text(`${eventos.casamientoDatos.getNombre}`);
+    $(".precio-ca").text(`${eventos.casamientoDatos.getPrecio}`);
     $(".cant-ca").text(localStorage.getItem("contador-ca"));
 
-    $("#fecha-egresado").text(`${e.egresadoDatos.getFecha}`);
-    $("#titulo-egresado").text(`${e.egresadoDatos.getNombre}`);
-    $(".precio-eg").text(`${e.egresadoDatos.getPrecio}`);
+    $("#fecha-egresado").text(`${eventos.egresadoDatos.getFecha}`);
+    $("#titulo-egresado").text(`${eventos.egresadoDatos.getNombre}`);
+    $(".precio-eg").text(`${eventos.egresadoDatos.getPrecio}`);
     $(".cant-eg").text(localStorage.getItem("contador-eg"));
 
-    $("#fecha-fiesta15").text(`${e.fiesta15Datos.getFecha}`);
-    $("#titulo-fiesta15").text(`${e.fiesta15Datos.getNombre}`);
-    $(".precio-15").text(`${e.fiesta15Datos.getPrecio}`);
+    $("#fecha-fiesta15").text(`${eventos.fiesta15Datos.getFecha}`);
+    $("#titulo-fiesta15").text(`${eventos.fiesta15Datos.getNombre}`);
+    $(".precio-15").text(`${eventos.fiesta15Datos.getPrecio}`);
     $(".cant-15").text(localStorage.getItem("contador-15"));
 
     //$(".total").text($(".cantidad").text()*$(".precio").text());
@@ -89,7 +85,7 @@ require(['jquery','backIndex','clases/instancias/eventos','modal','personalizar-
    $(".t-eg").text( $(".cant-eg").text() * $(".precio-eg").text());
    $(".t-15").text( $(".cant-15").text() * $(".precio-15").text());
 
-    r;
+    redireccionarPagina;
     entradas;
     //carro;
 
