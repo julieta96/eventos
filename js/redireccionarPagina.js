@@ -151,10 +151,10 @@ require(['jquery','clases/instancias/eventos','clases/instancias/organizadores']
 		//guardo valores
 
 			$("#titulo-e").text(localStorage.getItem(tituloE));
+			//$(".titulo-e").attr("value",$("#titulo-e").text());
 			$("#titulo-e").css("color",localStorage.getItem(tituloColorE));
 			$("#titulo-e").css("font-size" ,localStorage.getItem(tituloSizeE));
 			$("#titulo-e").css("text-align" ,localStorage.getItem(ubicacionTituloE));
-
 
 			$("#fecha-hora").text(localStorage.getItem(fechaHoraE));
 			$("#fecha-hora").css("color",localStorage.getItem(fechaHoraColorE));
@@ -162,6 +162,8 @@ require(['jquery','clases/instancias/eventos','clases/instancias/organizadores']
 			$("#fecha-hora").css("text-align" ,localStorage.getItem(ubicacionFechaHoraE));
 
 			$(".tarjeta").css("background-color",localStorage.getItem(fondoE));
+
+
 
 	}
 
