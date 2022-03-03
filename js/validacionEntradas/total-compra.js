@@ -1,4 +1,4 @@
-require(['jquery', 'js/lib/jsPDF/jspdf.js'] , ($,pdf) =>{
+require(['jquery', 'lib/jsPDF/jspdf'] , ($,pdf) =>{
 
 
 
@@ -28,7 +28,7 @@ require(['jquery', 'js/lib/jsPDF/jspdf.js'] , ($,pdf) =>{
 
     	doc.text("Probando PDF", 10,10);
     	doc.save("comprobante-de-pago.pdf");
-
+    	
     });
 
 })
