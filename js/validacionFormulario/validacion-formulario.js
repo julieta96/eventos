@@ -68,7 +68,7 @@ require(['jquery','clases/testCharacter'],
 
 
 
-   $(".formulario").on('click', '.remove' , function(){
+   $(".formulario").on('click', '.remove' , ()=>{
        
        $(this).parent().remove();
 
