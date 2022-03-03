@@ -59,11 +59,11 @@ require(['jquery'], ($)=>{
 
 		//$(window).on('resize', ()=>{
 
-			if(widthBrower>=900){
+			/*if(widthBrower>=900){
 			window.setTimeout('location.reload()', 3000);
 		}else{
 			window.setTimeout('location.reload()', 3000);
-		}
+		}*/
 	
 
 		//}
