@@ -7,15 +7,11 @@ require(['jquery', 'js/lib/jsPDF/jspdf.js'] , ($,pdf) =>{
 
 		let carritoCargado = localStorage.getItem("compra");
 		let totalAPagar = 0;
+		let carro=JSON.parse(carritoCargado);
 
-		for(let i = 0; i < carritoCargado.length; i++) {   
+		for(let i = 0; i < carro.length; i++) {   
 
-		      let id = $(carritoCargado).key(i);
-		      console.log("hola algo no funciona");
-		      let eventosCargados = $.parseJSON(carritoCargado.getItem(id));
-
-		      totalAPagar+= eventosCargados[i].precio;
-      
+		      totalAPagar+= carro[i].precio;
     	}
 
 	    $(".total-pago").html(totalAPagar);
@@ -23,13 +19,15 @@ require(['jquery', 'js/lib/jsPDF/jspdf.js'] , ($,pdf) =>{
 
 	});
 
+	console.log(localStorage.getItem("compra"));
+
 
     $(".imprimir-comprobante").click(()=>{
 
     	const doc = new jsPDF();
 
     	doc.text("Probando PDF", 10,10);
-    	doc.saveAs("comprobante-de-pago.pdf");
+    	doc.save("comprobante-de-pago.pdf");
 
     });
 
