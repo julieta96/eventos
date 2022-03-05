@@ -1,6 +1,10 @@
-require(['jquery', 'lib/jsPDF/jspdf'] , ($,pdf) =>{
+require(['jquery','lib/jsPDF/jspdf.umd.min','lib/bs'] , ($,pdf, Base64) =>{
 
+	const doc = new pdf.jsPDF();
+	doc.text("Eventos", 10,10);
 
+	//let data= 'data:image/png;base64,'+ Base64.encode('logo.png');
+    //doc.addImage('img/logo.png', 'png', 15, 40, 180, 160);
 
 	$(".b-fcompra").click(()=>{
 
@@ -12,7 +16,11 @@ require(['jquery', 'lib/jsPDF/jspdf'] , ($,pdf) =>{
 
 		for(let i = 0; i < carro.length; i++) {   
 
-			  eventoYPrecio.append(`<span class='nombre-evento'>${carro[i].nombre}</span> <span>$${carro[i].precio}</span>  `);
+			  eventoYPrecio.append(`<span class='nombre-evento'>${carro[i].nombre}</span>
+			  					    <span class='precio-evento'>$${carro[i].precio}</span>  `);
+
+			  doc.text(`${carro[i].nombre} $${carro[i].precio}`, 10,20+i*6);
+
 		      totalAPagar+= carro[i].precio;
     	}
 
@@ -21,12 +29,9 @@ require(['jquery', 'lib/jsPDF/jspdf'] , ($,pdf) =>{
 
 	});
 
-
-    $(".imprimir-comprobante").click(()=>{
-
-    	const doc = new jsPDF();
-
-    	doc.text("Probando PDF", 10,10);
+	$(".imprimir-comprobante").click(()=>{
+    	
+    	doc.text( `Total: $${$(".total-pago").html()}` ,10,40);
     	doc.save("comprobante-de-pago.pdf");
     	
     });
