@@ -13,6 +13,7 @@ _Lenguajes y librerias_
 * JAVASCRIPT
 * JQUERY
 * requireJS
+* jsPDF
 
 _Web storage_
 
