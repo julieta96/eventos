@@ -1,4 +1,4 @@
-require(['jquery','lib/jsPDF/jspdf.umd.min','lib/bs'] , ($,pdf, Base64) =>{
+require(['jquery','lib/jsPDF/jspdf.umd.min'] , ($,pdf) =>{
 
 	const doc = new pdf.jsPDF();
 	doc.text("Eventos", 10,10);
