@@ -1,5 +1,5 @@
-require(['jquery','backIndex','clases/instancias/eventos','modal','personalizar-invitacion','redireccionarPagina','validacionEntradas/entradas','validacionEntradas/total-compra','clases/carrito','clases/instancias/validacionCarrito','events-search'], 
-    function($,backIndex,eventos,modal,personalizarInvitacion,redireccionarPagina,entradas,totalCompra,carrito,validacionCarrito,search){
+require(['jquery','backIndex','clases/instancias/eventos','modal','personalizar-invitacion','redireccionarPagina','validacionEntradas/total-compra','clases/carrito','clases/instancias/validacionCarrito','events-search'], 
+    function($,backIndex,eventos,modal,personalizarInvitacion,redireccionarPagina,totalCompra,carrito,validacionCarrito,search){
 
    $(".fas").click(function(e){
 
@@ -86,8 +86,7 @@ require(['jquery','backIndex','clases/instancias/eventos','modal','personalizar-
    $(".t-15").text( $(".cant-15").text() * $(".precio-15").text());
 
     redireccionarPagina;
-    entradas;
-    //carro;
+   
 
     	$(".b-scomprar").click(function(){
 
