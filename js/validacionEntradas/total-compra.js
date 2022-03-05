@@ -8,9 +8,11 @@ require(['jquery', 'lib/jsPDF/jspdf'] , ($,pdf) =>{
 		let carritoCargado = localStorage.getItem("compra");
 		let totalAPagar = 0;
 		let carro=JSON.parse(carritoCargado);
+		let eventoYPrecio=$(".detalle-compra>.evento-precio");
 
 		for(let i = 0; i < carro.length; i++) {   
 
+			  eventoYPrecio.append(`<span class='nombre-evento'>${carro[i].nombre}</span> <span>$${carro[i].precio}</span>  `);
 		      totalAPagar+= carro[i].precio;
     	}
 
