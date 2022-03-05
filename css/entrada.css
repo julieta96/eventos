@@ -166,6 +166,15 @@
   height: 65%;
 }
 
+.detaller-compra>.evento-precio{
+  margin-bottom: 0;
+  display: inline-block;
+  margin-bottom: 2px;
+}
+
+.nombre-evento{
+  text-align: left;
+}
 
 .imprimir-comprobante , .pagar{
 
@@ -201,6 +210,12 @@
 
 .total{
   display: inline-block;
+}
+
+.detalle-compra >.total{
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 8px;
 }
 
 .total-pago{
