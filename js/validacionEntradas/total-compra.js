@@ -36,4 +36,13 @@ require(['jquery','lib/jsPDF/jspdf.umd.min','lib/bs'] , ($,pdf, Base64) =>{
     	
     });
 
+    $(".pagar").click(()=>{
+
+    	if(	$(".codigo-seguridad").val()=="" || $(".nro-tarjeta").val()=="" )
+    		alert("Debe completar los datos de la tarjeta");
+    	else
+    		alert("Pago exitoso!");
+    	
+    });
+
 })
