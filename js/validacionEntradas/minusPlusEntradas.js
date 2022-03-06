@@ -1,22 +1,23 @@
 require(['jquery'], ($)=>{
 
+  let valorPlus = 0;
+  let valorMinus = 0;
+
   $(".fas").click((e)=>{
 
        let cantidadEvento = e.target.classList[2];
 
        let cantidad = cantidadEvento.substring(0, 7);//cant-re
        let evento = cantidad.substring(5,7);//re 
-
-      let valorPlus = localStorage.getItem(`contador-${evento}`);
-      let valorMinus = localStorage.getItem(`contador-${evento}`);
-
+       
        //PLUS-------------
        
        if(cantidadEvento.includes('p')){
 
+        valorPlus+=1;
+        alert(valorPlus)
         localStorage.setItem(`contador-${evento}`,valorPlus);
-        valorPlus++;
-
+        
         $(`.${cantidad}`).text(  localStorage.getItem(`contador-${evento}`))
 
        }
@@ -27,7 +28,9 @@ require(['jquery'], ($)=>{
 
        if(cantidadEvento.includes('m')){
 
-         valorMinus--;
+         valorPlus-=1;
+
+         valorMinus=valorPlus;
 
          if(valorMinus<0){
 
@@ -35,6 +38,7 @@ require(['jquery'], ($)=>{
           
          }
 
+         alert(valorMinus)
          localStorage.setItem(`contador-${evento}`,valorMinus);
 
         $(`.${cantidad}`).text( localStorage.getItem(`contador-${evento}`))
@@ -42,8 +46,13 @@ require(['jquery'], ($)=>{
 
 
        }
+
+
+      $(`.t-${evento}`).text( $(`.cant-${evento}`).text() * $(`.precio-${evento}`).text());
     
   })
+
+
 
 });
 
