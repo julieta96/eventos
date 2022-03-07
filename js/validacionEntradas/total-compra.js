@@ -1,4 +1,4 @@
-require(['jquery','lib/jsPDF/jspdf.umd.min','logoBase64'] , ($,pdf,logoBase64) =>{
+require(['jquery','lib/jsPDF/jspdf.umd.min','logoBase64'/*,'barCode'*/] , ($,pdf,logoBase64/*,barCode*/) =>{
 
 	const doc = new pdf.jsPDF();
 
@@ -6,7 +6,6 @@ require(['jquery','lib/jsPDF/jspdf.umd.min','logoBase64'] , ($,pdf,logoBase64) =
     doc.addImage(img, 'png', 10, 10, 180, 25);
 
 	$(".b-fcompra").click(()=>{
-
 
 		let carritoCargado = localStorage.getItem("compra");
 		let totalAPagar = 0;
@@ -31,7 +30,7 @@ require(['jquery','lib/jsPDF/jspdf.umd.min','logoBase64'] , ($,pdf,logoBase64) =
 	$(".imprimir-comprobante").click(()=>{
     	
     	doc.text( `Total: $${$(".total-pago").html()}` ,10,75);
-    	//let barcode=barCode.barcode;
+    	//let barcode=barCode;
     	//doc.addImage(barcode, 'png', 10, 85, 180, 25);
     	doc.save("comprobante-de-pago.pdf");
     	
