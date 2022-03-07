@@ -177,8 +177,7 @@ input#buscador {
 
 #menu ul li{
     display: inline-block;
-    margin-right: 10px;  
-
+    margin-right: 10px; 
 }
 
 
@@ -190,6 +189,12 @@ input#buscador {
     margin-left: 50px;
     
 }
+
+/*#opciones{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}*/
 
 #opciones li a, #opciones-responsive li a{
   text-decoration:none;
