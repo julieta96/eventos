@@ -1,10 +1,9 @@
-require(['jquery','lib/jsPDF/jspdf.umd.min'] , ($,pdf) =>{
+require(['jquery','lib/jsPDF/jspdf.umd.min','logoBase64'] , ($,pdf,logoBase64) =>{
 
 	const doc = new pdf.jsPDF();
-	doc.text("Eventos", 10,10);
 
-	//let data= 'data:image/png;base64,'+ Base64.encode('logo.png');
-    //doc.addImage('img/logo.png', 'png', 15, 40, 180, 160);
+    let img=`data:image/png;base64,${logoBase64.logo}`;
+    doc.addImage(img, 'png', 10, 10, 180, 25);
 
 	$(".b-fcompra").click(()=>{
 
@@ -19,7 +18,7 @@ require(['jquery','lib/jsPDF/jspdf.umd.min'] , ($,pdf) =>{
 			  eventoYPrecio.append(`<span class='nombre-evento'>${carro[i].nombre}</span>
 			  					    <span class='precio-evento'>$${carro[i].precio}</span>  `);
 
-			  doc.text(`${carro[i].nombre} $${carro[i].precio}`, 10,20+i*6);
+			  doc.text(`${carro[i].nombre} $${carro[i].precio}`, 10,50+i*6);
 
 		      totalAPagar+= carro[i].precio;
     	}
@@ -31,7 +30,9 @@ require(['jquery','lib/jsPDF/jspdf.umd.min'] , ($,pdf) =>{
 
 	$(".imprimir-comprobante").click(()=>{
     	
-    	doc.text( `Total: $${$(".total-pago").html()}` ,10,40);
+    	doc.text( `Total: $${$(".total-pago").html()}` ,10,75);
+    	//let barcode=barCode.barcode;
+    	//doc.addImage(barcode, 'png', 10, 85, 180, 25);
     	doc.save("comprobante-de-pago.pdf");
     	
     });
