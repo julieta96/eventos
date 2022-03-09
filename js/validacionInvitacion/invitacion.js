@@ -1,18 +1,15 @@
-require(['jquery','backIndex','redireccionarPagina','validacionInvitacion/tarjeta-personalizada','validacionInvitacion/tarjeta-personalizada2','personalizar-invitacion','clases/carrito','clases/instancias/validacionCarrito','events-search'],
+require(['jquery','backIndex','redireccionarPagina','validacionInvitacion/tarjeta-personalizada','validacionInvitacion/tarjeta-personalizada2','clases/carrito','clases/instancias/validacionCarrito','events-search'],
 
-	   ($,backIndex,redireccionarPagina,tarjetaPersonalizada,tarjetaPersonalizada2,personalizarInvitacion,carroClase, carroObjeto, busquedaEvento)=> {
+	   ($,backIndex,redireccionarPagina,tarjetaPersonalizada,tarjetaPersonalizada2,carroClase, carroObjeto, busquedaEvento)=> {
 
 		backIndex;
 		redireccionarPagina;
 		tarjetaPersonalizada;
 		tarjetaPersonalizada2;
-		personalizarInvitacion;
 		carroClase;
 		carroObjeto;
 
     let idTarjeta = $(".tarjeta").attr("id");
-
-      
 
      $(".imprimir").click(()=>{
        
