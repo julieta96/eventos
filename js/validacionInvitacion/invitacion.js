@@ -1,6 +1,6 @@
 require(['jquery','backIndex','redireccionarPagina','validacionInvitacion/tarjeta-personalizada','validacionInvitacion/tarjeta-personalizada2','personalizar-invitacion','clases/carrito','clases/instancias/validacionCarrito','events-search'],
 
-	function($,backIndex,redireccionarPagina,tarjetaPersonalizada,tarjetaPersonalizada2,personalizarInvitacion,carroClase, carroObjeto, busquedaEvento) {
+	   ($,backIndex,redireccionarPagina,tarjetaPersonalizada,tarjetaPersonalizada2,personalizarInvitacion,carroClase, carroObjeto, busquedaEvento)=> {
 
 		backIndex;
 		redireccionarPagina;
@@ -14,7 +14,7 @@ require(['jquery','backIndex','redireccionarPagina','validacionInvitacion/tarjet
 
       
 
-     $(".imprimir").click(function(){
+     $(".imprimir").click(()=>{
        
        console.log(idTarjeta);
 
@@ -30,8 +30,5 @@ require(['jquery','backIndex','redireccionarPagina','validacionInvitacion/tarjet
      	
      })
 
-      busquedaEvento;
-
-    
 		
-	})
+})

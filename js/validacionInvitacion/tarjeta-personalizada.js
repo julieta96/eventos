@@ -1,24 +1,21 @@
-require(['jquery'],
-  function($){
+require(['jquery'],($)=>{
     
-  jQuery(document).on("keyup", "#formulario input[name='titulo-e'], #formulario input[name='fecha-hora']", 
+  $(document).on("keyup", "#formulario input[name='titulo-e'], #formulario input[name='fecha-hora']", 
 
-  function(event){
+   (event)=>{
 
 
-     let titulo=''
-     let fechaHora=''
+     let titulo='';
+     let fechaHora='';
 
-    if(event.target.name=="titulo-e")
-    {
+    if(event.target.name=="titulo-e"){
    
-        titulo = this.value   
-       $("#titulo-e").text(titulo)
+        titulo = this.value ;  
+       $("#titulo-e").text(titulo);
 
-    }else if(event.target.name=="fecha-hora")
-    {
-       fechaHora = this.value
-       $("#fecha-hora").text(fechaHora)
+    }else if(event.target.name=="fecha-hora"){
+       fechaHora = this.value;
+       $("#fecha-hora").text(fechaHora);
     }
     
  
