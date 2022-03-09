@@ -30,7 +30,19 @@
     $(".precio-15").text(`${eventos.fiesta15Datos.getPrecio}`);
     $(".cant-15").text(localStorage.getItem("contador-15"));
 
+//-------------------------------------------------------------------------
 
+    let valorId="";
+
+    $(".personalizar").click((e)=>{
+        
+        valorId=e.target.id;
+        $(location).attr("href",`invitacion.html#${valorId}`);
+    })
+
+    $(".a-titulo-principal").attr("href",`invitacion.html#${valorId}`);
+
+//------------------------------------------------------------------------
     $(".t-re").text( $(".cant-re").text() * $(".precio-re").text());
     $(".t-kk").text( $(".cant-kk").text() * $(".precio-kk").text());
     $(".t-cm").text( $(".cant-cm").text() * $(".precio-cm").text());
