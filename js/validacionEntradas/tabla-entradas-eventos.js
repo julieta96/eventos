@@ -30,5 +30,14 @@
     $(".precio-15").text(`${eventos.fiesta15Datos.getPrecio}`);
     $(".cant-15").text(localStorage.getItem("contador-15"));
 
+
+    $(".t-re").text( $(".cant-re").text() * $(".precio-re").text());
+    $(".t-kk").text( $(".cant-kk").text() * $(".precio-kk").text());
+    $(".t-cm").text( $(".cant-cm").text() * $(".precio-cm").text());
+    $(".t-ca").text( $(".cant-ca").text() * $(".precio-ca").text());
+    $(".t-eg").text( $(".cant-eg").text() * $(".precio-eg").text());
+    $(".t-15").text( $(".cant-15").text() * $(".precio-15").text());
+
+
   });  
     
