@@ -1,6 +1,7 @@
-require(['jquery','clases/instancias/eventos','clases/instancias/organizadores'],function($,objeto,org){
+require(['jquery','clases/instancias/eventos','clases/instancias/organizadores'],
+		($,objeto,org)=>{
 
-	function pageHref(){
+	const pageHref=()=>{
 
 		let rutaAbsoluta = self.location.href;   
 		let posicionUltimaBarra = rutaAbsoluta.lastIndexOf("/");
@@ -103,7 +104,7 @@ require(['jquery','clases/instancias/eventos','clases/instancias/organizadores']
 
 		let botonesPersonalizar=  $(".personalizar");
 
-		botonesPersonalizar.each(function(){
+		botonesPersonalizar.each(()=>{
 
 		 	let eventoPersonalizado = $(this).attr("id");
 		 	let buscarTarjetaPersonalizada = localStorage.getItem(`${eventoPersonalizado}Modificado`);
