@@ -1,11 +1,10 @@
-require(['jquery','backIndex','redireccionarPagina','validacionInvitacion/tarjeta-personalizada','validacionInvitacion/tarjeta-personalizada2','clases/carrito','clases/instancias/validacionCarrito','events-search'],
+require(['jquery','backIndex','redireccionarPagina','validacionInvitacion/tarjeta-personalizada','clases/carrito','clases/instancias/validacionCarrito'],
 
-	   ($,backIndex,redireccionarPagina,tarjetaPersonalizada,tarjetaPersonalizada2,carroClase, carroObjeto, busquedaEvento)=> {
+	   ($,backIndex,redireccionarPagina,tarjetaPersonalizada,carroClase, carroObjeto)=> {
 
 		backIndex;
 		redireccionarPagina;
 		tarjetaPersonalizada;
-		tarjetaPersonalizada2;
 		carroClase;
 		carroObjeto;
 

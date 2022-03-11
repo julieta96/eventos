@@ -1,19 +1,14 @@
-require(['jquery'],
+ //INPUT TITULO----------------------------------------
 
-  function($){
-
-
-    //INPUT TITULO----------------------------------------
-
-      $("#c-negro-t").click(function(){
+      $("#c-negro-t").click(()=>{
 
 
-              $('.titulo').css("color","#000");
+              $('.titulo').css("color","#");
      
           })
 
        
-     $("#c-blanco-t").click(function(){
+     $("#c-blanco-t").click(()=>{
 
 
               $('.titulo').css("color","#fff");
@@ -21,7 +16,7 @@ require(['jquery'],
           })
 
 
-      $("#c-rojo-t").click(function(){
+      $("#c-rojo-t").click(()=>{
 
 
               $('.titulo').css("color","#f00");
@@ -29,7 +24,7 @@ require(['jquery'],
           })
 
 
-      $("#c-azul-t").click(function(){
+      $("#c-azul-t").click(()=>{
 
 
               $('.titulo').css("color","#00f");
@@ -37,7 +32,7 @@ require(['jquery'],
           })
 
 
-      $("#c-azul-t").click(function(){
+      $("#c-verde-t").click(()=>{
 
 
               $('.titulo').css("color","#0f0");
@@ -50,7 +45,7 @@ require(['jquery'],
 
 //INPUT FH-----------------------------------------
 
-      $("#c-negro-fh").click(function(){
+      $("#c-negro-fh").click(()=>{
 
 
               $('#fecha-hora').css("color","#000");
@@ -58,7 +53,7 @@ require(['jquery'],
           })
 
        
-      $("#c-blanco-fh").click(function(){
+      $("#c-blanco-fh").click(()=>{
 
 
               $('#fecha-hora').css("color","#fff");
@@ -66,7 +61,7 @@ require(['jquery'],
           })
 
 
-      $("#c-rojo-fh").click(function(){
+      $("#c-rojo-fh").click(()=>{
 
 
               $('#fecha-hora').css("color","#f00");
@@ -74,7 +69,7 @@ require(['jquery'],
           })
 
 
-      $("#c-azul-fh").click(function(){
+      $("#c-azul-fh").click(()=>{
 
 
               $('#fecha-hora').css("color","#00f");
@@ -82,7 +77,7 @@ require(['jquery'],
           })
 
 
-      $("#c-verde-fh").click(function(){
+      $("#c-verde-fh").click(()=>{
 
 
               $('#fecha-hora').css("color","#0f0");
@@ -93,7 +88,7 @@ require(['jquery'],
 
    //FONTSIZE TITULO------------------------------------
 
-      $("#size20-t").click(function(){
+      $("#size20-t").click(()=>{
 
 
         $('.titulo').css("font-size","20px");
@@ -102,7 +97,7 @@ require(['jquery'],
       })
 
 
-     $("#size28-t").click(function(){
+     $("#size28-t").click(()=>{
 
 
         $('.titulo').css("font-size","28px");
@@ -111,7 +106,7 @@ require(['jquery'],
       })
 
 
-     $("#size32-t").click(function(){
+     $("#size32-t").click(()=>{
 
 
         $('.titulo').css("font-size","32px");
@@ -119,7 +114,7 @@ require(['jquery'],
 
       })
 
-      $("#size48-t").click(function(){
+      $("#size48-t").click(()=>{
 
 
         $('.titulo').css("font-size","48px");
@@ -127,7 +122,7 @@ require(['jquery'],
 
       })
 
-      $("#size60-t").click(function(){
+      $("#size60-t").click(()=>{
 
 
         $('.titulo').css("font-size","60px");
@@ -139,7 +134,7 @@ require(['jquery'],
 
 //FONT SIZE FH--------------------------------------------
 
-    $("#size20-fh").click(function(){
+    $("#size20-fh").click(()=>{
 
 
       $('#fecha-hora').css("font-size","20px");
@@ -148,7 +143,7 @@ require(['jquery'],
     })
 
 
-    $("#size28-fh").click(function(){
+    $("#size28-fh").click(()=>{
 
 
       $('#fecha-hora').css("font-size","28px");
@@ -157,7 +152,7 @@ require(['jquery'],
     })
 
 
-    $("#size32-fh").click(function(){
+    $("#size32-fh").click(()=>{
 
 
       $('#fecha-hora').css("font-size","32px");
@@ -165,7 +160,7 @@ require(['jquery'],
 
     })
 
-     $("#size48-fh").click(function(){
+     $("#size48-fh").click(()=>{
 
 
       $('#fecha-hora').css("font-size","48px");
@@ -177,17 +172,17 @@ require(['jquery'],
   //-------------------------------------------------
 
   //UBICACION TIT$-click-
-      $("#ub-1T").click(function(){
+      $("#ub-1T").click(()=>{
 
         $('.titulo').css("text-align" , "left");
       })
 
-       $("#ub-2T").click(function(){
+       $("#ub-2T").click(()=>{
 
         $('.titulo').css("text-align" , "center");
       })
 
-     $("#ub-3T").click(function(){
+     $("#ub-3T").click(()=>{
 
         $('.titulo').css("text-align" ,"right");
       })
@@ -197,17 +192,17 @@ require(['jquery'],
 
   //UBICACION FH------------------------------------
 
-     $("#ub-1FH").click(function(){
+     $("#ub-1FH").click(()=>{
 
       $('#fecha-hora').css("text-align" , "left");
       })
 
-     $("#ub-2FH").click(function(){
+     $("#ub-2FH").click(()=>{
 
       $('#fecha-hora').css("text-align" , "center");
      })
 
-     $("#ub-3FH").click(function(){
+     $("#ub-3FH").click(()=>{
 
       $('#fecha-hora').css("text-align" ,"right");
      })
@@ -225,7 +220,7 @@ require(['jquery'],
 
     
 
-   $("#b-negro").click(function(){
+   $("#b-negro").click(()=>{
 
 
       $('.tarjeta').css("background","#000");
@@ -236,7 +231,7 @@ require(['jquery'],
    })
 
 
-   $("#b-blanco").click(function(){
+   $("#b-blanco").click(()=>{
 
 
       $('.tarjeta').css("background","#fff");
@@ -247,7 +242,7 @@ require(['jquery'],
    })
 
 
-   $("#b-rojo").click(function(){
+   $("#b-rojo").click(()=>{
 
 
       $('.tarjeta').css("background","#f00");
@@ -257,7 +252,7 @@ require(['jquery'],
 
    }) 
 
-   $("#b-azul").click(function(){
+   $("#b-azul").click(()=>{
 
 
       $('.tarjeta').css("background","blue");
@@ -268,7 +263,7 @@ require(['jquery'],
    })  
 
 
-    $("#b-verde").click(function(){
+    $("#b-verde").click(()=>{
 
 
       $('.tarjeta').css("background","green");
@@ -277,10 +272,3 @@ require(['jquery'],
 
 
    }) 
- 
-
-
-  })
-
-
-  
