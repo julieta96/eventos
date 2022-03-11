@@ -140,7 +140,7 @@ if(pageHref()=="entradas.html"){
 
 			localStorage.setItem(fondoE,$(".tarjeta").css("background-color"));	
 
-			idBoton=/*$(this).attr("id")*/e.target.id;
+			idBoton=e.target.id;
 
 			localStorage.setItem(`${idBoton}Modificado`, idBoton);
 				
