@@ -8,7 +8,7 @@ require(['jquery','backIndex','redireccionarPagina','validacionInvitacion/tarjet
 		carroClase;
 		carroObjeto;
 
-    let idTarjeta = $(".tarjeta").attr("id");
+    let idTarjeta = $(".contenedor-tarjeta").attr("id");
 
      $(".imprimir").click(()=>{
        

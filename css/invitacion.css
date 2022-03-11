@@ -60,6 +60,7 @@
   margin: auto;
   margin-bottom: 20px;
   cursor: pointer;
+  border:0;
 }
 
 .titulo-principal{
@@ -101,18 +102,17 @@
 
 }
 
-
-
- .tarjeta{
- 
-  color: white;
-  border:1px  solid yellowgreen;
-  width: 400px;
+.contenedor-tarjeta, .tarjeta{
+ width: 400px;
   height: 300px;
   position: relative;
-  /*align-self: center;*/
   margin: auto;
+}
 
+ .tarjeta{
+  color: white;
+  border:1px  solid yellowgreen;
+  /*align-self: center;*/
 
 
  }
