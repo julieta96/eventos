@@ -99,22 +99,21 @@ require(['jquery','clases/instancias/eventos','clases/instancias/organizadores']
 
 	//para pagina entradas----------------------------------------------------------------------------------
 
-
-	if(pageHref()=="entradas.html"){
+if(pageHref()=="entradas.html"){
 
 		let botonesPersonalizar=  $(".personalizar");
 
-		botonesPersonalizar.each(()=>{
+		botonesPersonalizar.each(function(){
 
 		 	let eventoPersonalizado = $(this).attr("id");
 		 	let buscarTarjetaPersonalizada = localStorage.getItem(`${eventoPersonalizado}Modificado`);
-		 	
+
 		 	 if( buscarTarjetaPersonalizada == eventoPersonalizado ){
 
 			   $(this).removeClass('personalizar').addClass('m-personalizar');
 			   $(this).attr("value","MODIFICAR PERSONALIZACION");  }
 		 })
-		  
+
 
 		}
 
@@ -126,7 +125,7 @@ require(['jquery','clases/instancias/eventos','clases/instancias/organizadores']
            
         let idBoton="";
 
-		$(".b-confirmar").click(function(){
+		$(".b-confirmar").click((e)=>{
 
 	
 			localStorage.setItem(tituloE,$(".titulo-e").val());
@@ -141,11 +140,9 @@ require(['jquery','clases/instancias/eventos','clases/instancias/organizadores']
 
 			localStorage.setItem(fondoE,$(".tarjeta").css("background-color"));	
 
-			idBoton=$(this).attr("id");
+			idBoton=/*$(this).attr("id")*/e.target.id;
 
 			localStorage.setItem(`${idBoton}Modificado`, idBoton);
-
-		
 				
 	})
 
@@ -310,7 +307,7 @@ require(['jquery','clases/instancias/eventos','clases/instancias/organizadores']
 		$(".modal-content >h2").css("display" , "none");
         $(".modal-content >p").css("display" , "none");
         $(".inscriptos").html(`<h2>Para inscribirse debe seleccionar 1ero el evento</h2>`);
-       $(document).ready(function(){
+       $(document).ready(()=>{
         	$(".inscriptos>.nombre ,.inscriptos>.apellido , .inscriptos>.telefono ").remove();
         })
 		break;
@@ -320,7 +317,7 @@ require(['jquery','clases/instancias/eventos','clases/instancias/organizadores']
 		$(".titulo-evento").attr("id","recital");
         $(location).attr("href","formulario.html#recital");
         $(".titulo-evento").text(`${objeto.recitalDatos.getNombre}`);
-        $("#inscribirse").click(function(){
+        $("#inscribirse").click(()=>{
           infoEvento($(".titulo-evento").text() , `${objeto.recitalDatos.getFecha} ${objeto.recitalDatos.getHora}`)
           $("#total").attr("value","$ "+total($(".datos").length ,objeto.recitalDatos.getPrecio));
         })
@@ -332,7 +329,7 @@ require(['jquery','clases/instancias/eventos','clases/instancias/organizadores']
 		$(".titulo-evento").attr("id","karaoke");
         $(location).attr("href","formulario.html#karaoke");
         $(".titulo-evento").text(`${objeto.karaokeDatos.getNombre}`);
-        $("#inscribirse").click(function(){
+        $("#inscribirse").click(()=>{
          infoEvento($(".titulo-evento").text() ,`${objeto.karaokeDatos.getFecha} ${objeto.karaokeDatos.getHora}`);
          $("#total").attr("value","$ "+total($(".datos").length ,objeto.karaokeDatos.getPrecio));
         })
@@ -344,7 +341,7 @@ require(['jquery','clases/instancias/eventos','clases/instancias/organizadores']
 		$(".titulo-evento").attr("id","cumple");
         $(location).attr("href","formulario.html#cumple");
         $(".titulo-evento").text(`${objeto.cumpleDatos.getNombre}`);
-        $("#inscribirse").click(function(){
+        $("#inscribirse").click(()=>{
         infoEvento($(".titulo-evento").text() ,`${objeto.cumpleDatos.getFecha} ${objeto.cumpleDatos.getHora}`);
         $("#total").attr("value","$ "+total($(".datos").length ,objeto.cumpleDatos.getPrecio));
          })
@@ -355,7 +352,7 @@ require(['jquery','clases/instancias/eventos','clases/instancias/organizadores']
 		$(".titulo-evento").attr("id","casamiento");
         $(location).attr("href","formulario.html#casamiento");
         $(".titulo-evento").text(`${objeto.casamientoDatos.getNombre}`);
-        $("#inscribirse").click(function(){
+        $("#inscribirse").click(()=>{
         infoEvento($(".titulo-evento").text() , `${objeto.casamientoDatos.getFecha} ${objeto.casamientoDatos.getHora}`);
         $("#total").attr("value","$ "+total($(".datos").length ,objeto.casamientoDatos.getPrecio));
         })
@@ -366,7 +363,7 @@ require(['jquery','clases/instancias/eventos','clases/instancias/organizadores']
 		$(".titulo-evento").attr("id","egresado");
         $(location).attr("href","formulario.html#egresado");
         $(".titulo-evento").text(`${objeto.egresadoDatos.getNombre}`);
-        $("#inscribirse").click(function(){
+        $("#inscribirse").click(()=>{
         infoEvento($(".titulo-evento").text() , `${objeto.egresadoDatos.getFecha} ${objeto.egresadoDatos.getHora}`);
         $("#total").attr("value","$ "+total($(".datos").length ,objeto.egresadoDatos.getPrecio));
         })
@@ -377,7 +374,7 @@ require(['jquery','clases/instancias/eventos','clases/instancias/organizadores']
 		$(".titulo-evento").attr("id","fiesta15");
         $(location).attr("href","formulario.html#fiesta15");
         $(".titulo-evento").text(`${objeto.fiesta15Datos.getNombre}`);
-        $("#inscribirse").click(function(){
+        $("#inscribirse").click(()=>{
         infoEvento($(".titulo-evento").text() , `${objeto.fiesta15Datos.getFecha} ${objeto.fiesta15Datos.getHora}`);
         $("#total").attr("value","$ "+total($(".datos").length ,objeto.fiesta15Datos.getPrecio));
         })
