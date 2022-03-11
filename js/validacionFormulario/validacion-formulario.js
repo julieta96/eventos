@@ -1,72 +1,10 @@
-require(['jquery','clases/testCharacter'],
+require(['jquery'],
 
-    ($,t)=>{
+    ($)=>{
 
-        let input = $("input");
-
-        $("input").each((i)=>{
-
-
-      $(input[i]).keyup(validation);
-      $(input[i]).blur(validation);
-        
-    
-    });
-        
-        const test = new t();
+   $(".formulario").on('click', '.remove' , (e)=>{
        
-        function validation(e){
-
-            switch(e.target.id){
-                
-                case "nombre":
-                 let nombre =$("#nombre");
-                $("#nombre").each((i)=>{
-                    validarCampos(test.letters($(nombre[i]).val()), e.target);
-                 });
-                break;
-
-                case "apellido":
-                 let apellido = $("#apellido");
-                 $("#apellido").each((i)=>{
-                    validarCampos(test.letters($(apellido[i]).val()), e.target);
-                });
-                break;
-
-                case "email":
-                 let email = $("#email");
-                 $("#email").each((i)=>{
-                   
-                   validarCampos(test.lettersNumbersCharacters($(email[i]).val()), e.target);
-                 });
-                break;
-            }
-
-
-
-
-        }
-
-
-
-    const validarCampos=(test,input)=>{
-
-      if(test){
-
-       $(input).css("background","#4CAF50");
-
-      }else{
-
-       $(input).css("background","#FF5252");
-      }
-        
-    }
-
-
-
-   $(".formulario").on('click', '.remove' , ()=>{
-       
-       $(this).parent().remove();
+       $(e.target).parent().remove();
 
    })
 
@@ -81,9 +19,9 @@ require(['jquery','clases/testCharacter'],
          
          const formulario = $(".formulario");
          const div = $("<div>");
-         const input1 = $("<input>");
-         const input2 = $("<input>");
-         const input3 = $("<input>");
+         const input1 = $("<input style='margin-right:4px;'>");
+         const input2 = $("<input style='margin-right:4px;'>");
+         const input3 = $("<input style='margin-right:4px;'>");
 
          div.addClass("remove-container");
          div.addClass("datos");
@@ -109,7 +47,7 @@ require(['jquery','clases/testCharacter'],
 
 
          formulario.append(div);
-         div.append("<div class='icon-minus remove'></div>")
+         div.append("<div class='icon-minus remove' style='margin-right:5px;'></div>")
          div.append(input1);
          div.append(input2);
          div.append(input3);
