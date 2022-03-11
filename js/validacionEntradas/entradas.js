@@ -1,5 +1,5 @@
-require(['jquery','backIndex','modal','personalizar-invitacion','redireccionarPagina','validacionEntradas/total-compra','validacionEntradas/minusPlusEntradas','validacionEntradas/tabla-entradas-eventos','clases/carrito','clases/instancias/validacionCarrito','events-search'], 
-       ($,backIndex,modal,personalizarInvitacion,redireccionarPagina,totalCompra,minusPlusEntradas,tablaEntradasEventos,carrito,validacionCarrito,search)=>{
+require(['jquery','backIndex','modal','redireccionarPagina','validacionEntradas/total-compra','validacionEntradas/minusPlusEntradas','validacionEntradas/tabla-entradas-eventos','clases/carrito','clases/instancias/validacionCarrito','events-search'], 
+       ($,backIndex,modal,redireccionarPagina,totalCompra,minusPlusEntradas,tablaEntradasEventos,carrito,validacionCarrito,search)=>{
 
    
     redireccionarPagina;
