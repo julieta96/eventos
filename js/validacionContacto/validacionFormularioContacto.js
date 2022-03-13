@@ -55,13 +55,17 @@ require(['jquery','clases/testCharacter'], ($,t)=>{
 
         		let size = ($("#comentarios").val()).length;
 
-        			if(size<=100){
+        			if(size<230){
 
         				$("#comentarios").css("background","#4CAF50");
+                        $("#texto-alert").css("display","none");
+                        console.log(size);
 
         			}else{
-
+                        $("#comentarios").attr("maxlength","100");
         				$("#comentarios").css("background","#FF5252");
+                        $("#texto-alert").css("display","block");
+                        console.log(size);
 
         			}
 
@@ -99,7 +103,6 @@ require(['jquery','clases/testCharacter'], ($,t)=>{
           $("input[type='email']").val().length!=0
           && $("#comentarios").val()!=""){
 
-                console.log($("#comentarios").val());
             $("#b-enviar").attr("type","submit");
 
         }else{
