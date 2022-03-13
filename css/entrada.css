@@ -79,6 +79,11 @@
   color:black;
 }
 
+.personalizar[disabled='']{
+   opacity: 0.6;
+ 
+}
+
 .botones-compra{
   grid-area: botones;
   display: flex;
