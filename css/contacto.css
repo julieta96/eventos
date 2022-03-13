@@ -79,7 +79,8 @@
  }
 
  .form-contacto > #nombre-alert, .form-contacto > #apellido-alert,
- .form-contacto > #telefono-alert, .form-contacto > #email1-alert{
+ .form-contacto > #telefono-alert, .form-contacto > #email1-alert,
+ .form-contacto >#texto-alert{
   display: none;
   font-weight: bold;
   color: #FF5252;
