@@ -58,7 +58,7 @@ require(['jquery','lib/smtp/smtp'],($, smtp) =>{
 				Email.send({
 			    Host : /*"smtp.yourisp.com"*/"smtp.elasticemail.com",
 			    Username : "nuestroseventoarg@gmail.com",
-			    Password : "12153b47-7cd8-4646-83e6-d47a2cf25874",
+			    Password : "3235jkigyu",
 			    To : `${email}`,
 			    From : "nuestroseventoarg@gmail.com",
 			    Subject : "Confirmacion Inscripcion a Evento",
