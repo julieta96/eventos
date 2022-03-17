@@ -63,26 +63,26 @@
             <p class="inscripcion">Inscripcion</p>
         
            </div>
-           <form class="formulario" name="formulario" id="formulario">
+           <form class="formulario" name="formulario" id="formulario" method="post">
                   
                  <div class="no-remove-container datos">
                    <div class="icon-minus no-remove"></div>
-                   <input type="text" id="nombre" class="borrar-dato inscripcion" placeholder="Nombre" autocomplete="off"> 
-                   <input type="text" id="apellido" class="borrar-dato inscripcion" placeholder="Apellido" autocomplete="off">
+                   <input type="text" id="nombre" class="borrar-dato inscripcion" placeholder="Nombre" autocomplete="off" name="nombre"> 
+                   <input type="text" id="apellido" class="borrar-dato inscripcion" placeholder="Apellido" autocomplete="off" name="apellido">
                    <input type="email" id="email" class="borrar-dato inscripcion" placeholder="Email" autocomplete="off">
                  </div>
 
                 <div class="remove-container datos">
                    <div class="icon-minus remove"></div>
-                   <input type="text" id="nombre" class="inscripcion" placeholder="Nombre" autocomplete="off">
-                   <input type="text" id="apellido" class="inscripcion" placeholder="Apellido" autocomplete="off">
-                   <input type="email" id="email" class="inscripcion" placeholder="Email" autocomplete="off">
+                   <input type="text" id="nombre" class="inscripcion" placeholder="Nombre" autocomplete="off" name="nombre">
+                   <input type="text" id="apellido" class="inscripcion" placeholder="Apellido" autocomplete="off" name="apellido">
+                   <input type="email" id="email" class="inscripcion" placeholder="Email" autocomplete="off" name="email">
                </div>
                <div class="remove-container datos">
                    <div class="icon-minus remove"></div>
-                   <input type="text" id="nombre" class="inscripcion" placeholder="Nombre" autocomplete="off">
-                   <input type="text" id="apellido" class="inscripcion" placeholder="Apellido" autocomplete="off">
-                   <input type="email" id="email" class="inscripcion" placeholder="Email" autocomplete="off">
+                   <input type="text" id="nombre" class="inscripcion" placeholder="Nombre" autocomplete="off" name="nombre">
+                   <input type="text" id="apellido" class="inscripcion" placeholder="Apellido" autocomplete="off" name="apellido">
+                   <input type="email" id="email" class="inscripcion" placeholder="Email" autocomplete="off" name="email">
               </div>
 
            </form>
@@ -93,7 +93,7 @@
 
          
             <input type="button" value="000.-" class="boton1" id="total">
-            <input type="button" value="INSCRIBIRSE" class="boton2" id="inscribirse" form="formulario">
+            <input type="button" value="INSCRIBIRSE" class="boton2" id="inscribirse">
             <!--------modal----------->
             <div  id="modal" class="modal-container">
               <div class="modal-content">
@@ -109,7 +109,7 @@
                 <p>Fecha y Horario:
                   <p class="fecha-horario"></p>
                 </p>
-
+                  <!--<input type="submit" value="CONFIRMAR INSCRIPCION" class="confirmar" id="confirmar" form="formulario">-->
               </div>
             </div>
 
@@ -146,8 +146,7 @@
 
     </div>
 
-<script type="text/javascript" src="js/validacionFormulario/formulario.js"></script>
-  <script type="text/javascript" src="js/modal.js"></script>
-
+    <script type="text/javascript" src="js/validacionFormulario/formulario.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
   </body>
 </html>
