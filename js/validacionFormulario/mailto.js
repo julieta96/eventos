@@ -1,35 +1,36 @@
-require(['jquery'],($) =>{
+require(['jquery','lib/smtp/smtp.js'],($, smtp) =>{
 
 		const usuariosInscriptos = [];
 		let nombre="";
 		let apellido="";
 		let email="";
 		let datos = $('.datos');
-		let evento=$(".a-titulo >h2").attr('id');
+		let evento="";
 
-		console.log(evento)
-
+	
 		$("#inscribirse").click(()=>{
 
-			/*$.each($('.datos'),()=>{*/
+			/*$('.datos').each((e)=>{
 
-				 /*nombre=$(this).find("#nombre").val();
-				 apellido=$(this).find("#apellido").val();
-				 email=$(this).find("#email").val();*/
+				 evento=$(".a-titulo >h2").attr('id');
+				 nombre=$(e).find("#nombre").val();
+				 apellido=$(e).find("#apellido").val();
+				 email=$(e).find("#email").val();
+					console.log(evento)
 
-				 /*console.log($(this).find("#nombre").val())
-       		})*/
-
-       		 /*usuariosInscriptos.push({
+				 usuariosInscriptos.push({
        				nombre: `${nombre}`,
 					apellido:`${apellido}`,
-					email:`${email}`
-			});*/
+					email:`${email}`,
+					eventoInscripto:`${evento}`
+				});
 
-			
+				 
+       		})*/
 
 			for(let i=0;i<$(datos).length;i++){
 
+				 evento=$(".a-titulo >h2").attr('id');
 				 nombre=$(datos[i]).find("#nombre").val();
 				 apellido=$(datos[i]).find("#apellido").val();
 				 email=$(datos[i]).find("#email").val();
@@ -41,19 +42,35 @@ require(['jquery'],($) =>{
 					eventoInscripto:`${evento}`
 				});
 
-			}
-
-			for(let i=0;i<usuariosInscriptos.length;i++){
-
-				 if((usuariosInscriptos[i].nombre) =='' && (usuariosInscriptos[i].apellido) =='' && (usuariosInscriptos[i].email) ==''){
-
-      				$(usuariosInscriptos[i]).slice(i);
-
-				 }
+				sendMail(nombre, apellido, email, evento); 
 
 			}
 
-		console.log(usuariosInscriptos)
+       		console.log(usuariosInscriptos)
+
       })
+
+
+
+
+		const sendMail = (nombre, apellido, email, evento)=>{
+
+				Email.send({
+			    Host : /*"smtp.yourisp.com"*/"smtp.elasticemail.com",
+			    Username : "username",
+			    Password : "password",
+			    To : `${email}`,
+			    From : "nuestroseventoarg@gmail.com",
+			    Subject : "Confirmacion Inscripcion a Evento",
+			    Body : `Hola ${nombre} ${apellido}, se incribio para ${evento} con exito.
+			    Recuerde que tiene 24hs para realizar el pago, al pasar este tiempo estimado
+			    debera inscribirse nuevamente.
+			    Saludos! Team eventos.com`
+			}).then(
+			  message => alert("Send")
+			);
+
+		}
+			
    
 })
