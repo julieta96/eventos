@@ -56,9 +56,12 @@ require(['jquery','lib/smtp/smtp'],($, smtp) =>{
 		const sendMail = (nombre, apellido, email, evento)=>{
 
 				Email.send({
-			   	SecureToken : "5146c17e-3839-4eb9-ba2c-02e187d48df1",
-			    To : "nuestroseventoarg@gmail.com",
-			    From : `${email}`,
+			   	//SecureToken : "5146c17e-3839-4eb9-ba2c-02e187d48df1",
+			   	Host : "smtp.mailtrap.io",
+    			Username : "0e2aa4b24bad53",
+    			Password : "b2599ac0468e55",
+			    To : `${email}`,
+			    From : "nuestroseventoarg@gmail.com",
 			    Subject : "Confirmacion Inscripcion a Evento",
 			    Body : `Hola ${nombre} ${apellido}, se incribio para ${evento} con exito.
 			    Recuerde que tiene 24hs para realizar el pago, al pasar este tiempo estimado
