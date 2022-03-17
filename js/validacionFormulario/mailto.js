@@ -1,4 +1,4 @@
-require(['jquery','lib/smtp/smtp.js'],($, smtp) =>{
+require(['jquery','lib/smtp/smtp'],($, smtp) =>{
 
 		const usuariosInscriptos = [];
 		let nombre="";
