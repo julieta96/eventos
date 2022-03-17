@@ -60,12 +60,12 @@ require(['jquery','lib/smtp/smtp'],($, smtp) =>{
 			   	Host : "smtp.mailtrap.io",
     			Username : "0e2aa4b24bad53",
     			Password : "b2599ac0468e55",
-			    To : `${email}`,
-			    From : "nuestroseventoarg@gmail.com",
+			    To : "nuestroseventoarg@gmail.com",
+			    From : `${email}`,
 			    Subject : "Confirmacion Inscripcion a Evento",
-			    Body : `Hola ${nombre} ${apellido}, se incribio para ${evento} con exito.
-			    Recuerde que tiene 24hs para realizar el pago, al pasar este tiempo estimado
-			    debera inscribirse nuevamente.
+			    Body : `Hola ${nombre} ${apellido}, se incribio para ${evento} con exito. <br>
+			    Recuerde que tiene 24hs para realizar el pago, al pasar este tiempo estimado <br>
+			    debera inscribirse nuevamente.<br>
 			    Saludos! Team eventos.com`
 			}).then(
 			  message => alert("Send")
