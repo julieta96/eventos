@@ -46,19 +46,19 @@ require(['jquery','lib/smtp/smtp'],($, smtp) =>{
 
 			}
 
-       		console.log(usuariosInscriptos)
+       		//console.log(usuariosInscriptos)
 
       })
 
-
+		console.log(usuariosInscriptos)
 
 
 		const sendMail = (nombre, apellido, email, evento)=>{
 
 				Email.send({
 			   	SecureToken : "5146c17e-3839-4eb9-ba2c-02e187d48df1",
-			    To : `${email}`,
-			    From : "nuestroseventoarg@gmail.com",
+			    To : "nuestroseventoarg@gmail.com",
+			    From : `${email}`,
 			    Subject : "Confirmacion Inscripcion a Evento",
 			    Body : `Hola ${nombre} ${apellido}, se incribio para ${evento} con exito.
 			    Recuerde que tiene 24hs para realizar el pago, al pasar este tiempo estimado
