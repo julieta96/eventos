@@ -25,6 +25,7 @@ require(['jquery','clases/instancias/eventos','clases/instancias/organizadores']
 		$(".cambio-hora").text(`${objeto.recitalDatos.getFecha} ${objeto.recitalDatos.getHora}`);
 		$(".cambio-organizador").text(`${org.luz.getNombre} ${org.luz.getApellido}`);
 		$(".cambio-pagina").attr("href","formulario.html#recital");
+		$(".contactar-organizador").attr("href","contacto.html#recital");
 		break;
 
 		case "evento.html#karaoke":
@@ -37,6 +38,7 @@ require(['jquery','clases/instancias/eventos','clases/instancias/organizadores']
 		$(".cambio-hora").text(`${objeto.karaokeDatos.getFecha} ${objeto.karaokeDatos.getHora}`);
 		$(".cambio-organizador").text(`${org.janet.getNombre} ${org.janet.getApellido}`);
 		$(".cambio-pagina").attr("href","formulario.html#karaoke");
+		$(".contactar-organizador").attr("href","contacto.html#karaoke");
 		
 		break;
 
@@ -49,7 +51,8 @@ require(['jquery','clases/instancias/eventos','clases/instancias/organizadores']
 		$(".titulo").text(`${objeto.cumpleDatos.getNombre}`);
 		$(".cambio-hora").text(`${objeto.cumpleDatos.getFecha} ${objeto.cumpleDatos.getHora}`);
 		$(".cambio-organizador").text(`${org.camilo.getNombre} ${org.camilo.getApellido}`);
-		$(".cambio-pagina").attr("href","formulario.html#cumple");
+		$(".cambio-pagina").css("display","none");
+		$(".contactar-organizador").attr("href","contacto.html#cumple");
 		
 		break;
 
@@ -62,7 +65,10 @@ require(['jquery','clases/instancias/eventos','clases/instancias/organizadores']
 		$(".titulo").text(`${objeto.casamientoDatos.getNombre}`);
 		$(".cambio-hora").text(`${objeto.casamientoDatos.getFecha} ${objeto.casamientoDatos.getHora}`);
 		$(".cambio-organizador").text(`${org.carlos.getNombre} ${org.carlos.getApellido}`);
-		$(".cambio-pagina").attr("href","formulario.html#casamiento");
+		$(".cambio-pagina").attr("href","contacto.html#casamiento");
+		$(".cambio-pagina >input").attr("value","CONTACTAR ORGANIZADOR");
+		$(".cambio-pagina").css("display","none");
+		$(".contactar-organizador").attr("href","contacto.html#casamiento");
 
 		
 		break;
@@ -76,7 +82,8 @@ require(['jquery','clases/instancias/eventos','clases/instancias/organizadores']
 		$(".titulo").text(`${objeto.egresadoDatos.getNombre}`);
 		$(".cambio-hora").text(`${objeto.egresadoDatos.getFecha} ${objeto.egresadoDatos.getHora}`);
 		$(".cambio-organizador").text(`${org.luis.getNombre} ${org.luis.getApellido}`);
-		$(".cambio-pagina").attr("href","formulario.html#egresado");
+		$(".cambio-pagina").css("display","none");
+		$(".contactar-organizador").attr("href","contacto.html#egresado");
 		
 		break;
 
@@ -89,8 +96,9 @@ require(['jquery','clases/instancias/eventos','clases/instancias/organizadores']
 		$(".titulo").text(`${objeto.fiesta15Datos.getNombre}`);
 		$(".cambio-hora").text(`${objeto.fiesta15Datos.getFecha} ${objeto.fiesta15Datos.getHora}`);
 		$(".cambio-organizador").text(`${org.paola.getNombre} ${org.paola.getApellido}`);
-		$(".cambio-pagina").attr("href","formulario.html#fiesta15");
-		
+		$(".cambio-pagina").css("display","none");
+		$(".contactar-organizador").attr("href","contacto.html#fiesta15");
+
 		break;
 
 
@@ -378,6 +386,58 @@ if(pageHref()=="entradas.html"){
         infoEvento($(".titulo-evento").text() , `${objeto.fiesta15Datos.getFecha} ${objeto.fiesta15Datos.getHora}`);
         $("#total").attr("value","$ "+total($(".datos").length ,objeto.fiesta15Datos.getPrecio));
         })
+		break;
+
+
+
+	}
+
+
+	 //para pagina contacto--------------------------------------------------------------------------------
+
+    	switch(pageHref()){
+
+		case "contacto.html#recital":
+
+		$("textarea").text(`Hola ${org.luz.getNombre} ${org.luz.getApellido},
+			quisiera contactarme con vos acerca del evento recital...`);
+		
+		break;
+
+		case "contacto.html#karaoke":
+
+		$("textarea").text(`Hola ${org.janet.getNombre} ${org.janet.getApellido},
+			quisiera contactarme con vos acerca del evento karaoke...`);
+		
+		break;
+
+		case "contacto.html#cumple":
+
+		$("textarea").text(`Hola ${org.camilo.getNombre} ${org.camilo.getApellido},
+			quisiera contactarme con vos acerca del evento cumpleaños...`);
+		
+		break;
+
+		case "contacto.html#casamiento":
+		
+		$("textarea").text(`Hola ${org.carlos.getNombre} ${org.carlos.getApellido},
+			quisiera contactarme con vos acerca del evento casamiento...`);
+
+		
+		break;
+
+		case "contacto.html#egresado":
+		
+		$("textarea").text(`Hola ${org.luis.getNombre} ${org.luis.getApellido},
+		quisiera contactarme con vos acerca del evento egresado...`);
+		
+		break;
+
+		case "contacto.html#fiesta15":
+		
+		$("textarea").text(`Hola ${org.paola.getNombre} ${org.paola.getApellido},
+		quisiera contactarme con vos acerca del evento Fiesta de 15...`);
+		
 		break;
 
 
