@@ -1,6 +1,5 @@
 require(['jquery','lib/smtp/smtp'],($, smtp) =>{
 
-		const usuariosInscriptos = [];
 		let nombre="";
 		let apellido="";
 		let email="";
@@ -9,24 +8,6 @@ require(['jquery','lib/smtp/smtp'],($, smtp) =>{
 
 	
 		$("#inscribirse").click(()=>{
-
-			/*$('.datos').each((e)=>{
-
-				 evento=$(".a-titulo >h2").attr('id');
-				 nombre=$(e).find("#nombre").val();
-				 apellido=$(e).find("#apellido").val();
-				 email=$(e).find("#email").val();
-					console.log(evento)
-
-				 usuariosInscriptos.push({
-       				nombre: `${nombre}`,
-					apellido:`${apellido}`,
-					email:`${email}`,
-					eventoInscripto:`${evento}`
-				});
-
-				 
-       		})*/
 
 			for(let i=0;i<$(datos).length;i++){
 
@@ -37,15 +18,13 @@ require(['jquery','lib/smtp/smtp'],($, smtp) =>{
 
 				sendMail(nombre, apellido, email, evento); 
 
-			}
-
-       		
+			}      		
       })
 
 		const sendMail = (nombre, apellido, email, evento)=>{
 
 				Email.send({
-			   	//SecureToken : "31655225-abb2-4d5c-92ee-3a936c371cdb",smtp.gmail.com
+			   	//SecureToken : "31655225-abb2-4d5c-92ee-3a936c371cdb"
 			   	Host : "smtp.gmail.com",
 			    Username : "nuestroseventoarg@gmail.com",
 			    Password : "458opyuuWDA",
@@ -53,11 +32,10 @@ require(['jquery','lib/smtp/smtp'],($, smtp) =>{
 			    From : "nuestroseventoarg@gmail.com",
 			    Subject : "Confirmacion Inscripcion a Evento",
 			    Body : `Hola ${nombre} ${apellido}, se incribio para ${evento} con exito. <br>
-			    Recuerde que tiene 24hs para realizar el pago, al pasar este tiempo estimado <br>
-			    debera inscribirse nuevamente.<br>
-			    Saludos! Team eventos.com`
+			    Recuerde que tiene 24hs para realizar el pago, al pasar este tiempo estimado debera inscribirse nuevamente.<br>
+			    Team eventos.com`
 			}).then(
-			  message => alert("Send")
+			  message => alert("Enviado con éxito! Verifique su correo.")
 			);
 
 		}
