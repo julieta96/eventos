@@ -35,33 +35,22 @@ require(['jquery','lib/smtp/smtp'],($, smtp) =>{
 				 apellido=$(datos[i]).find("#apellido").val();
 				 email=$(datos[i]).find("#email").val();
 
-				 usuariosInscriptos.push({
-       				nombre: `${nombre}`,
-					apellido:`${apellido}`,
-					email:`${email}`,
-					eventoInscripto:`${evento}`
-				});
-
 				sendMail(nombre, apellido, email, evento); 
 
 			}
 
-       		//console.log(usuariosInscriptos)
-
+       		
       })
-
-		console.log(usuariosInscriptos)
-
 
 		const sendMail = (nombre, apellido, email, evento)=>{
 
 				Email.send({
-			   	//SecureToken : "5146c17e-3839-4eb9-ba2c-02e187d48df1",
-			   	Host : "smtp.mailtrap.io",
-    			Username : "0e2aa4b24bad53",
-    			Password : "b2599ac0468e55",
-			    To : "nuestroseventoarg@gmail.com",
-			    From : `${email}`,
+			   	//SecureToken : "31655225-abb2-4d5c-92ee-3a936c371cdb",smtp.gmail.com
+			   	Host : "smtp.gmail.com",
+			    Username : "nuestroseventoarg@gmail.com",
+			    Password : "458opyuuWDA",
+			    To :  `${email}`,
+			    From : "nuestroseventoarg@gmail.com",
 			    Subject : "Confirmacion Inscripcion a Evento",
 			    Body : `Hola ${nombre} ${apellido}, se incribio para ${evento} con exito. <br>
 			    Recuerde que tiene 24hs para realizar el pago, al pasar este tiempo estimado <br>

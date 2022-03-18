@@ -46,3 +46,13 @@ require(['jquery'],($) =>{
 					apellido:`${apellido}`,
 					email:`${email}`
 			});*/
+
+
+
+			/*(response)=>{
+
+				if(response=="OK!"){
+					alert("Se envio confirmacion de la inscripcion. Verifique su email!")
+				}else{
+					alert("Error")
+				}*/
