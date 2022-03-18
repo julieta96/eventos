@@ -1,0 +1,9 @@
+EVENTOS
+
+Una pagina web que contiene una variedad de eventos para organizar,
+en el cual el usuario podra comprar e inscribirse + personalizar la tarjeta de invitacion e imprimirla
+
+Es un proyecto frontend
+Realizado con html + css + javascript(poo)/jquery
+Contiene slider automatico y manual, ventana modal + formularios (con validacion en tiempo real), menu activo, responsive design,localStorage,
+requireJS 
