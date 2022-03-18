@@ -14,6 +14,7 @@ _Lenguajes y librerias_
 * JQUERY
 * requireJS
 * jsPDF
+* smtpJS
 
 _Web storage_
 
