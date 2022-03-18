@@ -1,4 +1,4 @@
-require(['jquery','sendEmail'],($, sendEmail) =>{
+require(['jquery','clases/sendEmail'],($, sendEmail) =>{
 
 		let nombre="";
 		let apellido="";
