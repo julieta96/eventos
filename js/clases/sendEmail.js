@@ -1,18 +1,17 @@
-define(['jquery','lib/smtp/smtp'],($, smtp) =>{
+define(['jquery','lib/smtp/smtp','pass'],($, smtp,pass) =>{
 
 
 		return class SendMail{
 
 			constructor(){}
 
-			send(nombre, apellido, email, evento, mensaje){
+			sendUser(nombre, apellido, email, evento){
 
-			 if(mensaje==""){
 
 				  	Email.send({
 				   	Host : "smtp.gmail.com",
 				    Username : "nuestroseventoarg@gmail.com",
-				    Password : "458opyuuWDA",
+				    Password : atob(pass.eventos),
 				    To :  `${email}`,
 				    From : "nuestroseventoarg@gmail.com",
 				    Subject : "Confirmacion Inscripcion a Evento",
@@ -23,24 +22,27 @@ define(['jquery','lib/smtp/smtp'],($, smtp) =>{
 					}).then(
 					  message => alert("Enviado con éxito! Verifique su correo.")
 					);
-			    	
-				}else{
+			    			
+			}
+
+
+			sendEventos(nombre, apellido, email, telefono, mensaje, emailEventoUOrganizador, pass){
 
 					Email.send({
 				   	Host : "smtp.gmail.com",
-				    Username : "nuestroseventoarg@gmail.com",
-				    Password : "458opyuuWDA",
-				    To :  "nuestroseventoarg@gmail.com",
+				    Username :emailEventoUOrganizador,
+				    Password : pass,
+				    To :  emailEventoUOrganizador,
 				    From : `${email}`,
 				    Subject : "Consulta",
-				    Body : `${mensaje}`
+				    Body : `${mensaje} <br> Tel: ${telefono} <br> Enviado por: ${nombre} ${apellido} (${email})`
 				  
 					}).then(
-					  message => alert("Enviado con éxito! Verifique su correo.")
+					  message => alert("Enviado con éxito!")
 					);
 
 				}
-			}
+			
 
 
 		}
