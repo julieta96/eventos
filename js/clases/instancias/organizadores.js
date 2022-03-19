@@ -1,4 +1,4 @@
-define(['jquery','clases/organizador'] , function($,o){
+define(['jquery','clases/organizador'] , ($,o)=>{
 
 	let luz = new o(1, "Luz", "Rodriguez");
 	let janet = new o(2, "Janet", "Ruiz");
