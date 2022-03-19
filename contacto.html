@@ -66,7 +66,7 @@
 
        </div>
 
-       <form class="form-contacto" id="form-contacto">
+       <form class="form-contacto" id="form-contacto" onsubmit="return false">
           <input type="text" id="nombre" class="nombre" placeholder="Nombre" autocomplete="off">
           <br>
           <p id="nombre-alert">El nombre debe contener letras y no mas de 20 carecteres</p>
@@ -91,6 +91,8 @@
           <br>
           <p id="texto-alert">Paso el limite de caracteres</p>
           <br>
+          <input type="hidden" value="nuestroseventoarg@gmail.com" id="email-empresa">
+          <input type="hidden" value="" id="email-organizador">
           <input type="button" id="b-enviar" value="ENVIAR" >
       </form>
 
