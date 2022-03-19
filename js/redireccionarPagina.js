@@ -1,19 +1,10 @@
-require(['jquery','clases/instancias/eventos','clases/instancias/organizadores'],
-		($,objeto,org)=>{
-
-	const pageHref=()=>{
-
-		let rutaAbsoluta = self.location.href;   
-		let posicionUltimaBarra = rutaAbsoluta.lastIndexOf("/");
-		let rutaRelativa = rutaAbsoluta.substring( posicionUltimaBarra + "/".length , rutaAbsoluta.length );
-		return rutaRelativa;  
-	}   
-
+require(['jquery','clases/instancias/eventos','clases/instancias/organizadores','page-href'],
+		($,objeto,org, page)=>{
 
 
 	    //para pagina evento--------------------------------------------------------------------------------
 
-    	switch(pageHref()){
+    	switch(page.page){
 
 		case "evento.html#recitales":
 
@@ -107,7 +98,7 @@ require(['jquery','clases/instancias/eventos','clases/instancias/organizadores']
 
 	//para pagina entradas----------------------------------------------------------------------------------
 
-if(pageHref()=="entradas.html"){
+if(page.page=="entradas.html"){
 
 		let botonesPersonalizar=  $(".personalizar");
 
@@ -173,7 +164,7 @@ if(pageHref()=="entradas.html"){
 
 	}
 
-	switch(pageHref()){
+	switch(page.page){
 
 		case "invitacion.html#recital":
 
@@ -307,7 +298,7 @@ if(pageHref()=="entradas.html"){
 		return cantidadInscriptos*precioEvento;
 	}
 
-	switch(pageHref()){
+	switch(page.page){
 
 
 		case "formulario.html":
@@ -391,59 +382,5 @@ if(pageHref()=="entradas.html"){
 
 
 	}
-
-
-	 //para pagina contacto--------------------------------------------------------------------------------
-
-    	switch(pageHref()){
-
-		case "contacto.html#recital":
-
-		$("textarea").text(`Hola ${org.luz.getNombre} ${org.luz.getApellido},
-			quisiera contactarme con vos acerca del evento recital...`);
-		
-		break;
-
-		case "contacto.html#karaoke":
-
-		$("textarea").text(`Hola ${org.janet.getNombre} ${org.janet.getApellido},
-			quisiera contactarme con vos acerca del evento karaoke...`);
-		
-		break;
-
-		case "contacto.html#cumple":
-
-		$("textarea").text(`Hola ${org.camilo.getNombre} ${org.camilo.getApellido},
-			quisiera contactarme con vos acerca del evento cumpleaños...`);
-		
-		break;
-
-		case "contacto.html#casamiento":
-		
-		$("textarea").text(`Hola ${org.carlos.getNombre} ${org.carlos.getApellido},
-			quisiera contactarme con vos acerca del evento casamiento...`);
-
-		
-		break;
-
-		case "contacto.html#egresado":
-		
-		$("textarea").text(`Hola ${org.luis.getNombre} ${org.luis.getApellido},
-		quisiera contactarme con vos acerca del evento egresado...`);
-		
-		break;
-
-		case "contacto.html#fiesta15":
-		
-		$("textarea").text(`Hola ${org.paola.getNombre} ${org.paola.getApellido},
-		quisiera contactarme con vos acerca del evento Fiesta de 15...`);
-		
-		break;
-
-
-
-	}
-	
- 
 
 })
