@@ -6,7 +6,7 @@ require(['jquery','clases/sendEmail'],($, sendEmail) =>{
 		let datos = $('.datos');
 		let evento="";
 		const send = new sendEmail();
-	
+
 		$("#inscribirse").click(()=>{
 
 			for(let i=0;i<$(datos).length;i++){
@@ -16,7 +16,7 @@ require(['jquery','clases/sendEmail'],($, sendEmail) =>{
 				 apellido=$(datos[i]).find("#apellido").val();
 				 email=$(datos[i]).find("#email").val();
 
-				send.send(nombre, apellido, email, evento,""); 
+				send.sendUser(nombre, apellido, email, evento); 
 
 			}      		
       })
