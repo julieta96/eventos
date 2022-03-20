@@ -1,20 +1,20 @@
-require(['jquery','clases/instancias/eventos','clases/instancias/organizadores','page-href'],
-		($,objeto,org, page)=>{
+require(['jquery','clases/instancias/eventos','page-href'],
+		($,objeto, page)=>{
 
 
 	    //para pagina evento--------------------------------------------------------------------------------
 
     	switch(page.page){
 
-		case "evento.html#recitales":
+		case "evento.html#recital":
 
-		$("#recitales").css("display","block");
+		$("#recital").css("display","block");
         $(".re").css("display","block");
-        $("#recitales").siblings().css("display","none");
+        $("#recital").siblings().css("display","none");
         $(".re").siblings().css("display","none");
 		$(".titulo").text(`${objeto.recitalDatos.getNombre}`);
 		$(".cambio-hora").text(`${objeto.recitalDatos.getFecha} ${objeto.recitalDatos.getHora}`);
-		$(".cambio-organizador").text(`${org.luz.getNombre} ${org.luz.getApellido}`);
+		$(".cambio-organizador").text(`${objeto.recitalDatos.getOrganizador.getNombre} ${objeto.recitalDatos.getOrganizador.getApellido}`);
 		$(".cambio-pagina").attr("href","formulario.html#recital");
 		$(".contactar-organizador").attr("href","contacto.html#recital");
 		break;
@@ -27,7 +27,7 @@ require(['jquery','clases/instancias/eventos','clases/instancias/organizadores',
         $("#karaoke").siblings().css("display","none");
 		$(".titulo").text(`${objeto.karaokeDatos.getNombre}`);
 		$(".cambio-hora").text(`${objeto.karaokeDatos.getFecha} ${objeto.karaokeDatos.getHora}`);
-		$(".cambio-organizador").text(`${org.janet.getNombre} ${org.janet.getApellido}`);
+		$(".cambio-organizador").text(`${objeto.karaokeDatos.getOrganizador.getNombre} ${objeto.karaokeDatos.getOrganizador.getApellido}`);
 		$(".cambio-pagina").attr("href","formulario.html#karaoke");
 		$(".contactar-organizador").attr("href","contacto.html#karaoke");
 		
@@ -41,13 +41,13 @@ require(['jquery','clases/instancias/eventos','clases/instancias/organizadores',
         $("#cumpleanos").siblings().css("display","none");
 		$(".titulo").text(`${objeto.cumpleDatos.getNombre}`);
 		$(".cambio-hora").text(`${objeto.cumpleDatos.getFecha} ${objeto.cumpleDatos.getHora}`);
-		$(".cambio-organizador").text(`${org.camilo.getNombre} ${org.camilo.getApellido}`);
+		$(".cambio-organizador").text(`${objeto.cumpleDatos.getOrganizador.getNombre} ${objeto.cumpleDatos.getOrganizador.getApellido}`);
 		$(".cambio-pagina").css("display","none");
 		$(".contactar-organizador").attr("href","contacto.html#cumple");
 		
 		break;
 
-		case "evento.html#casamientos":
+		case "evento.html#casamiento":
 		
 		$("#casamientos").css("display","block");
         $(".ca").css("display","block");
@@ -55,7 +55,7 @@ require(['jquery','clases/instancias/eventos','clases/instancias/organizadores',
         $("#casamientos").siblings().css("display","none");
 		$(".titulo").text(`${objeto.casamientoDatos.getNombre}`);
 		$(".cambio-hora").text(`${objeto.casamientoDatos.getFecha} ${objeto.casamientoDatos.getHora}`);
-		$(".cambio-organizador").text(`${org.carlos.getNombre} ${org.carlos.getApellido}`);
+		$(".cambio-organizador").text(`${objeto.casamientoDatos.getOrganizador.getNombre} ${objeto.casamientoDatos.getOrganizador.getApellido}`);
 		$(".cambio-pagina").attr("href","contacto.html#casamiento");
 		$(".cambio-pagina >input").attr("value","CONTACTAR ORGANIZADOR");
 		$(".cambio-pagina").css("display","none");
@@ -72,7 +72,7 @@ require(['jquery','clases/instancias/eventos','clases/instancias/organizadores',
         $("#egresados").siblings().css("display","none");
 		$(".titulo").text(`${objeto.egresadoDatos.getNombre}`);
 		$(".cambio-hora").text(`${objeto.egresadoDatos.getFecha} ${objeto.egresadoDatos.getHora}`);
-		$(".cambio-organizador").text(`${org.luis.getNombre} ${org.luis.getApellido}`);
+		$(".cambio-organizador").text(`${objeto.egresadoDatos.getOrganizador.getNombre} ${objeto.egresadoDatos.getOrganizador.getApellido}`);
 		$(".cambio-pagina").css("display","none");
 		$(".contactar-organizador").attr("href","contacto.html#egresado");
 		
@@ -86,7 +86,7 @@ require(['jquery','clases/instancias/eventos','clases/instancias/organizadores',
         $("#fiesta15").siblings().css("display","none");
 		$(".titulo").text(`${objeto.fiesta15Datos.getNombre}`);
 		$(".cambio-hora").text(`${objeto.fiesta15Datos.getFecha} ${objeto.fiesta15Datos.getHora}`);
-		$(".cambio-organizador").text(`${org.paola.getNombre} ${org.paola.getApellido}`);
+		$(".cambio-organizador").text(`${objeto.fiesta15Datos.getOrganizador.getNombre} ${objeto.fiesta15Datos.getOrganizador.getApellido}`);
 		$(".cambio-pagina").css("display","none");
 		$(".contactar-organizador").attr("href","contacto.html#fiesta15");
 
@@ -98,11 +98,11 @@ require(['jquery','clases/instancias/eventos','clases/instancias/organizadores',
 
 	//para pagina entradas----------------------------------------------------------------------------------
 
-if(page.page=="entradas.html"){
+	if(page.page=="entradas.html"){
 
 		let botonesPersonalizar=  $(".personalizar");
 
-		botonesPersonalizar.each(function(){
+		botonesPersonalizar.each(()=>{
 
 		 	let eventoPersonalizado = $(this).attr("id");
 		 	let buscarTarjetaPersonalizada = localStorage.getItem(`${eventoPersonalizado}Modificado`);
@@ -114,7 +114,7 @@ if(page.page=="entradas.html"){
 		 })
 
 
-		}
+	}
 
 		
 
