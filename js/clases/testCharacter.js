@@ -1,4 +1,4 @@
-define(['jquery'],function($){
+define(['jquery'],($)=>{
 
 	return class TestCharacter{
 

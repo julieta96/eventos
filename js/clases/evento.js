@@ -1,10 +1,10 @@
-define([], function(){
+define([], ()=>{
 
 
 return class Evento{
 
 
-constructor (id , nombre , descripcion, fecha , hora , precio , stock , foto){
+constructor (id , nombre , descripcion, fecha , hora , precio , stock , foto, organizador){
    
       this.id=id;
       this.nombre=nombre;
@@ -15,6 +15,7 @@ constructor (id , nombre , descripcion, fecha , hora , precio , stock , foto){
       this.stock = stock;
       this.foto = foto;
       this.cantidadAComprar = 0;
+      this.organizador = organizador;
 
    }
 
@@ -127,6 +128,19 @@ set setCantidad(nuevoValor){
    get getCantidad(){
 
       return this.cantidadAComprar;
+}
+
+
+ set setOrganizador(organizador){
+
+      this.id=organizador;
+
+   }
+
+
+   get getOrganizador(){
+
+      return this.organizador;
 }
 
 } 

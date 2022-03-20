@@ -1,5 +1,5 @@
 require(['jquery','clases/carrito'],
-	function($, c){
+	   ($, c)=>{
 
 		const carrito = new c(1);
 
@@ -12,7 +12,7 @@ require(['jquery','clases/carrito'],
 		let contador50 = localStorage.getItem("contadorEgresados")|| 0;
 		let contador60 = localStorage.getItem("contadorFiesta15")|| 0;
 
-		$(".comprar").on('click',function(eventoSeleccionado){
+		$(".comprar").on('click',(eventoSeleccionado)=>{
 
 			let eventoComprado = eventoSeleccionado.target.id;
 			carrito.comprarEvento(eventoComprado);

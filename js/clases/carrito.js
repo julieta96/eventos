@@ -1,4 +1,4 @@
-define(['clases/instancias/eventos'] , function(objetoEvento){
+define(['clases/instancias/eventos'] , (objetoEvento)=>{
 
 return class Carrito{
 

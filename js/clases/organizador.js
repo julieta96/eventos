@@ -1,12 +1,14 @@
-define([] , function(){
+define([] , ()=>{
 
 return class Organizador{
 
-	constructor(id , nombre , apellido){
+	constructor(id , nombre , apellido, email,pass){
 
 		this.id =id;
 		this.nombre=nombre;
-		this.apellido=apellido;     
+		this.apellido=apellido;  
+		this.email=email;
+		this.pass=pass;   
 	}
 
 
@@ -43,6 +45,31 @@ return class Organizador{
 	get getApellido(){
 
 		return this.apellido;
+		
+	}
+
+
+	set setEmail(nuevoValor){
+
+		this.email=nuevoValor;
+
+	}
+
+	get getEmail(){
+
+		return this.email;
+		
+	}
+
+	set setPass(nuevoValor){
+
+		this.pass=nuevoValor;
+
+	}
+
+	get getPass(){
+
+		return this.pass;
 		
 	}
 

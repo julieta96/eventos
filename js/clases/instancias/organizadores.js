@@ -1,11 +1,11 @@
-define(['jquery','clases/organizador'] , ($,o)=>{
+define(['jquery','pass','clases/organizador'] , ($,pass,organizador)=>{
 
-	let luz = new o(1, "Luz", "Rodriguez");
-	let janet = new o(2, "Janet", "Ruiz");
-	let camilo = new o(3, "Camilo", "Gomez");
-	let carlos = new o(4, "Carlos", "Vazquez");
-	let luis = new o(5, "Luis", "Garcia");
-	let paola = new o(6, "Paola", "Ortiz");
+	let luz = new organizador(1, "Luz", "Rodriguez","lrodriguezeventosarg@gmail.com",atob(pass.recital));
+	let janet = new organizador(2, "Janet", "Ruiz","jruizeventosarg@gmail.com",atob(pass.karaoke));
+	let camilo = new organizador(3, "Camilo", "Gomez","cgomezeventosarg@gmail.com",atob(pass.cumple));
+	let carlos = new organizador(4, "Carlos", "Vazquez","cvazquezeventosarg@gmail.com",atob(pass.casamiento));
+	let luis = new organizador(5, "Luis", "Garcia","lgarciaeventosarg@gmail.com",atob(pass.egresado));
+	let paola = new organizador(6, "Paola", "Ortiz","portizeventosarg@gmail.com",atob(pass.fiesta15));
 
 	let organizadores = [luz, janet , camilo , carlos , luis , paola];
 

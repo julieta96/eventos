@@ -1,4 +1,4 @@
-define(['jquery','clases/evento'], function($,e){
+define(['jquery','clases/evento','clases/instancias/organizadores'], ($,e,o)=>{
 
 	let descripcion = `Lorem ipsum dolor sit amet consectetur,<br>
      adipisicing elit.Iure, veniam fuga?<br>
@@ -6,12 +6,12 @@ define(['jquery','clases/evento'], function($,e){
      dolorum quas tempore veritatis, atque voluptatem<br>
      natus impeditipsam, dicta in magnam architecto.`;
 
-     const recital = new e(10, "RECITAL", descripcion,'15/10/2021', '20hs', 3000.0, 10,'img/eventos/1.png');
-     const karaoke = new e(20, "KARAOKE", descripcion,'02/09/2021','23hs', 850.0, 10,'img/eventos/2.jpg');
-     const cumple = new e(30, "CUMPLEAÑOS", descripcion,'10/07/2021','20hs', 10000.0, 5,'img/eventos/3.jpg');
-     const casamiento = new e(40, "CASAMIENTO", descripcion,'20/09/2021','23hs', 20000.0, 10,'img/eventos/4.jpg');
-     const egresado = new e(50, "EGRESADOS", descripcion,'12/12/2021','20hs', 18000.0, 100,'img/eventos/5.jpg');
-     const fiesta15 = new e(60, "FIESTA DE 15", descripcion,'08/08/2021','21hs', 16000.0, 20,'img/eventos/6.jpg');
+     const recital = new e(10, "RECITAL", descripcion,'15/10/2021', '20hs', 3000.0, 10,'img/eventos/1.png',o.luz);
+     const karaoke = new e(20, "KARAOKE", descripcion,'02/09/2021','23hs', 850.0, 10,'img/eventos/2.jpg',o.janet);
+     const cumple = new e(30, "CUMPLEAÑOS", descripcion,'10/07/2021','20hs', 10000.0, 5,'img/eventos/3.jpg',o.camilo);
+     const casamiento = new e(40, "CASAMIENTO", descripcion,'20/09/2021','23hs', 20000.0, 10,'img/eventos/4.jpg',o.carlos);
+     const egresado = new e(50, "EGRESADOS", descripcion,'12/12/2021','20hs', 18000.0, 100,'img/eventos/5.jpg',o.luis);
+     const fiesta15 = new e(60, "FIESTA DE 15", descripcion,'08/08/2021','21hs', 16000.0, 20,'img/eventos/6.jpg',o.paola);
 
      localStorage.setItem("idRecital",recital.getId);
      localStorage.setItem("precioRecital",recital.getPrecio);
@@ -33,7 +33,7 @@ define(['jquery','clases/evento'], function($,e){
 
      let eventos =[recital , karaoke , cumple ,casamiento , egresado , fiesta15];
 
-     function eventosDatos(){
+     const eventosDatos = ()=>{
 
      $("#precio-recital").text(`$${recital.getPrecio}`);
      $("#t-recital").text(`${recital.getNombre}`);
