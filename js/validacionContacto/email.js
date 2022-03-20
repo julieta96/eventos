@@ -1,5 +1,5 @@
-require(['jquery','clases/sendEmail', 'page-href','clases/instancias/organizadores','pass'],
-	($, sendEmail, page,org,pass) =>{
+require(['jquery','clases/sendEmail', 'page-href','clases/instancias/eventos'],
+	($, sendEmail, page,eventos) =>{
 
 		const send = new sendEmail();
 
@@ -34,7 +34,7 @@ require(['jquery','clases/sendEmail', 'page-href','clases/instancias/organizador
 		case "contacto.html#recital":
 
 		$("#email-organizador").attr("value","lrodriguezeventosarg@gmail.com");
-		$("textarea").text(`Hola ${org.luz.getNombre} ${org.luz.getApellido},
+		$("textarea").text(`Hola ${eventos.recitalDatos.getOrganizador.getNombre} ${eventos.recitalDatos.getOrganizador.getApellido},
 			quisiera contactarme con vos acerca del evento recital...`);
 
 		$("#b-enviar").click(()=>{
@@ -45,7 +45,7 @@ require(['jquery','clases/sendEmail', 'page-href','clases/instancias/organizador
 								 emailUsuario.val(),
 								 telefono.val(),
 								 mensaje.val(),
-								 emailOrganizador.val(),atob(pass.recital));		 
+								 emailOrganizador.val(),eventos.recitalDatos.getOrganizador.getPass);		 
 
        		})
 
@@ -55,7 +55,8 @@ require(['jquery','clases/sendEmail', 'page-href','clases/instancias/organizador
 
 		case "contacto.html#karaoke":
 
-		$("textarea").text(`Hola ${org.janet.getNombre} ${org.janet.getApellido},
+		$("#email-organizador").attr("value","jruizeventosarg@gmail.com");
+		$("textarea").text(`Hola ${eventos.karaokeDatos.getOrganizador.getNombre} ${eventos.karaokeDatos.getOrganizador.getApellido},
 			quisiera contactarme con vos acerca del evento karaoke...`);
 
 		$("#b-enviar").click(()=>{
@@ -66,15 +67,15 @@ require(['jquery','clases/sendEmail', 'page-href','clases/instancias/organizador
 								 emailUsuario.val(),
 								 telefono.val(),
 								 mensaje.val(),
-								 emailOrganizador.val(),atob(pass.karaoke));		 
+								 emailOrganizador.val(),eventos.karaokeDatos.getOrganizador.getPass);		 
 
        		})
 		
 		break;
 
 		case "contacto.html#cumple":
-
-		$("textarea").text(`Hola ${org.camilo.getNombre} ${org.camilo.getApellido},
+		$("#email-organizador").attr("value","cgomezeventosarg@gmail.com");
+		$("textarea").text(`Hola ${eventos.cumpleDatos.getOrganizador.getNombre} ${eventos.cumpleDatos.getOrganizador.getApellido},
 			quisiera contactarme con vos acerca del evento cumpleaños...`);
 
 		$("#b-enviar").click(()=>{
@@ -85,15 +86,15 @@ require(['jquery','clases/sendEmail', 'page-href','clases/instancias/organizador
 								 emailUsuario.val(),
 								 telefono.val(),
 								 mensaje.val(),
-								 emailOrganizador.val(),atob(pass.cumple));		 
+								 emailOrganizador.val(),eventos.cumpleDatos.getOrganizador.getPass);		 
 
        		})
 		
 		break;
 
 		case "contacto.html#casamiento":
-		
-		$("textarea").text(`Hola ${org.carlos.getNombre} ${org.carlos.getApellido},
+		$("#email-organizador").attr("value","cvazquezeventosarg@gmail.com");
+		$("textarea").text(`Hola ${eventos.casamientoDatos.getOrganizador.getNombre} ${eventos.casamientoDatos.getOrganizador.getApellido},
 			quisiera contactarme con vos acerca del evento casamiento...`);
 
 		$("#b-enviar").click(()=>{
@@ -104,7 +105,7 @@ require(['jquery','clases/sendEmail', 'page-href','clases/instancias/organizador
 								 emailUsuario.val(),
 								 telefono.val(),
 								 mensaje.val(),
-								 emailOrganizador.val(),atob(pass.casamiento));		 
+								 emailOrganizador.val(),eventos.casamientoDatos.getOrganizador.getPass);		 
 
        		})
 
@@ -112,8 +113,8 @@ require(['jquery','clases/sendEmail', 'page-href','clases/instancias/organizador
 		break;
 
 		case "contacto.html#egresado":
-		
-		$("textarea").text(`Hola ${org.luis.getNombre} ${org.luis.getApellido},
+		$("#email-organizador").attr("value","lgarciaeventosarg@gmail.com");
+		$("textarea").text(`Hola ${eventos.egresadoDatos.getOrganizador.getNombre} ${eventos.egresadoDatos.getOrganizador.getApellido},
 		quisiera contactarme con vos acerca del evento egresado...`);
 
 		$("#b-enviar").click(()=>{
@@ -124,15 +125,15 @@ require(['jquery','clases/sendEmail', 'page-href','clases/instancias/organizador
 								 emailUsuario.val(),
 								 telefono.val(),
 								 mensaje.val(),
-								 emailOrganizador.val(),atob(pass.egresado));		 
+								 emailOrganizador.val(),eventos.egresadoDatos.getOrganizador.getPass);		 
 
        		})
 		
 		break;
 
 		case "contacto.html#fiesta15":
-		
-		$("textarea").text(`Hola ${org.paola.getNombre} ${org.paola.getApellido},
+		$("#email-organizador").attr("value","portizeventosarg@gmail.com");
+		$("textarea").text(`Hola ${eventos.fiesta15Datos.getOrganizador.getNombre} ${eventos.fiesta15Datos.getOrganizador.getApellido},
 		quisiera contactarme con vos acerca del evento Fiesta de 15...`);
 
 		$("#b-enviar").click(()=>{
@@ -142,7 +143,7 @@ require(['jquery','clases/sendEmail', 'page-href','clases/instancias/organizador
 								 emailUsuario.val(),
 								 telefono.val(),
 								 mensaje.val(),
-								 emailOrganizador.val(),atob(pass.fiesta15));		 
+								 emailOrganizador.val(),eventos.fiesta15Datos.getOrganizador.getPass);		 
 
        		})
 		
