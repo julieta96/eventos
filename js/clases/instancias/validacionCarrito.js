@@ -5,12 +5,12 @@ require(['jquery','clases/carrito'],
 
 		//let eventoComprado=null;
         let contador = localStorage.getItem("cantidadEventos") || 0; 
-		let contador10 = localStorage.getItem("contadorRecital")|| 0;
-		let contador20 = localStorage.getItem("contadorKaraoke")|| 0;
-		let contador30 = localStorage.getItem("contadorCumple")|| 0;
-		let contador40 = localStorage.getItem("contadorCasamiento")|| 0;
-		let contador50 = localStorage.getItem("contadorEgresados")|| 0;
-		let contador60 = localStorage.getItem("contadorFiesta15")|| 0;
+		let contador10 = localStorage.getItem("contador-re")|| localStorage.setItem("contador-re", 0);
+		let contador20 = localStorage.getItem("contador-kk")|| localStorage.setItem("contador-kk", 0);
+		let contador30 = localStorage.getItem("contador-cm")|| localStorage.setItem("contador-cm", 0);
+		let contador40 = localStorage.getItem("contador-ca")|| localStorage.setItem("contador-ca", 0);
+		let contador50 = localStorage.getItem("contador-eg")|| localStorage.setItem("contador-eg", 0);
+		let contador60 = localStorage.getItem("contador-15")|| localStorage.setItem("contador-15", 0);
 
 		$(".comprar").on('click',(eventoSeleccionado)=>{
 

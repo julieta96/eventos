@@ -23,8 +23,8 @@ require(['jquery'], ($)=>{
          }
          
         localStorage.setItem(`contador-${evento}`,valorPlus);
-        
         $(`.${cantidad}`).text(  localStorage.getItem(`contador-${evento}`))
+        $(".contador").text(localStorage.getItem("cantidadEventos"));
 
        }
 
@@ -44,7 +44,6 @@ require(['jquery'], ($)=>{
          }
 
          localStorage.setItem(`contador-${evento}`,valorMinus);
-
          $(`.${cantidad}`).text( localStorage.getItem(`contador-${evento}`))
          $(".contador").text(localStorage.getItem("cantidadEventos"));
 
