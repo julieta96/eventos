@@ -73,6 +73,7 @@
   padding: 5px;
   font-family: 'Roboto', sans-serif;
   outline: 0;
+  cursor: pointer;
 }
 
 .personalizar:hover , .m-personalizar:hover{
