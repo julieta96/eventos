@@ -102,15 +102,15 @@ require(['jquery','clases/instancias/eventos','page-href'],
 
 		let botonesPersonalizar=  $(".personalizar");
 
-		botonesPersonalizar.each(()=>{
+		botonesPersonalizar.each((i)=>{
 
-		 	let eventoPersonalizado = $(this).attr("id");
+		 	let eventoPersonalizado = $(botonesPersonalizar[i]).attr('id');
 		 	let buscarTarjetaPersonalizada = localStorage.getItem(`${eventoPersonalizado}Modificado`);
 
 		 	 if( buscarTarjetaPersonalizada == eventoPersonalizado ){
 
-			   $(this).removeClass('personalizar').addClass('m-personalizar');
-			   $(this).attr("value","MODIFICAR PERSONALIZACION");  }
+			   $(botonesPersonalizar[i]).removeClass('personalizar').addClass('m-personalizar');
+			   $(botonesPersonalizar[i]).attr("value","MODIFICAR PERSONALIZACION");  }
 		 })
 
 
@@ -271,8 +271,6 @@ require(['jquery','clases/instancias/eventos','page-href'],
 
 
 	}
-
-
 
 	//para pagina formulario--------------------------------------------------------------------------------
 
