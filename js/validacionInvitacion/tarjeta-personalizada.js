@@ -20,8 +20,6 @@ require(['jquery'],($)=>{
        $("#fecha-hora").text(fechaHora)
     }
 
-
-
    })
 
   //Titulo ----------------------------------
