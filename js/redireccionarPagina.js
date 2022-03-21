@@ -1,5 +1,5 @@
-require(['jquery','clases/instancias/eventos','page-href'],
-		($,objeto, page)=>{
+require(['jquery','clases/instancias/eventos','page-href', 'validacionInvitacion/tarjeta-personalizada'],
+		($,objeto, page ,tarjetaPersonalizada )=>{
 
 
 	    //para pagina evento--------------------------------------------------------------------------------
