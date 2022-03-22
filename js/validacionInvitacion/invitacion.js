@@ -1,7 +1,7 @@
 require(['jquery','backIndex','redireccionarPagina','validacionInvitacion/tarjeta-personalizada','clases/carrito','clases/instancias/validacionCarrito'],
 
 	   ($,backIndex,redireccionarPagina,tarjetaPersonalizada,carroClase, carroObjeto)=> {
-
+	   	
 		backIndex;
 		redireccionarPagina;
 		tarjetaPersonalizada;
