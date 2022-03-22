@@ -152,7 +152,10 @@
       cursor: pointer;
     }
 
-
+#barcode{
+  /*visibility: hidden;*/
+  display: none;
+}
 .fa-check{
   color: green;
 }
