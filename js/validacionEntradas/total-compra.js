@@ -3,7 +3,14 @@ require(['jquery','lib/jsPDF/jspdf.umd.min','logo','barCode'] , ($,pdf,logo,barC
 	const doc = new pdf.jsPDF();
 
     let img=`data:image/png;base64,${logo.logo}`;
-    doc.addImage(img, 'png', 10, 10, 180, 25);
+
+    doc.addImage(img, 'png', 10, 10, 180, 22);
+  
+    doc.setFontSize(13).setFont(undefined, 'bold');
+    doc.text('EVENTO', 10,40);
+    doc.text('PRECIO UNITARIO', 50,40);
+    doc.text('CANTIDAD', 110,40);
+    doc.setFontSize(11).setFont(undefined, 'normal');
 
 	$(".b-fcompra").click(()=>{
 
@@ -17,8 +24,12 @@ require(['jquery','lib/jsPDF/jspdf.umd.min','logo','barCode'] , ($,pdf,logo,barC
 			  eventoYPrecio.append(`<span class='nombre-evento'>${carro[i].nombre}</span>
 			  					    <span class='precio-evento'>$${carro[i].precio}</span>  `);
 
-			  doc.text(`${carro[i].nombre} $${carro[i].precio}`, 10,50+i*6);
-
+              let evento = carro[i].nombre;
+              let texto=evento.substr(0,1)+evento.substr(1,evento.length).toLowerCase();
+    
+			  doc.text(`${texto}`, 10,50+i*6).setFontSize(11).setFont(undefined, 'normal');
+              doc.text(`$${carro[i].precio}`, 50,50+i*6).setFontSize(11).setFont(undefined, 'normal');
+              
 		      totalAPagar+= carro[i].precio;
     	}
 
@@ -28,8 +39,8 @@ require(['jquery','lib/jsPDF/jspdf.umd.min','logo','barCode'] , ($,pdf,logo,barC
 	});
 
 	$(".imprimir-comprobante").click(()=>{
-    	
-    	doc.text( `Total: $${$(".total-pago").html()}` ,10,75);
+    	doc.setFontSize(13).setFont(undefined, 'bold');
+    	doc.text( `TOTAL: $${$(".total-pago").html()}` ,10,90);
     	let barra=`${barCode.barcode}`;
     	doc.addImage(barra,'png', 55, 105, 100, 20);
     	doc.save("comprobante-de-pago.pdf");
