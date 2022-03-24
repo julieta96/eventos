@@ -24,77 +24,60 @@ require(['jquery'],($)=>{
 
   //Titulo ----------------------------------
 
-  $("input[name='colores-t']").click((e)=>{
+  $(document).click((e)=>{
 
-    let idInput= e.target.id;
-    let color = idInput.substr(2, 3);
+      /*if(e.target.name == "colores-t"){
+        console.log(e.target.id)
 
-    $('.titulo').css("color",`#${color}`);
+      }*/
 
-  })
+      switch(e.target.name){
 
-  $("input[name='size-title']").click((e)=>{
+        case 'colores-t':
+        let idInputColorTitle= e.target.id;
+        let colorTitle = idInputColorTitle.substr(2, 3);
+        $('.titulo').css("color",`#${colorTitle}`);
+        break;
 
-    let idInput= e.target.id;
-    let sizeTitle = idInput.substr(4, 2);
+        case 'size-title':
+        let idInputSizeTitle= e.target.id;
+        let sizeTitle = idInputSizeTitle.substr(4, 2);
+        $('.titulo').css("font-size",`${sizeTitle}px`);
+        break;
 
-    $('.titulo').css("font-size",`${sizeTitle}px`);
+        case 'ubicacion-title':
+        let idInputUbicacionTitle= e.target.id;
+        let positionUbicacion = idInputUbicacionTitle.replace('ub-','');
+        $('.titulo').css("text-align" , positionUbicacion);
+        break;
 
-  })
+        case 'colores-fh':
+        let idInputColorFechaHora= e.target.id;
+        let colorFechaHora = idInputColorFechaHora.substr(2,3);
+        $('#fecha-hora').css("color",`#${colorFechaHora}`);
+        break;
 
+        case 'size-fh':
+        let idInputSizeFechaHora= e.target.id;
+        let sizeFechaHora = idInputSizeFechaHora.substr(4, 2);
+        $('#fecha-hora').css("font-size",`${sizeFechaHora}px`);
+        break;
 
-  $("input[name='ubicacion-title']").click((e)=>{
+        case 'ubicacion-fh':
+        let idInputUbicacionFechaHora= e.target.id;
+        let positionUbicacionFechaHora = idInputUbicacionFechaHora.replace('ub-','');
+        $('#fecha-hora').css("text-align" , positionUbicacionFechaHora);
+        break;
 
-    let idInput= e.target.id;
-    let position = idInput.replace('ub-','');
-   
-    $('.titulo').css("text-align" , position);
+        case 'fondo':
+        let idInputFondo= e.target.id;
+        let backgroundColor = idInputFondo.replace('bg-','');
+        $('.tarjeta').css("background",`#${backgroundColor}`);
+        break;
 
-  })
-
-
-  //Fecha y Hora-------------------------------
-
-
-  $("input[name='colores-fh']").click((e)=>{
-
-    let idInput= e.target.id;
-    let color = idInput.substr(2,3);
-
-    $('#fecha-hora').css("color",`#${color}`);
-
-  })
-
-
-  $("input[name='size-fh']").click((e)=>{
-
-    let idInput= e.target.id;
-    let sizeFechaHora = idInput.substr(4, 2);
-
-    $('#fecha-hora').css("font-size",`${sizeFechaHora}px`);
-   
-  })
-
-  $("input[name='ubicacion-fh']").click((e)=>{
-
-    let idInput= e.target.id;
-    let position = idInput.replace('ub-','');
-
-    $('#fecha-hora').css("text-align" , position);
+      }
 
   })
-
-  //Fondo-------------------------------------
-  
-  $("input[name='fondo']").click((e)=>{
-
-    let idInput= e.target.id;
-    let backgroundColor = idInput.replace('bg-','');
-
-    $('.tarjeta').css("background",`#${backgroundColor}`);
-
-  })
-
 
 
 })
