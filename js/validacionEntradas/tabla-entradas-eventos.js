@@ -32,24 +32,25 @@
 
 //-------------------------------------------------------------------------
 
-    let valorId="";
+    
+    const btnPersonalizarModificarTarjeta = (elemento)=>{
 
-    $(".personalizar").click((e)=>{
-        
-        valorId=e.target.id;
-        $(location).attr("href",`invitacion.html#${valorId}`);
-    })
+        let valorId="";
 
-    $(".a-titulo-principal").attr("href",`invitacion.html#${valorId}`);
+         $(elemento).click((e)=>{
+            
+            valorId=e.target.id;
+            $(location).attr("href",`invitacion.html#${valorId}`);
+        })
+
+        $(".a-titulo-principal").attr("href",`invitacion.html#${valorId}`);
 
 
-     $(".m-personalizar").click((e)=>{
-        
-        valorId=e.target.id;
-        $(location).attr("href",`invitacion.html#${valorId}`);
-    })
+    }
 
-    $(".a-titulo-principal").attr("href",`invitacion.html#${valorId}`);
+    btnPersonalizarModificarTarjeta($(".personalizar"));
+    btnPersonalizarModificarTarjeta($(".m-personalizar"));
+
 
 //------------------------------------------------------------------------
     $(".t-re").text( $(".cant-re").text() * $(".precio-re").text());
