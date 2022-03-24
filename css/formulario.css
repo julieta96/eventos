@@ -224,6 +224,11 @@
   text-align: center;
 }
 
+#barcode{
+  /*visibility: hidden;*/
+  display: none;
+}
+
 /*--------------------------------*/
 
  footer{
