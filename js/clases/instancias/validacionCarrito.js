@@ -26,6 +26,7 @@ require(['jquery','clases/carrito'],
 				carrito.agregarCantidadEvento(eventoComprado ,contador10);
 				localStorage.setItem("contador-re",contador10);
 				localStorage.setItem(`${contadorEvento}Comprado`,contadorEvento);
+				
 				break;
 
 				case "karaoke":
@@ -33,6 +34,7 @@ require(['jquery','clases/carrito'],
 				carrito.agregarCantidadEvento(eventoComprado ,contador20);
 				localStorage.setItem("contador-kk",contador20);
 				localStorage.setItem(`${contadorEvento}Comprado`,contadorEvento);
+				
 				break;
 
 				case "cumple":
@@ -40,6 +42,7 @@ require(['jquery','clases/carrito'],
 				carrito.agregarCantidadEvento(eventoComprado ,contador30);
 				localStorage.setItem("contador-cm",contador30);
 				localStorage.setItem(`${contadorEvento}Comprado`,contadorEvento);
+				
 				break;
 
 				case "casamiento":
@@ -47,7 +50,7 @@ require(['jquery','clases/carrito'],
 				carrito.agregarCantidadEvento(eventoComprado ,contador40);
 				localStorage.setItem("contador-ca",contador40);
 				localStorage.setItem(`${contadorEvento}Comprado`,contadorEvento);
-
+				
 				break;
 
 				case "egresados":
@@ -55,6 +58,7 @@ require(['jquery','clases/carrito'],
 				carrito.agregarCantidadEvento(eventoComprado ,contador50);
 				localStorage.setItem("contador-eg",contador50);
 				localStorage.setItem(`${contadorEvento}Comprado`,contadorEvento);
+				
 				break;
 
 				case "fiesta15":
@@ -62,6 +66,7 @@ require(['jquery','clases/carrito'],
 				carrito.agregarCantidadEvento(eventoComprado ,contador60);
 				localStorage.setItem("contador-15",contador60);
 				localStorage.setItem(`${contadorEvento}Comprado`,contadorEvento);
+				
 				break;
 			}
 
