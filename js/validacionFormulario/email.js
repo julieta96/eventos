@@ -1,4 +1,4 @@
-require(['jquery','clases/sendEmail'],($, sendEmail) =>{
+require(['jquery','clases/sendEmail','lib/jsPDF/jspdf.umd.min'],($, sendEmail,pdf) =>{
 
 		let nombre="";
 		let apellido="";
@@ -6,6 +6,7 @@ require(['jquery','clases/sendEmail'],($, sendEmail) =>{
 		let datos = $('.datos');
 		let evento="";
 		const send = new sendEmail();
+		const doc = new pdf.jsPDF();
 
 		$("#inscribirse").click(()=>{
 
