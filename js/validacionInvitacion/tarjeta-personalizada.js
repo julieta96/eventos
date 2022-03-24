@@ -26,11 +26,6 @@ require(['jquery'],($)=>{
 
   $(document).click((e)=>{
 
-      /*if(e.target.name == "colores-t"){
-        console.log(e.target.id)
-
-      }*/
-
       switch(e.target.name){
 
         case 'colores-t':
