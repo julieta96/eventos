@@ -19,18 +19,22 @@ require(['jquery','lib/jsPDF/jspdf.umd.min','logo','barCode'] , ($,pdf,logo,barC
 		let carro=JSON.parse(carritoCargado);
 		let eventoYPrecio=$(".detalle-compra>.evento-precio");
 
-		for(let i = 0; i < carro.length; i++) {   
+		for(let i = 0; i < carro.length; i++) {
 
-			  eventoYPrecio.append(`<span class='nombre-evento'>${carro[i].nombre}</span>
-			  					    <span class='precio-evento'>$${carro[i].precio}</span>  `);
+              let evento = carro[i].nombre;   
 
-              let evento = carro[i].nombre;
+			  eventoYPrecio.append(`<span class='nombre-evento'>${carro[i].nombre} X ${carro[i].cantidadAComprar}</span>
+			  					    <span class='precio-evento'>$${carro[i].precio}</span>`);
+
               let texto=evento.substr(0,1)+evento.substr(1,evento.length).toLowerCase();
     
 			  doc.text(`${texto}`, 10,50+i*6).setFontSize(11).setFont(undefined, 'normal');
               doc.text(`$${carro[i].precio}`, 50,50+i*6).setFontSize(11).setFont(undefined, 'normal');
+              doc.text(`${carro[i].cantidadAComprar}`, 110,50+i*6).setFontSize(11).setFont(undefined, 'normal');
+             
+              let precioYCantidad = carro[i].precio * carro[i].cantidadAComprar;
               
-		      totalAPagar+= carro[i].precio;
+		      totalAPagar+= precioYCantidad;
     	}
 
 	    $(".total-pago").html(totalAPagar);
