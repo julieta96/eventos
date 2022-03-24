@@ -5,7 +5,7 @@ define(['jquery','lib/smtp/smtp','pass'],($, smtp,pass) =>{
 
 			constructor(){}
 
-			sendUser(nombre, apellido, email, evento){
+			sendUser(nombre, apellido, email, evento, pdf){
 
 
 				  	Email.send({
@@ -17,8 +17,14 @@ define(['jquery','lib/smtp/smtp','pass'],($, smtp,pass) =>{
 				    Subject : "Confirmacion Inscripcion a Evento",
 				    Body : `Hola ${nombre} ${apellido}, se incribio para ${evento} con exito. <br>
 				    Recuerde que tiene 24hs para realizar el pago, al pasar este tiempo estimado debera inscribirse nuevamente.<br>
-				    <br>Team eventos.com`
-			  
+				    <br>Team eventos.com`,
+				    Attachments : [
+				     {
+				      name : 'inscripcion.pdf',
+				      data : pdf 
+
+				     }]
+							  
 					}).then(
 					  message => alert("Enviado con éxito! Verifique su correo.")
 					);
