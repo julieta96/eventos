@@ -3,7 +3,7 @@ require(['jquery','clases/carrito'],
 
 		const carrito = new c(1);
 		
-        let contador = localStorage.getItem("cantidadEventos")|| 0; 
+        let contador = localStorage.getItem("cantidadEventos")|| localStorage.setItem("cantidadEventos",0); 
 		let contador10 = localStorage.getItem("contador-re")|| localStorage.setItem("contador-re",0);
 		let contador20 = localStorage.getItem("contador-kk")|| localStorage.setItem("contador-kk",0);
 		let contador30 = localStorage.getItem("contador-cm")|| localStorage.setItem("contador-cm",0);
