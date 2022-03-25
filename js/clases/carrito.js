@@ -154,10 +154,23 @@ return class Carrito{
 
 	vaciarCarrito(){
 
-		if(this.estaVacio()==false){
-          
-        this.setContador=0;
-        this.setTotal=0;
+		if(!this.estaVacio()){
+
+		localStorage.setItem("cantidadEventos",0); 
+		localStorage.setItem("contador-re",0);
+		localStorage.setItem("contador-kk",0);
+		localStorage.setItem("contador-cm",0);
+		localStorage.setItem("contador-ca",0);
+		localStorage.setItem("contador-eg",0);
+		localStorage.setItem("contador-15",0);
+		localStorage.getItem("totalCarrito",0);
+        $(".contador").text(localStorage.getItem("cantidadEventos"));
+	        this.setContador=localStorage.getItem("cantidadEventos");
+	        this.setTotal=localStorage.getItem("totalCarrito");
+	        for(let lista in this.listaEventos){
+
+	            this.listaEventos[lista].setCantidad=0;
+			}
 
 		}
 
@@ -165,17 +178,20 @@ return class Carrito{
 
 	estaVacio(){
          
-
 		if(this.getListaEventos.length==0){
 
 			console.log(this.getListaEventos.length)
 
-			this.setVacio=true;
+			localStorage.setItem("carritoVacio",true);
+			this.setVacio=localStorage.getItem("carritoVacio");
 
 		}else{
-			this.setVacio=false;
-			$(".icon-basket").css("color","#cddc39");
+			localStorage.setItem("carritoVacio",false);
+			this.setVacio=localStorage.getItem("carritoVacio");	
 		}
+
+		console.log(localStorage.getItem("carritoVacio"))
+		console.log(this.getVacio)
 
 		return this.getVacio;
 	}

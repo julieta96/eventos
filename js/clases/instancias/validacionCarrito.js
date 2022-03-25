@@ -3,13 +3,13 @@ require(['jquery','clases/carrito'],
 
 		const carrito = new c(1);
 		
-        let contador = localStorage.getItem("cantidadEventos")|| localStorage.setItem("cantidadEventos",0); 
-		let contador10 = localStorage.getItem("contador-re")|| localStorage.setItem("contador-re",0);
-		let contador20 = localStorage.getItem("contador-kk")|| localStorage.setItem("contador-kk",0);
-		let contador30 = localStorage.getItem("contador-cm")|| localStorage.setItem("contador-cm",0);
-		let contador40 = localStorage.getItem("contador-ca")|| localStorage.setItem("contador-ca",0);
-		let contador50 = localStorage.getItem("contador-eg")|| localStorage.setItem("contador-eg",0);
-		let contador60 = localStorage.getItem("contador-15")|| localStorage.setItem("contador-15",0);
+        let contador = parseInt(localStorage.getItem("cantidadEventos"))|| localStorage.setItem("cantidadEventos",0); 
+		let contador10 = parseInt(localStorage.getItem("contador-re"))|| localStorage.setItem("contador-re",0);
+		let contador20 = parseInt(localStorage.getItem("contador-kk"))|| localStorage.setItem("contador-kk",0);
+		let contador30 = parseInt(localStorage.getItem("contador-cm"))|| localStorage.setItem("contador-cm",0);
+		let contador40 = parseInt(localStorage.getItem("contador-ca"))|| localStorage.setItem("contador-ca",0);
+		let contador50 = parseInt(localStorage.getItem("contador-eg"))|| localStorage.setItem("contador-eg",0);
+		let contador60 = parseInt(localStorage.getItem("contador-15"))|| localStorage.setItem("contador-15",0);
 
 		$(".comprar").on('click',(eventoSeleccionado)=>{
 
@@ -75,20 +75,27 @@ require(['jquery','clases/carrito'],
 			localStorage.setItem('compra', JSON.stringify(listaDeCompras));
              console.log(listaDeCompras);
 
-			contador= parseInt(contador10)+parseInt(contador20)+parseInt(contador30)+
-			parseInt(contador40)+parseInt(contador50)+parseInt(contador60);
+			contador= contador10+contador20+contador30+
+			contador40+contador50+contador60;
 		    $(".contador").text(contador);
             localStorage.setItem("cantidadEventos", contador);
             
+            if(!carrito.estaVacio()){
 
+            	$(".icon-basket").css("color","#cddc39");
+
+            } 
 	
 	
 		})
 
-       
+		$(".icon-basket").click(()=>{
+
+			carrito.vaciarCarrito();
+			$(".icon-basket").css("color","#fff"); alert("gunciona")
+		})
+
 	    $(".contador").text(localStorage.getItem("cantidadEventos"));
 		$(".total-pago").text(localStorage.getItem("totalCarrito"));
-		carrito.estaVacio();
-
    
 	})
