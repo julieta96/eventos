@@ -177,20 +177,21 @@ return class Carrito{
 	}
 
 	estaVacio(){
+
+
          
 		if(this.getListaEventos.length==0){
 
 			console.log(this.getListaEventos.length)
-
+			this.setVacio=true;
 			localStorage.setItem("carritoVacio",true);
-			this.setVacio=localStorage.getItem("carritoVacio");
 
 		}else{
+			
+			this.setVacio=false;	
 			localStorage.setItem("carritoVacio",false);
-			this.setVacio=localStorage.getItem("carritoVacio");	
 		}
 
-		console.log(localStorage.getItem("carritoVacio"))
 		console.log(this.getVacio)
 
 		return this.getVacio;
