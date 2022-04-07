@@ -2,21 +2,22 @@ require(['jquery','clases/carrito'],
 	   ($, c)=>{
 
 		const carrito = new c(1);
+
+		//localStorage.setItem("cantidadEventos",0);
 		
-        let contador = parseInt(localStorage.getItem("cantidadEventos"))|| localStorage.setItem("cantidadEventos",0); 
-		let contador10 = parseInt(localStorage.getItem("contador-re"))|| localStorage.setItem("contador-re",0);
-		let contador20 = parseInt(localStorage.getItem("contador-kk"))|| localStorage.setItem("contador-kk",0);
-		let contador30 = parseInt(localStorage.getItem("contador-cm"))|| localStorage.setItem("contador-cm",0);
-		let contador40 = parseInt(localStorage.getItem("contador-ca"))|| localStorage.setItem("contador-ca",0);
-		let contador50 = parseInt(localStorage.getItem("contador-eg"))|| localStorage.setItem("contador-eg",0);
-		let contador60 = parseInt(localStorage.getItem("contador-15"))|| localStorage.setItem("contador-15",0);
+        let contador = parseInt(localStorage.getItem("cantidadEventos"))||0 ; 
+		let contador10 = parseInt(localStorage.getItem("contador-re"))|| 0;
+		let contador20 = parseInt(localStorage.getItem("contador-kk"))|| 0;
+		let contador30 = parseInt(localStorage.getItem("contador-cm"))|| 0;
+		let contador40 = parseInt(localStorage.getItem("contador-ca"))|| 0;
+		let contador50 = parseInt(localStorage.getItem("contador-eg"))|| 0;
+		let contador60 = parseInt(localStorage.getItem("contador-15"))|| 0;
 
 		$(".comprar").on('click',(eventoSeleccionado)=>{
 
 			let eventoComprado = eventoSeleccionado.target.id;
 			carrito.comprarEvento(eventoComprado);
-			console.log(eventoComprado);
-
+			
             let contadorEvento= eventoSeleccionado.target.classList[1];
 
 			switch(contadorEvento){
@@ -79,15 +80,14 @@ require(['jquery','clases/carrito'],
 			contador40+contador50+contador60;
 		    $(".contador").text(contador);
             localStorage.setItem("cantidadEventos", contador);
-            
-            if(!carrito.estaVacio()){
+  
+		})
+
+		if(!carrito.estaVacio()){
 
             	$(".icon-basket").css("color","#cddc39");
 
-            } 
-	
-	
-		})
+         } 
 
 		$(".icon-basket").click(()=>{
 
