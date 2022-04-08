@@ -6,6 +6,7 @@ require(['jquery','clases/sendEmail','lib/jsPDF/jspdf.umd.min','logo','barCode']
 		let datos = $('.datos');
 		let nombreEvento="";
 		let evento="";
+		let valor="";
 		const actualidad = Date.now();
 		const fecha =  new Date(actualidad);
 		const anoActual= fecha.getFullYear();
@@ -41,10 +42,11 @@ require(['jquery','clases/sendEmail','lib/jsPDF/jspdf.umd.min','logo','barCode']
 
 				 nombreEvento=$(".a-titulo >h2").attr('id');
               	 evento=nombreEvento.substr(0,1).toUpperCase()+nombreEvento.substr(1,nombreEvento.length);
+              	 valor= localStorage.getItem(`precio${evento}`);
 				 nombre=$(datos[i]).find("#nombre").val();
 				 apellido=$(datos[i]).find("#apellido").val();
 				 email=$(datos[i]).find("#email").val();
-
+				 
 				 let barra=`${barCode.barcode}`;
 		    	 let pdfInscripcion = getDataToPdf(nombre, apellido, valor, evento, proximoDia, mesActual, anoActual, barra); 
 		
