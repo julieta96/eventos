@@ -5,7 +5,7 @@ return class Carrito{
 	constructor(id){
 
 		this.id = id;
-		this.vacio = true;
+		this.vacio = false;
 		this.contador = 0;
 		this.total = 0;
 		this.listaEventos = new Array();
@@ -154,8 +154,6 @@ return class Carrito{
 
 	vaciarCarrito(){
 
-		if(!this.estaVacio()){
-
 		localStorage.setItem("cantidadEventos",0); 
 		localStorage.setItem("contador-re",0);
 		localStorage.setItem("contador-kk",0);
@@ -171,18 +169,15 @@ return class Carrito{
 
 	            this.listaEventos[lista].setCantidad=0;
 			}
-
-		}
+			$(".icon-basket").css("color","#fff");
+			this.setVacio=true;		
 
 	}
 
 	estaVacio(){
 
-
-         
 		if(this.getListaEventos.length==0){
 
-			console.log(this.getListaEventos.length)
 			this.setVacio=true;
 			localStorage.setItem("carritoVacio",true);
 
@@ -191,8 +186,6 @@ return class Carrito{
 			this.setVacio=false;	
 			localStorage.setItem("carritoVacio",false);
 		}
-
-		console.log(this.getVacio)
 
 		return this.getVacio;
 	}

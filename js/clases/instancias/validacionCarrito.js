@@ -85,14 +85,13 @@ require(['jquery','clases/carrito'],
 
 		if(!carrito.estaVacio()){
 
-            	$(".icon-basket").css("color","#cddc39");
+            $(".icon-basket").css("color","#cddc39");
 
-         } 
+         }
 
-		$(".icon-basket").click(()=>{
+        $(".icon-basket").click(()=>{
 
-			carrito.vaciarCarrito();
-			$(".icon-basket").css("color","#fff"); alert("gunciona")
+				carrito.vaciarCarrito();
 		})
 
 	    $(".contador").text(localStorage.getItem("cantidadEventos"));
