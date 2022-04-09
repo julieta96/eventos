@@ -77,20 +77,19 @@ return class Carrito{
 
 	obtenerEvento(id){//funciona
 
-	let eventoEncontrado = null;
+	  let eventoEncontrado = null;
 
-     objetoEvento.eventos.filter(function (obj) {
-     let encontrarEvento = obj;
-     if(encontrarEvento.getId==id){
+     objetoEvento.eventos.filter((obj)=> {
 
-        eventoEncontrado=obj;
+	     	let encontrarEvento = obj;
 
-     }
- 
+	     	if(encontrarEvento.getId==id){
+				eventoEncontrado=obj;
+	     	}
 
      })
 			
-	return eventoEncontrado;
+		return eventoEncontrado;
 
 	}
 
@@ -105,27 +104,25 @@ return class Carrito{
 
 		let guardarEvento = this.obtenerEvento(evento);
         
-        if(!this.listaEventos.includes(guardarEvento)){
-		this.listaEventos.push(guardarEvento);
+      if(!this.listaEventos.includes(guardarEvento)){
+				this.listaEventos.push(guardarEvento);
 	    }
 	}
 
 	buscarEventoId(id){//funciona
 
-	let eventoEncontrado = null;
+	  let eventoEncontrado = null;
 
-     this.listaEventos.filter(function (obj) {
-     let encontrarEvento = obj;
-     if(encontrarEvento.getId==id){
+     this.listaEventos.filter((obj)=>{
+     	  let encontrarEvento = obj;
+	     if(encontrarEvento.getId==id){
 
-        eventoEncontrado=obj;
-
-     }
- 
+	        eventoEncontrado=obj;
+	     }
 
      })
 			
-	return eventoEncontrado;
+	  return eventoEncontrado;
 
 	}
 
@@ -138,10 +135,10 @@ return class Carrito{
             precio = this.listaEventos[lista].getPrecio;
 		}
 
-         this.total=  parseInt(this.getTotal) +  parseInt(precio);
-         localStorage.setItem("totalCarrito", this.total);
-         localStorage.getItem("totalCarrito");
-		 return this.getTotal;       
+      this.total=  parseInt(this.getTotal) +  parseInt(precio);
+      localStorage.setItem("totalCarrito", this.total);
+      localStorage.getItem("totalCarrito");
+		return this.getTotal;       
 	}
 
 
@@ -162,15 +159,18 @@ return class Carrito{
 		localStorage.setItem("contador-eg",0);
 		localStorage.setItem("contador-15",0);
 		localStorage.getItem("totalCarrito",0);
-        $(".contador").text(localStorage.getItem("cantidadEventos"));
+
+      $(".contador").text(localStorage.getItem("cantidadEventos"));
 	        this.setContador=localStorage.getItem("cantidadEventos");
 	        this.setTotal=localStorage.getItem("totalCarrito");
 	        for(let lista in this.listaEventos){
 
 	            this.listaEventos[lista].setCantidad=0;
-			}
-			$(".icon-basket").css("color","#fff");
-			this.setVacio=true;		
+		}
+
+		$(".icon-basket").css("color","#fff");
+
+		this.setVacio=true;		
 
 	}
 
